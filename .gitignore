@@ -1,0 +1,13 @@
+.DS_Store
+
+# Ignore everything
+*
+
+# Allow .gitignore itself
+!.gitignore
+
+# Allow plugins folder and ONE plugin only
+!HDESakura/
+!HDESakura/**
+!PuctecHdeSakura/
+!PuctecHdeSakura/**
