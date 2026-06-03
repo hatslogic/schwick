@@ -1,0 +1,291 @@
+	{% block custom_fields_unit_voltage_tester %}
+  
+		{# UNIT Voltage Tester #}
+		{% if page.product.translated.customFields.zusatzfelder_unit_voltage_tester_active == "Yes" %}
+			{% if page.product.translated.customFields.zusatzfelder_unit_voltage_tester_phase_rotation_test %}
+			<tr>
+			<th>{{ "customFields.zusatzfelder_unit_voltage_tester_phase_rotation_test"|trans }}:</th>
+			{% if page.product.translated.customFields.zusatzfelder_unit_voltage_tester_phase_rotation_test|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_unit_voltage_tester_phase_rotation_test|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_unit_voltage_tester_phase_rotation_test|trans|sw_sanitize }}</td>	
+					{% endif %}	
+			</tr>
+			{% endif %}
+
+			{% if page.product.translated.customFields.zusatzfelder_unit_voltage_tester_single_lead_l2_voltage_detection %}
+			<tr>
+			<th>{{ "customFields.zusatzfelder_unit_voltage_tester_single_lead_l2_voltage_detection"|trans }}:</th>
+			{% if   page.product.translated.customFields.zusatzfelder_unit_voltage_tester_single_lead_l2_voltage_detection|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_unit_voltage_tester_single_lead_l2_voltage_detection|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_unit_voltage_tester_single_lead_l2_voltage_detection|trans|sw_sanitize }}</td>	
+					{% endif %}	
+			</tr>
+			{% endif %}
+
+			{% if page.product.translated.customFields.zusatzfelder_unit_voltage_tester_continuity_test %}
+			<tr>
+			<th>{{ "customFields.zusatzfelder_unit_voltage_tester_continuity_test"|trans }}:</th>
+			{% if   page.product.translated.customFields.zusatzfelder_unit_voltage_tester_continuity_test|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_unit_voltage_tester_continuity_test|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_unit_voltage_tester_continuity_test|trans|sw_sanitize }}</td>	
+					{% endif %}	
+			</tr>
+			{% endif %}
+
+			{% if page.product.translated.customFields.zusatzfelder_unit_voltage_tester_rcd_test %}
+			<tr>
+			<th>{{ "customFields.zusatzfelder_unit_voltage_tester_rcd_test"|trans }}:</th>
+			{% if   page.product.translated.customFields.zusatzfelder_unit_voltage_tester_rcd_test|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_unit_voltage_tester_rcd_test|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_unit_voltage_tester_rcd_test|trans|sw_sanitize }}</td>	
+					{% endif %}	
+			</tr>
+			{% endif %}
+
+			{% if page.product.translated.customFields.zusatzfelder_unit_voltage_tester_polarity_detection %}
+			<tr>
+			<th>{{ "customFields.zusatzfelder_unit_voltage_tester_polarity_detection"|trans }}:</th>
+			{% if   page.product.translated.customFields.zusatzfelder_unit_voltage_tester_polarity_detection|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_unit_voltage_tester_polarity_detection|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_unit_voltage_tester_polarity_detection|trans|sw_sanitize }}</td>	
+					{% endif %}	
+			</tr>
+			{% endif %}
+
+			{% if page.product.translated.customFields.zusatzfelder_unit_voltage_tester_ac_voltage %}
+			<tr>
+			<th>{{ "customFields.zusatzfelder_unit_voltage_tester_ac_voltage"|trans }}:</th>
+			{% if   page.product.translated.customFields.zusatzfelder_unit_voltage_tester_ac_voltage|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_unit_voltage_tester_ac_voltage|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_unit_voltage_tester_ac_voltage|trans|sw_sanitize }}</td>	
+					{% endif %}	
+			</tr>
+			{% endif %}
+
+			{% if page.product.translated.customFields.zusatzfelder_unit_voltage_tester_lcd_voltage_display %}
+			<tr>
+			<th>{{ "customFields.zusatzfelder_unit_voltage_tester_lcd_voltage_display"|trans }}:</th>
+			{% if   page.product.translated.customFields.zusatzfelder_unit_voltage_tester_lcd_voltage_display|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_unit_voltage_tester_lcd_voltage_display|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_unit_voltage_tester_lcd_voltage_display|trans|sw_sanitize  }}</td>	
+					{% endif %}	
+			</tr>
+			{% endif %}
+
+			{% if page.product.translated.customFields.zusatzfelder_unit_voltage_tester_lcd_frequency_display %}
+			<tr>
+			<th>{{ "customFields.zusatzfelder_unit_voltage_tester_lcd_frequency_display"|trans }}:</th>
+			{% if   page.product.translated.customFields.zusatzfelder_unit_voltage_tester_lcd_frequency_display|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_unit_voltage_tester_lcd_frequency_display|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_unit_voltage_tester_lcd_frequency_display|trans|sw_sanitize }}</td>	
+					{% endif %}	
+			</tr>
+			{% endif %}
+
+			{% if page.product.translated.customFields.zusatzfelder_unit_voltage_tester_frequency %}
+			<tr>
+			<th>{{ "customFields.zusatzfelder_unit_voltage_tester_frequency"|trans }}:</th>
+			{% if   page.product.translated.customFields.zusatzfelder_unit_voltage_tester_frequency|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_unit_voltage_tester_frequency|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_unit_voltage_tester_frequency|trans|sw_sanitize }}</td>	
+					{% endif %}	
+			</tr>
+			{% endif %}
+
+			{% if page.product.translated.customFields.zusatzfelder_unit_voltage_tester_rating %}
+			<tr>
+			<th>{{ "customFields.zusatzfelder_unit_voltage_tester_rating"|trans }}:</th>
+			{% if   page.product.translated.customFields.zusatzfelder_unit_voltage_tester_rating|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_unit_voltage_tester_rating|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_unit_voltage_tester_rating|trans|sw_sanitize }}</td>	
+					{% endif %}	
+			</tr>
+			{% endif %}
+
+			{% if page.product.translated.customFields.zusatzfelder_unit_voltage_tester_auto_power_off %}
+			<tr>
+			<th>{{ "customFields.zusatzfelder_unit_voltage_tester_auto_power_off"|trans }}:</th>
+			{% if   page.product.translated.customFields.zusatzfelder_unit_voltage_tester_auto_power_off|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_unit_voltage_tester_auto_power_off|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_unit_voltage_tester_auto_power_off|trans|sw_sanitize  }}</td>	
+					{% endif %}	
+			</tr>
+			{% endif %}
+
+			{% if page.product.translated.customFields.zusatzfelder_unit_voltage_tester_polarity %}
+			<tr>
+			<th>{{ "customFields.zusatzfelder_unit_voltage_tester_polarity"|trans }}:</th>
+			{% if   page.product.translated.customFields.zusatzfelder_unit_voltage_tester_polarity|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_unit_voltage_tester_polarity|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_unit_voltage_tester_polarity|trans|sw_sanitize }}</td>	
+					{% endif %}	
+			</tr>
+			{% endif %}
+
+			{% if page.product.translated.customFields.zusatzfelder_unit_voltage_tester_low_voltage_indication %}
+			<tr>
+			<th>{{ "customFields.zusatzfelder_unit_voltage_tester_low_voltage_indication"|trans }}:</th>
+			{% if   page.product.translated.customFields.zusatzfelder_unit_voltage_tester_low_voltage_indication|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_unit_voltage_tester_low_voltage_indication|trans|sw_sanitize  == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_unit_voltage_tester_low_voltage_indication|trans|sw_sanitize }}</td>	
+					{% endif %}	
+			</tr>
+			{% endif %}
+
+			{% if page.product.translated.customFields.zusatzfelder_unit_voltage_tester_low_battery_indication %}
+			<tr>
+			<th>{{ "customFields.zusatzfelder_unit_voltage_tester_low_battery_indication"|trans }}:</th>
+			{% if   page.product.translated.customFields.zusatzfelder_unit_voltage_tester_low_battery_indication|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_unit_voltage_tester_low_battery_indication|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_unit_voltage_tester_low_battery_indication|trans|sw_sanitize }}</td>	
+					{% endif %}	
+			</tr>
+			{% endif %}
+
+			{% if page.product.translated.customFields.zusatzfelder_unit_voltage_tester_flashlight %}
+			<tr>
+			<th>{{ "customFields.zusatzfelder_unit_voltage_tester_flashlight"|trans }}:</th>
+			{% if   page.product.translated.customFields.zusatzfelder_unit_voltage_tester_flashlight|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_unit_voltage_tester_flashlight|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_unit_voltage_tester_flashlight|trans|sw_sanitize }}</td>	
+					{% endif %}	
+			</tr>
+			{% endif %}
+
+			{% if page.product.translated.customFields.zusatzfelder_unit_voltage_tester_display %}
+			<tr>
+			<th>{{ "customFields.zusatzfelder_unit_voltage_tester_display"|trans }}:</th>
+			{% if   page.product.translated.customFields.zusatzfelder_unit_voltage_tester_display|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_unit_voltage_tester_display|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_unit_voltage_tester_display|trans|sw_sanitize }}</td>	
+					{% endif %}	
+			</tr>
+			{% endif %}
+
+			{% if page.product.translated.customFields.zusatzfelder_unit_voltage_tester_led_indication %}
+			<tr>
+			<th>{{ "customFields.zusatzfelder_unit_voltage_tester_led_indication"|trans }}:</th>
+			{% if   page.product.translated.customFields.zusatzfelder_unit_voltage_tester_led_indication|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_unit_voltage_tester_led_indication|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_unit_voltage_tester_led_indication|trans|sw_sanitize }}</td>	
+					{% endif %}	
+			</tr>
+			{% endif %}
+
+			{% if page.product.translated.customFields.zusatzfelder_unit_voltage_tester_ip_protection_rating %}
+			<tr>
+			<th>{{ "customFields.zusatzfelder_unit_voltage_tester_ip_protection_rating"|trans }}:</th>
+			{% if   page.product.translated.customFields.zusatzfelder_unit_voltage_tester_ip_protection_rating|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_unit_voltage_tester_ip_protection_rating|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_unit_voltage_tester_ip_protection_rating|trans|sw_sanitize }}</td>	
+					{% endif %}	
+			</tr>
+			{% endif %}
+
+			{% if page.product.translated.customFields.zusatzfelder_unit_voltage_tester_display_size %}
+			<tr>
+			<th>{{ "customFields.zusatzfelder_unit_voltage_tester_display_size"|trans }}:</th>
+			{% if   page.product.translated.customFields.zusatzfelder_unit_voltage_tester_display_size|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_unit_voltage_tester_display_size|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_unit_voltage_tester_display_size|trans|sw_sanitize }}</td>	
+					{% endif %}	
+			</tr>
+			{% endif %}
+
+			{% if page.product.length %}
+			<tr>
+			<th>{{ "customFields.zusatzfelder_unit_voltage_tester_size"|trans }}:</th>
+				<td>
+					{{ page.product.length|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+
+					{% if page.product.width %}
+						 x {{ page.product.width|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+						{% if page.product.height %}
+							x {{ page.product.height|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+						{% endif %}
+
+					{% endif %}
+									
+				</td>						
+			</tr>
+			{% endif %}
+
+			{% if page.product.weight %}
+			<tr>
+			<th>{{ "customFields.zusatzfelder_unit_voltage_tester_weight"|trans }}:</th>			
+				<td>{{ page.product.weight|trans|sw_sanitize|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}kg</td>						
+			</tr>
+			{% endif %}
+
+			{% if page.product.translated.customFields.zusatzfelder_unit_voltage_tester_power_supply %}
+			<tr>
+			<th>{{ "customFields.zusatzfelder_unit_voltage_tester_power_supply"|trans }}:</th>
+			{% if   page.product.translated.customFields.zusatzfelder_unit_voltage_tester_power_supply|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_unit_voltage_tester_power_supply|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_unit_voltage_tester_power_supply|trans|sw_sanitize }}</td>	
+					{% endif %}	
+			</tr>
+			{% endif %}
+		{% endif %}
+
+	{%  endblock %}

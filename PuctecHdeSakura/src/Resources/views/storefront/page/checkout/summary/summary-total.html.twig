@@ -1,0 +1,12 @@
+{% sw_extends '@Storefront/storefront/page/checkout/summary/summary-total.html.twig' %}
+
+{% block page_checkout_summary_total_label %}
+    <dt class="col-7 checkout-aside-summary-label checkout-aside-summary-total">
+		{% set grosskundenGroupId = 'checkout.summaryShipping.bigCustomersGroupId'|trans|sw_sanitize %}
+		{% if context.customer.groupId is same as(grosskundenGroupId) %}
+			{{ 'checkout.summaryTotalPrice.bigCustomersText'|trans|sw_sanitize }}
+		{% else %}
+			{{ 'checkout.summaryTotalPrice'|trans|sw_sanitize }}
+		{% endif %}
+    </dt>
+{% endblock %}

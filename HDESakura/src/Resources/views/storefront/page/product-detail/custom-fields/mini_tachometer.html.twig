@@ -1,0 +1,170 @@
+
+{% if page.product.translated.customFields.zusatzfelder_unit_mini_tachometer_active == "Yes" %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_mini_tachometer_rpm_measurement %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_mini_tachometer_rpm_measurement"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_mini_tachometer_rpm_measurement|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+
+
+
+{% if page.product.translated.customFields.usatzfelder_unit_mini_tachometer_counting_measurement %}
+                <tr>
+                <th>{{ "customFields.usatzfelder_unit_mini_tachometer_counting_measurement"|trans }}:</th>
+                {% if    page.product.translated.customFields.usatzfelder_unit_mini_tachometer_counting_measurement|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.usatzfelder_unit_mini_tachometer_counting_measurement|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.usatzfelder_unit_mini_tachometer_counting_measurement|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}{% if page.product.translated.customFields.zusatzfelder_unit_mini_tachometer_auto_range %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_mini_tachometer_auto_range"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_mini_tachometer_auto_range|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_mini_tachometer_auto_range|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_mini_tachometer_auto_range|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}{% if page.product.translated.customFields.zusatzfelder_unit_mini_tachometer_auto_power_off %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_mini_tachometer_auto_power_off"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_mini_tachometer_auto_power_off|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_mini_tachometer_auto_power_off|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_mini_tachometer_auto_power_off|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}{% if page.product.translated.customFields.zusatzfelder_unit_mini_tachometer_data_hold %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_mini_tachometer_data_hold"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_mini_tachometer_data_hold|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_mini_tachometer_data_hold|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_mini_tachometer_data_hold|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}{% if page.product.translated.customFields.zusatzfelder_unit_mini_tachometer_min_max_function %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_mini_tachometer_min_max_function"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_mini_tachometer_min_max_function|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_mini_tachometer_min_max_function|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_mini_tachometer_min_max_function|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}{% if page.product.translated.customFields.zusatzfelder_unit_mini_tachometer_low_battery_indication %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_mini_tachometer_low_battery_indication"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_mini_tachometer_low_battery_indication|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_mini_tachometer_low_battery_indication|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_mini_tachometer_low_battery_indication|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}{% if page.product.translated.customFields.zusatzfelder_unit_mini_tachometer_laser_on_indication %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_mini_tachometer_laser_on_indication"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_mini_tachometer_laser_on_indication|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_mini_tachometer_laser_on_indication|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_mini_tachometer_laser_on_indication|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}{% if page.product.translated.customFields.zusatzfelder_unit_mini_tachometer_rotation_speed_count_function_switching %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_mini_tachometer_rotation_speed_count_function_switching"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_mini_tachometer_rotation_speed_count_function_switching|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_mini_tachometer_rotation_speed_count_function_switching|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_mini_tachometer_rotation_speed_count_function_switching|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}
+
+
+
+
+
+
+{% if page.product.translated.customFields.zusatzfelder_unit_mini_tachometer_overload_indication %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_mini_tachometer_overload_indication"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_mini_tachometer_overload_indication|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_mini_tachometer_overload_indication|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_mini_tachometer_overload_indication|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}
+
+
+
+{% if page.product.translated.customFields.zusatzfelder_unit_mini_tachometer_sensor_type %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_mini_tachometer_sensor_type"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_mini_tachometer_sensor_type|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_mini_tachometer_power_supply %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_mini_tachometer_power_supply"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_mini_tachometer_power_supply|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+{% if page.product.weight %}
+      <tr>
+      <th>{{ "customFields.zusatzfelder_unit_mini_tachometer_weight"|trans }}:</th>      
+        <td>{{ page.product.weight|trans|sw_sanitize|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}kg</td>           
+      </tr>
+      {% endif %}
+
+      
+
+      {% if page.product.length %}
+      <tr>
+      <th>{{ "customFields.zusatzfelder_unit_mini_tachometer_size"|trans }}:</th>
+        <td>
+          {{ page.product.length|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+
+          {% if page.product.width %}
+             x {{ page.product.width|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+            {% if page.product.height %}
+              x {{ page.product.height|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+            {% endif %}
+
+          {% endif %}
+                  
+        </td>           
+      </tr>
+      {% endif %}
+
+
+
+{% endif %}
+
+
+

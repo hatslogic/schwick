@@ -1,0 +1,297 @@
+{# UNIT OSCILLOSCOPE #}
+
+{% block custom_fields_unit_oscilloscope %}
+
+	{% if page.product.translated.customFields.zusatzfelder_unit_oscilloscope_active == "Yes" %}
+
+		{% if page.product.translated.customFields.zusatzfelder_unit_oscilloscope_bandwith %}
+		<tr>
+		<th>{{ "customFields.zusatzfelder_unit_oscilloscope_bandwith"|trans }}:</th>
+		{% if   page.product.translated.customFields.zusatzfelder_unit_oscilloscope_bandwith|trans|sw_sanitize == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_unit_oscilloscope_bandwith|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_unit_oscilloscope_bandwith|trans|sw_sanitize }}</td>	
+					{% endif %}	
+		</tr>
+		{% endif %}
+
+		{% if page.product.translated.customFields.zusatzfelder_unit_oscilloscope_channels %}
+		<tr>
+		<th>{{ "customFields.zusatzfelder_unit_oscilloscope_channels"|trans }}:</th>
+
+			<td>{{ page.product.translated.customFields.zusatzfelder_unit_oscilloscope_channels|trans|sw_sanitize }}</td>	
+					
+		</tr>
+		{% endif %}
+
+		{% if page.product.translated.customFields.zusatzfelder_unit_oscilloscope_sampling_rate %}
+		<tr>
+		<th>{{ "customFields.zusatzfelder_unit_oscilloscope_sampling_rate"|trans }}:</th>
+		{% if   page.product.translated.customFields.zusatzfelder_unit_oscilloscope_sampling_rate|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_unit_oscilloscope_sampling_rate|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_unit_oscilloscope_sampling_rate|trans|sw_sanitize }}</td>	
+					{% endif %}	
+		</tr>
+		{% endif %}
+
+		{% if page.product.translated.customFields.zusatzfelder_unit_oscilloscope_rise_time %}
+		<tr>
+		<th>{{ "customFields.zusatzfelder_unit_oscilloscope_rise_time"|trans }}:</th>
+		{% if   page.product.translated.customFields.zusatzfelder_unit_oscilloscope_rise_time|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_unit_oscilloscope_rise_time|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_unit_oscilloscope_rise_time|trans|sw_sanitize }}</td>	
+					{% endif %}	
+		</tr>
+		{% endif %}
+
+		{% if page.product.translated.customFields.zusatzfelder_unit_oscilloscope_memory_depth %}
+		<tr>
+		<th>{{ "customFields.zusatzfelder_unit_oscilloscope_memory_depth"|trans }}:</th>
+		{% if   page.product.translated.customFields.zusatzfelder_unit_oscilloscope_memory_depth|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_unit_oscilloscope_memory_depth|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_unit_oscilloscope_memory_depth|trans|sw_sanitize }}</td>	
+					{% endif %}	
+		</tr>
+		{% endif %}
+
+		{% if page.product.translated.customFields.zusatzfelder_unit_oscilloscope_vertical_scale %}
+		<tr>
+		<th>{{ "customFields.zusatzfelder_unit_oscilloscope_vertical_scale"|trans }}:</th>
+		{% if   page.product.translated.customFields.zusatzfelder_unit_oscilloscope_vertical_scale|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_unit_oscilloscope_vertical_scale|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_unit_oscilloscope_vertical_scale|trans|sw_sanitize }}</td>	
+					{% endif %}	
+		</tr>
+		{% endif %}
+
+		{% if page.product.translated.customFields.zusatzfelder_unit_oscilloscope_time_base_scale %}
+		<tr>
+		<th>{{ "customFields.zusatzfelder_unit_oscilloscope_time_base_scale"|trans }}:</th>
+		{% if   page.product.translated.customFields.zusatzfelder_unit_oscilloscope_time_base_scale|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_unit_oscilloscope_time_base_scale|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_unit_oscilloscope_time_base_scale|trans|sw_sanitize }}</td>	
+					{% endif %}	
+		</tr>
+		{% endif %}
+
+		{% if page.product.translated.customFields.zusatzfelder_unit_oscilloscope_storage_methods %}
+		<tr>
+		<th>{{ "customFields.zusatzfelder_unit_oscilloscope_storage_methods"|trans }}:</th>
+		{% if   page.product.translated.customFields.zusatzfelder_unit_oscilloscope_storage_methods|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_unit_oscilloscope_storage_methods|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_unit_oscilloscope_storage_methods|trans|sw_sanitize }}</td>	
+					{% endif %}	
+		</tr>
+		{% endif %}
+
+		{% if page.product.translated.customFields.zusatzfelder_unit_oscilloscope_trigger_types %}
+		<tr>
+		<th>{{ "customFields.zusatzfelder_unit_oscilloscope_trigger_types"|trans }}:</th>
+		{% if   page.product.translated.customFields.zusatzfelder_unit_oscilloscope_trigger_types|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_unit_oscilloscope_trigger_types|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_unit_oscilloscope_trigger_types|trans|sw_sanitize }}</td>	
+					{% endif %}	
+		</tr>
+		{% endif %}
+												  
+		{% if page.product.translated.customFields.zusatzfelder_unit_oscilloscope_standard_interface %}
+		<tr>
+		<th>{{ "customFields.zusatzfelder_unit_oscilloscope_standard_interface"|trans }}:</th>
+			<td>{{ page.product.translated.customFields.zusatzfelder_unit_oscilloscope_standard_interface |trans|sw_sanitize }}</td>	
+					
+		</tr>
+		{% endif %}
+
+		{% if page.product.translated.customFields.zusatzfelder_unit_oscilloscope_dc_voltage %}
+		<tr>
+		<th>{{ "customFields.zusatzfelder_unit_oscilloscope_dc_voltage"|trans }}:</th>
+		{% if   page.product.translated.customFields.zusatzfelder_unit_oscilloscope_dc_voltage|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_unit_oscilloscope_dc_voltage|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_unit_oscilloscope_dc_voltage|trans|sw_sanitize }}</td>	
+					{% endif %}	
+		</tr>
+		{% endif %}
+
+		{% if page.product.translated.customFields.zusatzfelder_unit_oscilloscope_ac_voltage %}
+		<tr>
+		<th>{{ "customFields.zusatzfelder_unit_oscilloscope_ac_voltage"|trans }}:</th>
+		{% if   page.product.translated.customFields.zusatzfelder_unit_oscilloscope_ac_voltage|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_unit_oscilloscope_ac_voltage|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_unit_oscilloscope_ac_voltage|trans|sw_sanitize }}</td>	
+					{% endif %}	
+		</tr>
+		{% endif %}
+
+		{% if page.product.translated.customFields.zusatzfelder_unit_oscilloscope_dc_current %}
+		<tr>
+		<th>{{ "customFields.zusatzfelder_unit_oscilloscope_dc_current"|trans }}:</th>
+		{% if   page.product.translated.customFields.zusatzfelder_unit_oscilloscope_dc_current|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_unit_oscilloscope_dc_current|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_unit_oscilloscope_dc_current|trans|sw_sanitize }}</td>	
+					{% endif %}	
+		</tr>
+		{% endif %}
+
+		{% if page.product.translated.customFields.zusatzfelder_unit_oscilloscope_ac_current %}
+		<tr>
+		<th>{{ "customFields.zusatzfelder_unit_oscilloscope_ac_current"|trans }}:</th>
+		{% if   page.product.translated.customFields.zusatzfelder_unit_oscilloscope_ac_current|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_unit_oscilloscope_ac_current|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_unit_oscilloscope_ac_current|trans|sw_sanitize }}</td>	
+					{% endif %}	
+		</tr>
+		{% endif %}
+
+		{% if page.product.translated.customFields.zusatzfelder_unit_oscilloscope_resistance %}
+		<tr>
+		<th>{{ "customFields.zusatzfelder_unit_oscilloscope_resistance"|trans }}:</th>
+		{% if   page.product.translated.customFields.zusatzfelder_unit_oscilloscope_resistance|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_unit_oscilloscope_resistance|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_unit_oscilloscope_resistance|trans|sw_sanitize }}</td>	
+					{% endif %}	
+		</tr>
+		{% endif %}
+
+		{% if page.product.translated.customFields.zusatzfelder_unit_oscilloscope_capacitance %}
+		<tr>
+		<th>{{ "customFields.zusatzfelder_unit_oscilloscope_capacitance"|trans }}:</th>
+		{% if   page.product.translated.customFields.zusatzfelder_unit_oscilloscope_capacitance|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_unit_oscilloscope_capacitance|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_unit_oscilloscope_capacitance|trans|sw_sanitize }}</td>	
+					{% endif %}	
+		</tr>
+		{% endif %}
+
+		{% if page.product.translated.customFields.zusatzfelder_unit_oscilloscope_display_count %}
+		<tr>
+		<th>{{ "customFields.zusatzfelder_unit_oscilloscope_display_count"|trans }}:</th>
+		{% if   page.product.translated.customFields.zusatzfelder_unit_oscilloscope_display_count|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_unit_oscilloscope_display_count|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_unit_oscilloscope_display_count|trans|sw_sanitize }}</td>	
+					{% endif %}	
+		</tr>
+		{% endif %}
+
+		{% if page.product.translated.customFields.zusatzfelder_unit_oscilloscope_display_size %}
+		<tr>
+		<th>{{ "customFields.zusatzfelder_unit_oscilloscope_display_size"|trans }}:</th>
+		{% if   page.product.translated.customFields.zusatzfelder_unit_oscilloscope_display_size|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_unit_oscilloscope_display_size|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_unit_oscilloscope_display_size|trans|sw_sanitize }}</td>	
+					{% endif %}	
+		</tr>
+		{% endif %}
+
+		{% if page.product.translated.customFields.zusatzfelder_unit_oscilloscope_size %}
+		<tr>
+		<th>{{ "customFields.zusatzfelder_unit_oscilloscope_size"|trans }}:</th>
+		{% if   page.product.translated.customFields.zusatzfelder_unit_oscilloscope_size|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_unit_oscilloscope_size|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_unit_oscilloscope_size|trans|sw_sanitize }}</td>	
+					{% endif %}	
+		</tr>
+		{% endif %}
+
+		{% if page.product.translated.customFields.zusatzfelder_unit_oscilloscope_weight %}
+		<tr>
+		<th>{{ "customFields.zusatzfelder_unit_oscilloscope_weight"|trans }}:</th>
+		{% if   page.product.translated.customFields.zusatzfelder_unit_oscilloscope_weight|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_unit_oscilloscope_weight|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_unit_oscilloscope_weight|trans|sw_sanitize }}</td>	
+					{% endif %}	
+		</tr>
+		{% endif %}
+
+		{% if page.product.translated.customFields.zusatzfelder_unit_oscilloscope_power_supply %}
+		<tr>
+		<th>{{ "customFields.zusatzfelder_unit_oscilloscope_power_supply"|trans }}:</th>
+		{% if   page.product.translated.customFields.zusatzfelder_unit_oscilloscope_power_supply|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_unit_oscilloscope_power_supply|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_unit_oscilloscope_power_supply|trans|sw_sanitize }}</td>	
+					{% endif %}	
+		</tr>
+		{% endif %}
+
+		{% if page.product.weight %}
+			<tr>
+			<th>{{ "customFields.zusatzfelder_unit_multimeter_Weight"|trans }}:</th>			
+				<td>{{ page.product.weight|trans|sw_sanitize|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}kg</td>						
+			</tr>
+		{% endif %}
+
+		{% if page.product.length %}
+		<tr>
+		<th>{{ "customFields.zusatzfelder_meanwell_size"|trans }}:</th>
+			<td>
+				{{ page.product.length|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+
+				{% if page.product.width %}
+					 x {{ page.product.width|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+					{% if page.product.height %}
+						x {{ page.product.height|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+					{% endif %}
+
+				{% endif %}
+								
+			</td>						
+		</tr>
+		{% endif %}
+
+	{% endif %}
+{% endblock %}

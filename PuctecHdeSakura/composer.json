@@ -1,0 +1,19 @@
+{
+  "name": "swag/theme-skeleton",
+  "description": "SAKURA Theme by HosonoDE",
+  "version": "1.0.1",
+  "type": "shopware-platform-plugin",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "PuctecHdeSakura\\": "src/"
+    }
+  },
+  "extra": {
+    "shopware-plugin-class": "PuctecHdeSakura\\PuctecHdeSakura",
+    "label": {
+      "de-DE": "Theme Puctec Sakura by HosonoDE",
+      "en-GB": "Theme Puctec Sakura by HosonoDE"
+    }
+  }
+}

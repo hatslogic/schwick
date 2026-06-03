@@ -1,0 +1,15 @@
+{% sw_extends '@Storefront/storefront/component/buy-widget/buy-widget-form.html.twig' %}       
+
+{% block buy_widget_buy_container %}
+
+
+{#	{% if context.customer is null %}	#}
+        {# hide buy button #}	
+{#    {% else %}	#}
+
+        {{ parent() }}
+
+
+{#    {% endif %} 	#}
+
+{% endblock %}

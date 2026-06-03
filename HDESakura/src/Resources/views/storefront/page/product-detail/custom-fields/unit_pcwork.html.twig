@@ -1,0 +1,588 @@
+{% block custom_fields_unit_pcwork %}
+        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_active == "Yes" %}
+                {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_accurrent %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_accurrent"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_accurrent|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_accurrent|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_accurrent|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_acvoltage %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_acvoltage"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_acvoltage|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_acvoltage|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_acvoltage|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_auto_power_off %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_auto_power_off"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_auto_power_off|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_auto_power_off|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_auto_power_off|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_auto_range %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_auto_range"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_auto_range|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_auto_range|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_auto_range|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_capacitance %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_capacitance"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_capacitance|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_capacitance|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_capacitance|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_clampopening %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_clampopening"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_clampopening|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_clampopening|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_clampopening|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_continuity_test %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_continuity_test"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_continuity_test|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_continuity_test|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_continuity_test|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_data_hold %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_data_hold"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_data_hold|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_data_hold|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_data_hold|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_dccurrent %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_dccurrent"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_dccurrent|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_dccurrent|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_dccurrent|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_dcvoltage %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_dcvoltage"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_dcvoltage|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_dcvoltage|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_dcvoltage|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_diode_test %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_diode_test"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_diode_test|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_diode_test|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_diode_test|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_display_count %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_display_count"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_display_count|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_display_count|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_display_count|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_display_size %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_display_size"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_display_size|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_display_size|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_display_size|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_ds_ratio %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_ds_ratio"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_ds_ratio|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_ds_ratio|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_ds_ratio|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_duty %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_duty"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_duty|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_duty|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_duty|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_emissivity %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_emissivity"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_emissivity|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_emissivity|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_emissivity|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_frequency %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_frequency"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_frequency|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_frequency|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_frequency|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_humidity %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_humidity"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_humidity|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_humidity|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_humidity|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_insulation_resistance %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_insulation_resistance"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_insulation_resistance|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_insulation_resistance|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_insulation_resistance|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_laser_power %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_laser_power"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_laser_power|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_laser_power|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_laser_power|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_led_ac_vi %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_led_ac_vi"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_led_ac_vi|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_led_ac_vi|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_led_ac_vi|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_low_resistance %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_low_resistance"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_low_resistance|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_low_resistance|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_low_resistance|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_manual_range %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_manual_range"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_manual_range|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_manual_range|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_manual_range|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_max_function %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_max_function"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_max_function|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_max_function|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_max_function|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_measurement_range %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_measurement_range"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_measurement_range|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_measurement_range|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_measurement_range|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_min_max_function %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_min_max_function"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_min_max_function|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_min_max_function|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_min_max_function|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_non_contact_vd %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_non_contact_vd"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_non_contact_vd|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_non_contact_vd|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_non_contact_vd|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_operating_altitude %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_operating_altitude"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_operating_altitude|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_operating_altitude|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_operating_altitude|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_operating_temperature %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_operating_temperature"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_operating_temperature|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_operating_temperature|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_operating_temperature|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_phase_rotation_test %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_phase_rotation_test"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_phase_rotation_test|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_phase_rotation_test|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_phase_rotation_test|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_polarity_detection %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_polarity_detection"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_polarity_detection|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_polarity_detection|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_polarity_detection|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_power_supply %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_power_supply"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_power_supply|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_power_supply|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_power_supply|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_rating %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_rating"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_rating|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_rating|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_rating|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_rcd_test %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_rcd_test"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_rcd_test|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_rcd_test|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_rcd_test|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_rcd_working_voltage %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_rcd_working_voltage"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_rcd_working_voltage|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_rcd_working_voltage|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_rcd_working_voltage|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_readability %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_readability"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_readability|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_readability|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_readability|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_resistance %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_resistance"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_resistance|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_resistance|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_resistance|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_response_time %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_response_time"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_response_time|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_response_time|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_response_time|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_safety_rating %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_safety_rating"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_safety_rating|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_safety_rating|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_safety_rating|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_short_circuit_current %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_short_circuit_current"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_short_circuit_current|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_short_circuit_current|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_short_circuit_current|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_single_lead_vd %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_single_lead_vd"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_single_lead_vd|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_single_lead_vd|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_single_lead_vd|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_spectral_response %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_spectral_response"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_spectral_response|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_spectral_response|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_spectral_response|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_storage_temperature %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_storage_temperature"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_storage_temperature|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_storage_temperature|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_storage_temperature|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_temperature_ange %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_temperature_ange"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_temperature_ange|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_temperature_ange|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_temperature_ange|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_true_rms %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_true_rms"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_true_rms|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_true_rms|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_true_rms|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_water-proof %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_water-proof"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_water-proof|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_water-proof|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_water-proof|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_worklight %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_pcwork_worklight"|trans }}:</th>
+                            {% if page.product.translated.customFields.zusatzfelder_unit_pcwork_worklight|trans|sw_sanitize == 1 %}
+                            <td>✓</td>
+                            {% elseif page.product.translated.customFields.zusatzfelder_unit_pcwork_worklight|trans|sw_sanitize == 0 %}
+                            <td>✗</td>
+                            {% else %}
+                            <td>{{ page.product.translated.customFields.zusatzfelder_unit_pcwork_worklight|trans|sw_sanitize }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endif %}
+                        {% if page.product.weight %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_usb_tester_weight"|trans }}:</th>
+                            <td>{{ page.product.weight|trans|sw_sanitize|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}kg</td>
+                        </tr>
+                        {% endif %}
+                        {% if page.product.length %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_usb_tester_size"|trans }}:</th>
+                            <td>
+                                {{ page.product.length|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+                                {% if page.product.width %}
+                                x {{ page.product.width|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+                                {% if page.product.height %}
+                                x {{ page.product.height|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+                                {% endif %}
+                                {% endif %}
+                            </td>
+                        </tr>
+                {% endif %}
+        {% endif %}
+{% endblock %}

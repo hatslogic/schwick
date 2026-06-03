@@ -1,0 +1,10 @@
+.nav-main {
+	background-color: $sw-color-brand-primary;
+	nav.main-navigation-menu > a {
+		color: white;
+		font-weight: bold;
+		&:hover {
+			color: $sw-text-color;
+		}
+	}
+}

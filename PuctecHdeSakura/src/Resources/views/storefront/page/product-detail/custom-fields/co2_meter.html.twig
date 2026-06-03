@@ -1,0 +1,165 @@
+
+{% if page.product.translated.customFields.zusatzfelder_unit_co2_meter_active == "Yes" %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_co2_meter_carbon_dioxide %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_co2_meter_carbon_dioxide"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_co2_meter_carbon_dioxide|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_co2_meter_relative_humidity %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_co2_meter_relative_humidity"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_co2_meter_relative_humidity|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_co2_meter_temperature_range %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_co2_meter_temperature_range"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_co2_meter_temperature_range|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_co2_meter_operating_temperature %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_co2_meter_operating_temperature"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_co2_meter_operating_temperature|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_co2_meter_storage %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_co2_meter_storage"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_co2_meter_storage|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_co2_meter_sensor_type %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_co2_meter_sensor_type"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_co2_meter_sensor_type|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+
+
+
+
+
+
+
+{% if page.product.translated.customFields.zusatzfelder_unit_co2_meter_auto_power_off %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_co2_meter_auto_power_off"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_co2_meter_auto_power_off|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_co2_meter_auto_power_off|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_co2_meter_auto_power_off|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}{% if page.product.translated.customFields.zusatzfelder_unit_co2_meter_low_battery_indication %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_co2_meter_low_battery_indication"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_co2_meter_low_battery_indication|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_co2_meter_low_battery_indication|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_co2_meter_low_battery_indication|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}{% if page.product.translated.customFields.zusatzfelder_unit_co2_meter_backlight %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_co2_meter_backlight"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_co2_meter_backlight|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_co2_meter_backlight|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_co2_meter_backlight|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}{% if page.product.translated.customFields.zusatzfelder_unit_co2_meter_automatic_baseline_correction %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_co2_meter_automatic_baseline_correction"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_co2_meter_automatic_baseline_correction|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_co2_meter_automatic_baseline_correction|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_co2_meter_automatic_baseline_correction|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}{% if page.product.translated.customFields.zusatzfelder_unit_co2_meter_audible_and_visual_alarm %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_co2_meter_audible_and_visual_alarm"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_co2_meter_audible_and_visual_alarm|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_co2_meter_audible_and_visual_alarm|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_co2_meter_audible_and_visual_alarm|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}
+
+
+
+
+
+
+{% if page.product.translated.customFields.zusatzfelder_unit_co2_meter_display_size %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_co2_meter_display_size"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_co2_meter_display_size|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_co2_meter_power_supply %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_co2_meter_power_supply"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_co2_meter_power_supply|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+
+
+{% if page.product.weight %}
+      <tr>
+      <th>{{ "customFields.zusatzfelder_unit_co2_meter_weight"|trans }}:</th>      
+        <td>{{ page.product.weight|trans|sw_sanitize|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}kg</td>           
+      </tr>
+      {% endif %}
+
+      
+
+      {% if page.product.length %}
+      <tr>
+      <th>{{ "customFields.zusatzfelder_unit_co2_meter_size"|trans }}:</th>
+        <td>
+          {{ page.product.length|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+
+          {% if page.product.width %}
+             x {{ page.product.width|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+            {% if page.product.height %}
+              x {{ page.product.height|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+            {% endif %}
+
+          {% endif %}
+                  
+        </td>           
+      </tr>
+      {% endif %}
+
+
+{% endif %}
+
+
+
+
+
+

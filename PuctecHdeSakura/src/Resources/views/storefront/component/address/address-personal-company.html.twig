@@ -1,0 +1,31 @@
+{% sw_extends '@Storefront/storefront/component/address/address-personal-company.html.twig' %}
+
+{#
+{% block component_address_form_company_name_label %}
+	{% set accountTypeRequired = false %}
+    {{ parent() }}
+{% endblock %}
+
+{% block component_address_form_company_name_input %}
+	{% set accountTypeRequired = false %}
+    {{ parent() }}
+{% endblock %}
+#}
+
+{#{% block component_address_form_company_name_label %}#}
+{#    <label class="form-label"#}
+{#           for="{{ idPrefix ~ prefix }}company">#}
+{#        {{ "address.companyNameLabel"|trans|sw_sanitize }}#}
+{#    </label>#}
+{#{% endblock %}#}
+
+{#{% block component_address_form_company_name_input %}#}
+{#    <input type="text"#}
+{#           class="form-control{% if violationPath %} is-invalid{% endif %}"#}
+{#           id="{{ idPrefix ~ prefix }}company"#}
+{#           placeholder="{{ "address.companyNamePlaceholder"|trans|striptags }}"#}
+{#           name="{{ prefix }}[company]"#}
+{#           value="{{ address.get('company') }}"#}
+{#           data-form-validation-required#}
+{#           >#}
+{#{% endblock %}#}

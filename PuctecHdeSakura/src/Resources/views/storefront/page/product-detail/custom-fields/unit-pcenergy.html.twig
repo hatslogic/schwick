@@ -1,0 +1,61 @@
+{% block custom_fields_pcenergy %}
+
+	{% if page.product.translated.customFields.zusatzfelder_pcenergy_aktiv == "Yes" %}
+		
+		{% if page.product.translated.customFields.zusatzfelder_pcenergy_Ausgangspannung %}
+			<tr>
+			<th>{{ "customFields.zusatzfelder_pcenergy_Ausgangspannung"|trans }}: </th><td>{{ page.product.translated.customFields.zusatzfelder_pcenergy_Ausgangspannung|trans|sw_sanitize }}</td>
+			</tr>		
+		{% endif %}
+
+
+		{% if page.product.translated.customFields.zusatzfelder_pcenergy_Ausgangsstrom %}
+			<tr>
+			<th>{{ "customFields.zusatzfelder_pcenergy_Ausgangsstrom"|trans }}: </th><td>{{ page.product.translated.customFields.zusatzfelder_pcenergy_Ausgangsstrom|trans|sw_sanitize  }}</td>
+			</tr>
+		{% endif %}
+
+
+		{% if page.product.translated.customFields.zusatzfelder_pcenergy_Dichtheitsklasse %}
+			<tr>
+			<th>{{ "customFields.zusatzfelder_pcenergy_Dichtheitsklasse"|trans }}: </th><td>{{ page.product.translated.customFields.zusatzfelder_pcenergy_Dichtheitsklasse|trans|sw_sanitize }}</td>
+			</tr>
+		{% endif %}
+
+		{% if page.product.translated.customFields.zusatzfelder_pcenergy_leistung %}
+			<tr>
+			<th>{{ "customFields.zusatzfelder_pcenergy_leistung"|trans }}:</th><td>{{ page.product.translated.customFields.zusatzfelder_pcenergy_leistung|trans|sw_sanitize }}</td>
+			</tr>
+		{% endif %}
+	{% endif %}
+
+			{% if page.product.length %}
+			<tr>
+			<th>{{ "customFields.zusatzfelder_unit_multimeter_Size"|trans }}:</th>
+				<td>
+					{{ page.product.length|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+					{% if page.product.width %}
+						 x {{ page.product.width|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+						{% if page.product.height %}
+							x {{ page.product.height|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+						{% endif %}
+
+					{% endif %}
+						
+				</td>						
+			</tr>
+			{% endif %}
+
+
+			{% if page.product.weight %}
+			<tr>
+			<th>{{ "customFields.zusatzfelder_unit_multimeter_Weight"|trans }}:</th>			
+				<td>{{ page.product.weight|trans|sw_sanitize|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}kg</td>						
+			</tr>
+			{% endif %}
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,69 @@
+{% sw_extends '@Storefront/storefront/utilities/offcanvas.html.twig' %}
+
+
+{% block utilities_offcanvas_content %}
+	{% block page_product_detail_description_container %}
+		<div class="product-detail-description tab-pane-container">
+			{% block page_product_detail_description_title %}
+				<div class="h3 product-detail-description-title">					
+					{{ "hde_tech_data_title"|trans }}
+				</div>
+			{% endblock %}
+ 
+			{% block page_product_detail_description_content %}
+
+				<div class="table-responsive">
+				  <table class="table">
+					<tbody>
+						<tr>
+							<th>{{ "detail.productNumberLabel"|trans }}</th>
+							<td>{{ page.product.productNumber }}</td>
+						</tr>
+					
+						{% sw_include '@Storefront/storefront/page/product-detail/custom-fields/unit-multimeter.html.twig' ignore missing %}
+						{% sw_include '@Storefront/storefront/page/product-detail/custom-fields/unit-voltage-tester.html.twig' ignore missing %}
+						{% sw_include '@Storefront/storefront/page/product-detail/custom-fields/unit-clamp-meter.html.twig' ignore missing %}						
+						{% sw_include '@Storefront/storefront/page/product-detail/custom-fields/meanwell.html.twig' ignore missing %}
+						{% sw_include '@Storefront/storefront/page/product-detail/custom-fields/unit-oscilloscope.html.twig' ignore missing %}
+						{% sw_include '@Storefront/storefront/page/product-detail/custom-fields/unit-test-probes.html.twig' ignore missing %}
+
+						{% sw_include '@Storefront/storefront/page/product-detail/custom-fields/unit-vibration-tester.html.twig' ignore missing %}
+						{% sw_include '@Storefront/storefront/page/product-detail/custom-fields/unit-coating_thickness_gauge.html.twig' ignore missing %}
+						{% sw_include '@Storefront/storefront/page/product-detail/custom-fields/unit_usb_tester.html.twig' ignore missing %}
+						{% sw_include '@Storefront/storefront/page/product-detail/custom-fields/unit_angle_meter.html.twig' ignore missing %}
+						{% sw_include '@Storefront/storefront/page/product-detail/custom-fields/unit_temperature_humidity_meter.html.twig' ignore missing %}
+						{% sw_include '@Storefront/storefront/page/product-detail/custom-fields/unit_wind_meter.html.twig' ignore missing %}
+						{% sw_include '@Storefront/storefront/page/product-detail/custom-fields/unit_battery_tester.html.twig' ignore missing %}
+						{% sw_include '@Storefront/storefront/page/product-detail/custom-fields/unit_wall_scanner_code.html.twig' ignore missing %}
+						{% sw_include '@Storefront/storefront/page/product-detail/custom-fields/unit_sound_level_meters.html.twig' ignore missing %}
+
+						{% sw_include '@Storefront/storefront/page/product-detail/custom-fields/unit_wood_moisture_meter.html.twig' ignore missing %}
+						{% sw_include '@Storefront/storefront/page/product-detail/custom-fields/unit_laser_leveler.html.twig' ignore missing %}
+						{% sw_include '@Storefront/storefront/page/product-detail/custom-fields/unit_thermometer.html.twig' ignore missing %}
+
+						{% sw_include '@Storefront/storefront/page/product-detail/custom-fields/co2_meter.html.twig' ignore missing %}
+						{% sw_include '@Storefront/storefront/page/product-detail/custom-fields/mini_tachometer.html.twig' ignore missing %}
+						{% sw_include '@Storefront/storefront/page/product-detail/custom-fields/conductance_capacity_meter.html.twig' ignore missing %}
+
+						{% sw_include '@Storefront/storefront/page/product-detail/custom-fields/unit_thermal_imager.html.twig' ignore missing %}
+
+						{% sw_include '@Storefront/storefront/page/product-detail/custom-fields/unit_lightmeter.html.twig' ignore missing %}
+						{% sw_include '@Storefront/storefront/page/product-detail/custom-fields/cable_tester.html.twig' ignore missing %}
+
+						{% sw_include '@Storefront/storefront/page/product-detail/custom-fields/laser_meter.html.twig' ignore missing %}
+
+						{% sw_include '@Storefront/storefront/page/product-detail/custom-fields/insulation_resistance_tester.html.twig' ignore missing %}
+						{% sw_include '@Storefront/storefront/page/product-detail/custom-fields/unit_pcwork.html.twig' ignore missing %}
+						{% sw_include '@Storefront/storefront/page/product-detail/custom-fields/unit-pcenergy.html.twig' ignore missing %}
+
+
+
+						
+					</tbody>
+				  </table>
+				</div>
+			{% endblock %}
+
+		</div>
+	{% endblock %}
+{% endblock %}

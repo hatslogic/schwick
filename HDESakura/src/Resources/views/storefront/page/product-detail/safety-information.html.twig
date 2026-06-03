@@ -1,0 +1,17 @@
+{% sw_extends '@Storefront/storefront/utilities/offcanvas.html.twig' %}
+
+{% block utilities_offcanvas_content %}
+    {% block page_product_detail_safety_information_container %}
+        <div class="product-detail-safety-information tab-pane-container">
+            {% block page_product_detail_safety_information_title %}
+                <div class="h3 product-detail-safety-information-title">
+                    {{ "Safety Information" | trans }}
+                </div>
+            {% endblock %}
+            {% block page_product_detail_safety_information_content %}
+                <div>{{ "customFields.custom_gpsr1_sicherheitshinweise" | trans | sw_sanitize }}</div>
+            {% endblock %}
+        </div>
+    {% endblock %}
+{% endblock %}
+

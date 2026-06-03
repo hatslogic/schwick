@@ -1,0 +1,28 @@
+.navigation-flyout-content {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+.navigation-flyout-link {
+	margin: 0;
+	padding: 0;
+	line-height: 1.5;
+}
+
+.navigation-flyout-categories:not(.is-level-0) {
+	margin: 0;
+}
+
+.is-level-1 {
+    font-size: .9rem;
+}
+
+.navigation-flyout-categories.is-level-0 > .navigation-flyout-col {
+	margin-bottom: 1rem;
+	&::before {
+		border: none;
+	}
+}
+
+.navigation-flyout-bar {
+	display: none;
+}

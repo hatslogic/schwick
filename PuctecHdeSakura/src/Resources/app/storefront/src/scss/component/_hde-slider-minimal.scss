@@ -1,0 +1,33 @@
+//Styling for Minimalistic Slider for PucTec home page
+
+.product-slider  {
+  .product-slider-item {
+    .card-body {
+      padding-top: 0;
+
+
+      .product-name {
+        -webkit-line-clamp: none;
+        line-clamp: none;
+        height: 100%;
+        margin-bottom: 0;
+      }
+
+      .product-info.col {
+        padding: 0!important;
+
+        .product-price-info {
+          margin-top: 0;
+        }
+
+        .maxia-listing-price-table-spacer {
+          margin-top: 0;
+        }
+      }
+
+      .menge {
+        display:none;
+      }
+    }
+  }
+}

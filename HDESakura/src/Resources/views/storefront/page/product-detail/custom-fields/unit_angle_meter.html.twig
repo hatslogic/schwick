@@ -1,0 +1,133 @@
+{% block custom_fields_unit_angle_meter %}
+   
+
+{% if page.product.translated.customFields.zusatzfelder_unit_angle_meter_active == "Yes" %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_angle_meter_measurement_range %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_angle_meter_measurement_range"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_angle_meter_measurement_range|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_angle_meter_resolution %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_angle_meter_resolution"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_angle_meter_resolution|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_angle_meter_magnet_base %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_angle_meter_magnet_base"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_angle_meter_magnet_base|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_angle_meter_laser_indication %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_angle_meter_laser_indication"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_angle_meter_laser_indication|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+
+
+
+
+                {% if page.product.translated.customFields.zusatzfelder_unit_angle_meter_low_battery_indicator %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_angle_meter_low_battery_indicator"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_angle_meter_low_battery_indicator|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_angle_meter_low_battery_indicator|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_angle_meter_low_battery_indicator|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}
+
+
+                {% if page.product.translated.customFields.zusatzfelder_unit_angle_meter_relative_absolute %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_angle_meter_relative_absolute"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_angle_meter_relative_absolute|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_angle_meter_relative_absolute|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_angle_meter_relative_absolute|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}
+
+
+                {% if page.product.translated.customFields.zusatzfelder_unit_angle_meter_auto_power_off %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_angle_meter_auto_power_off"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_angle_meter_auto_power_off|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_angle_meter_auto_power_off|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_angle_meter_auto_power_off|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}
+
+
+{% if page.product.translated.customFields.zusatzfelder_unit_angle_meter_display %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_angle_meter_display"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_angle_meter_display|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+
+
+
+{% if page.product.translated.customFields.zusatzfelder_unit_angle_meter_power_supply %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_angle_meter_power_supply"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_angle_meter_power_supply|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+
+
+{% if page.product.weight %}
+      <tr>
+      <th>{{ "customFields.zusatzfelder_unit_angle_meter_weight"|trans }}:</th>      
+        <td>{{ page.product.weight|trans|sw_sanitize|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}kg</td>           
+      </tr>
+      {% endif %}
+
+      
+
+      {% if page.product.length %}
+      <tr>
+      <th>{{ "customFields.zusatzfelder_unit_angle_meter_size"|trans }}:</th>
+        <td>
+          {{ page.product.length|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+
+          {% if page.product.width %}
+             x {{ page.product.width|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+            {% if page.product.height %}
+              x {{ page.product.height|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+            {% endif %}
+
+          {% endif %}
+                  
+        </td>           
+      </tr>
+      {% endif %}
+
+
+
+
+
+{% endif %}
+
+
+{% endblock %}

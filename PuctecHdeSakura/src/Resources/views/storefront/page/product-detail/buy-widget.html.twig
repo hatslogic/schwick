@@ -1,0 +1,108 @@
+{% sw_extends '@Storefront/storefront/page/product-detail/buy-widget.html.twig' %}
+
+{% block page_product_detail_ordernumber_container %}	
+	<div class="table-responsive">
+	  <table class="table">
+	  	<tbody>
+	  		<tr>
+	  			<th>{{ "detail.productNumberLabel"|trans }}</th>
+	  			<td>{{ page.product.productNumber }}</td>
+	  		</tr>
+	  		<tr>
+	  			<th>{{ 'component.product.feature.label.manufacturerNumber' | trans }}</th>
+	  			<td>{{ page.product.manufacturerNumber }}</td>
+	  		</tr>
+	  		{% if page.product.ean is defined and page.product.ean is not null %}
+		  		<tr>
+		  			<th>{{ 'hde_ean' | trans }}</th>
+		  			<td>{{ page.product.ean }}</td>
+		  		</tr>
+	  		{% endif %}
+			{% if page.product.translated.customFields.zusatzfelder_unit_multimeter_active == "Yes" %}
+				{% if page.product.translated.customFields.zusatzfelder_unit_multimeter_dc_voltage %}
+					<tr>
+						<th>{{ "customFields.zusatzfelder_unit_multimeter_dc_voltage"|trans }}:</th>
+						<td>{{ page.product.translated.customFields.zusatzfelder_unit_multimeter_dc_voltage|trans|sw_sanitize }}</td>
+					</tr>
+				{% endif %}
+
+				{% if page.product.translated.customFields.zusatzfelder_unit_multimeter_AC_Voltage %}
+					<tr>
+						<th>{{ "customFields.zusatzfelder_unit_multimeter_AC_Voltage"|trans }}:</th>
+						<td>{{ page.product.translated.customFields.zusatzfelder_unit_multimeter_AC_Voltage|trans|sw_sanitize }}</td>
+					</tr>
+				{% endif %}
+
+				{% if page.product.translated.customFields.zusatzfelder_unit_multimeter_dc_current %}
+				<tr>
+					<th>{{ "customFields.zusatzfelder_unit_multimeter_dc_current"|trans }}:</th>
+					<td>{{ page.product.translated.customFields.zusatzfelder_unit_multimeter_dc_current|trans|sw_sanitize }}</td>
+				</tr>
+				{% endif %}
+
+				{% if page.product.translated.customFields.zusatzfelder_unit_multimeter_AC_Current %}
+				<tr>
+					<th>{{ "customFields.zusatzfelder_unit_multimeter_AC_Current"|trans }}:</th>
+					<td>{{ page.product.translated.customFields.zusatzfelder_unit_multimeter_AC_Current|trans|sw_sanitize }}</td>
+				</tr>
+				{% endif %}
+			{% endif %}
+	  	</tbody>
+	  </table>
+	</div>	
+
+	<div class="hde-product-detail-text2">
+        {{ "hde_product_detail_page_text2"|trans|raw }}
+    </div>
+{% endblock %}
+
+
+{% block page_product_detail_data_rich_snippet_price_currency %}
+	
+	{# {% if context.customer is null %} #}
+		{# hide meta price if not logged in #}
+	{#{% else %}	#}
+    	<meta itemprop="priceCurrency"
+        	  content="{{ context.currency.translated.shortName }}"/>
+    {#{% endif %} #}
+
+{% endblock %}
+
+
+{% block page_product_detail_data_rich_snippet_price_range %}
+
+<!-- page/product detail/buywidget meta price hidden -->
+
+    {% if page.product.calculatedPrices|length > 1 %}
+        {% set lowestPrice = false %}
+        {% set highestPrice = false %}
+
+        {% for price in page.product.calculatedPrices %}
+            {% if not lowestPrice or price.unitPrice < lowestPrice %}
+                {% set lowestPrice = price.unitPrice %}
+            {% endif %}
+            {% if not highestPrice or price.unitPrice > highestPrice %}
+                {% set highestPrice = price.unitPrice %}
+            {% endif %}
+        {% endfor %}
+
+
+		{#{% if context.customer is null %}#}
+			{# hide meta price if not logged in #}
+		{#{% else %}	#}
+	        <meta itemprop="lowPrice" content="{{ lowestPrice }}"/>
+	        <meta itemprop="highPrice" content="{{ highestPrice }}"/>
+	        <meta itemprop="offerCount" content="{{ page.product.calculatedPrices|length }}"/>
+		{#{% endif %}#}
+
+
+    {% endif %}
+{% endblock %}
+
+
+ {% block page_product_detail_tax %}	
+    
+    {{ parent() }}
+
+
+{% endblock %}

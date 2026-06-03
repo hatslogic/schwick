@@ -1,0 +1,41 @@
+{% sw_extends '@Storefront/storefront/component/buy-widget/buy-widget.html.twig' %}                    
+
+{% block buy_widget_data_rich_snippet_price_range %}
+
+    <!-- component/buywidget meta price hidden -->
+
+    {% if product.calculatedPrices|length > 1 %}
+        {% set lowestPrice = false %}
+        {% set highestPrice = false %}
+
+        {% for price in product.calculatedPrices %}
+            {% if not lowestPrice or price.unitPrice < lowestPrice %}
+                {% set lowestPrice = price.unitPrice %}
+            {% endif %}
+            {% if not highestPrice or price.unitPrice > highestPrice %}
+                {% set highestPrice = price.unitPrice %}
+            {% endif %}
+        {% endfor %}
+
+        {# {% if context.customer is null %} #}
+            {# hide meta price if not logged in #}
+        {#{% else %}  #}
+            <meta itemprop="lowPrice" content="{{ lowestPrice }}"/>
+            <meta itemprop="highPrice" content="{{ highestPrice }}"/>
+            <meta itemprop="offerCount" content="{{ product.calculatedPrices|length }}"/>
+        {#{% endif %}#}
+
+    {% endif %}
+{% endblock %}
+
+
+{% block buy_widget_data_rich_snippet_price_currency %}
+    {#{% if context.customer is null %}#}
+        {# hide meta price if not logged in #}
+    {#{% else %} #} 
+        <meta itemprop="priceCurrency"
+                              content="{{ context.currency.translated.shortName }}"/>
+    {#{% endif %} #}  
+
+
+{% endblock %}

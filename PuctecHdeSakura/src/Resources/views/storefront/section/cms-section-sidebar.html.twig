@@ -1,0 +1,25 @@
+{% sw_extends '@Storefront/storefront/section/cms-section-sidebar.html.twig' %}
+
+{% block section_sidebar_content %}
+
+    <div class="cms-section-sidebar-sidebar-content col-lg-5 col-xl-4">
+
+        {% for block in sidebarBlocks %}
+            {% block section_sidebar_content_block %}
+                {{ parent() }}
+            {% endblock %}
+        {% endfor %} 
+    </div>
+{% endblock %}
+
+{% block section_main_content %}
+
+    <div class="cms-section-sidebar-main-content col-lg-7 col-xl-8">
+
+        {% for block in mainContentBlocks %}
+            {% block section_main_content_block %}
+                {{ parent() }}
+            {% endblock %}
+        {% endfor %}
+    </div>
+{% endblock %}

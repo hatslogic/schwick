@@ -1,0 +1,30 @@
+{% block custom_fields_pcenergy %}
+	{% if product.customFields.zusatzfelder_pcenergy_aktiv == "Yes" %}
+		
+		{% if product.customFields.zusatzfelder_pcenergy_Ausgangspannung %}
+			<li>
+			{{ "customFields.zusatzfelder_pcenergy_Ausgangspannung"|trans }}: {{ product.customFields.zusatzfelder_pcenergy_Ausgangspannung|trans|sw_sanitize }}
+			</li>		
+		{% endif %}
+
+
+		{% if product.customFields.zusatzfelder_pcenergy_Ausgangsstrom %}
+			<li>
+			{{ "customFields.zusatzfelder_pcenergy_Ausgangsstrom"|trans }}: {{ product.customFields.zusatzfelder_pcenergy_Ausgangsstrom|trans|sw_sanitize  }}
+			</li>
+		{% endif %}
+
+
+		{% if product.customFields.zusatzfelder_pcenergy_Dichtheitsklasse %}
+			<li>
+			{{ "customFields.zusatzfelder_pcenergy_Dichtheitsklasse"|trans }}: {{ product.customFields.zusatzfelder_pcenergy_Dichtheitsklasse|trans|sw_sanitize }}
+			</li>
+		{% endif %}
+
+		{% if product.customFields.zusatzfelder_pcenergy_leistung %}
+			<li>
+			{{ "customFields.zusatzfelder_pcenergy_leistung"|trans }}: {{ product.customFields.zusatzfelder_pcenergy_leistung|trans|sw_sanitize }}
+			</li>
+		{% endif %}
+	{% endif %}
+{% endblock %}

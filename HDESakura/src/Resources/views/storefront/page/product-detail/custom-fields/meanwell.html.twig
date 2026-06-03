@@ -1,0 +1,269 @@
+{# MWEANWELL #}
+
+{% block custom_fields_meanwell %}
+
+	{% if page.product.translated.customFields.zusatzfelder_meanwell_active == "Yes" %}
+
+		{# different display for diameter #}
+
+		{% if page.product.translated.customFields.zusatzfelder_meanwell_size_is_diameter and page.product.translated.customFields.zusatzfelder_meanwell_size_is_diameter == 1 %}
+
+			{% if page.product.length %}
+			<tr>
+			<th>{{ "customFields.zusatzfelder_meanwell_size"|trans }}:</th>
+				<td>
+					Ø{{ page.product.length|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm										{% if page.product.width %}
+						 x {{ page.product.width|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+						{% if page.product.height %}
+							x {{ page.product.height|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+						{% endif %}
+
+					{% endif %}
+				</td>						
+			</tr>
+			{% endif %}			
+
+		{% else %}
+
+			{% if page.product.length %}
+			<tr>
+			<th>{{ "customFields.zusatzfelder_meanwell_size"|trans }}:</th>
+				<td>
+					{{ page.product.length|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+
+					{% if page.product.width %}
+						 x {{ page.product.width|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+						{% if page.product.height %}
+							x {{ page.product.height|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+						{% endif %}
+
+					{% endif %}
+									
+				</td>						
+			</tr>
+			{% endif %}
+
+		{% endif %}
+
+
+		{% if page.product.translated.customFields.zusatzfelder_meanwell_protection %}
+		<tr>
+		<th>{{ "customFields.zusatzfelder_meanwell_protection"|trans }}:</th>
+		{% if  page.product.translated.customFields.zusatzfelder_meanwell_protection|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_meanwell_protection|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_meanwell_protection|trans|sw_sanitize }}</td>	
+					{% endif %}		
+		</tr>
+		{% endif %}
+
+		{% if page.product.translated.customFields.zusatzfelder_meanwell_weight %}
+		<tr>
+		<th>{{ "customFields.zusatzfelder_meanwell_weight"|trans }}:</th>
+
+			<td>{{ page.product.translated.customFields.zusatzfelder_meanwell_weight|trans|sw_sanitize|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}kg</td>	
+					
+		</tr>
+		{% endif %}
+
+		{% if page.product.translated.customFields.zusatzfelder_meanwell_electtrical_connection_type %}
+		<tr>
+		<th>{{ "customFields.zusatzfelder_meanwell_electtrical_connection_type"|trans }}:</th>
+		{% if  page.product.translated.customFields.zusatzfelder_meanwell_electtrical_connection_type|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_meanwell_electtrical_connection_type|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_meanwell_electtrical_connection_type|trans|sw_sanitize }}</td>	
+					{% endif %}		
+		</tr>
+		{% endif %}
+
+		{% if page.product.translated.customFields.zusatzfelder_meanwell_installation %}
+		<tr>
+		<th>{{ "customFields.zusatzfelder_meanwell_installation"|trans }}:</th>
+		{% if  page.product.translated.customFields.zusatzfelder_meanwell_installation|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_meanwell_installation|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_meanwell_installation|trans|sw_sanitize }}</td>	
+					{% endif %}		
+		</tr>
+		{% endif %}
+
+		{% if page.product.translated.customFields.zusatzfelder_meanwell_number_of_outputs %}
+		<tr>
+		<th>{{ "customFields.zusatzfelder_meanwell_number_of_outputs"|trans }}:</th>
+			<td>{{ page.product.translated.customFields.zusatzfelder_meanwell_number_of_outputs|trans|sw_sanitize }}</td>	
+		</tr>
+		{% endif %}
+
+		{% if page.product.translated.customFields.zusatzfelder_meanwell_efficiency %}
+		<tr>
+		<th>{{ "customFields.zusatzfelder_meanwell_efficiency"|trans }}:</th>
+		{% if  page.product.translated.customFields.zusatzfelder_meanwell_efficiency|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_meanwell_efficiency|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_meanwell_efficiency|trans|sw_sanitize }}</td>	
+					{% endif %}		
+		</tr>
+		{% endif %}
+
+		{% if page.product.translated.customFields.zusatzfelder_meanwell_power_supplies_accessories_type %}
+		<tr>
+		<th>{{ "customFields.zusatzfelder_meanwell_power_supplies_accessories_type"|trans }}:</th>
+		{% if  page.product.translated.customFields.zusatzfelder_meanwell_power_supplies_accessories_type|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_meanwell_power_supplies_accessories_type|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_meanwell_power_supplies_accessories_type|trans|sw_sanitize }}</td>	
+					{% endif %}		
+		</tr>
+		{% endif %}
+
+		{% if page.product.translated.customFields.zusatzfelder_meanwell_case_type %}
+		<tr>
+		<th>{{ "customFields.zusatzfelder_meanwell_case_type"|trans }}:</th>
+		{% if  page.product.translated.customFields.zusatzfelder_meanwell_case_type|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_meanwell_case_type|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_meanwell_case_type|trans|sw_sanitize }}</td>	
+					{% endif %}		
+		</tr>
+		{% endif %}
+
+		{% if page.product.translated.customFields.zusatzfelder_meanwell_sealing_class %}
+		<tr>
+		<th>{{ "customFields.zusatzfelder_meanwell_sealing_class"|trans }}:</th>
+		{% if  page.product.translated.customFields.zusatzfelder_meanwell_sealing_class|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_meanwell_sealing_class|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_meanwell_sealing_class|trans|sw_sanitize }}</td>	
+					{% endif %}		
+		</tr>
+		{% endif %}
+
+		{% if page.product.translated.customFields.zusatzfelder_meanwell_output_current %}
+		<tr>
+		<th>{{ "customFields.zusatzfelder_meanwell_output_current"|trans }}:</th>
+		{% if  page.product.translated.customFields.zusatzfelder_meanwell_output_current|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_meanwell_output_current|trans|sw_sanitize  == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_meanwell_output_current|trans|sw_sanitize  }}</td>	
+					{% endif %}		
+		</tr>
+		{% endif %}
+
+		{% if page.product.translated.customFields.zusatzfelder_meanwell_output_voltage_range %}
+		<tr>
+		<th>{{ "customFields.zusatzfelder_meanwell_output_voltage_range"|trans }}:</th>
+		{% if  page.product.translated.customFields.zusatzfelder_meanwell_output_voltage_range|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_meanwell_output_voltage_range|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_meanwell_output_voltage_range|trans|sw_sanitize }}</td>	
+					{% endif %}		
+		</tr>
+		{% endif %}
+
+		{% if page.product.translated.customFields.zusatzfelder_meanwell_output_voltage %}
+		<tr>
+		<th>{{ "customFields.zusatzfelder_meanwell_output_voltage"|trans }}:</th>
+		{% if  page.product.translated.customFields.zusatzfelder_meanwell_output_voltage|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_meanwell_output_voltage|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_meanwell_output_voltage|trans|sw_sanitize }}</td>	
+					{% endif %}		
+		</tr>
+		{% endif %}
+
+		{% if page.product.translated.customFields.zusatzfelder_meanwell_power %}
+		<tr>
+		<th>{{ "customFields.zusatzfelder_meanwell_power"|trans }}:</th>
+		{% if  page.product.translated.customFields.zusatzfelder_meanwell_power|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_meanwell_power|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_meanwell_power|trans|sw_sanitize }}</td>	
+					{% endif %}		
+		</tr>
+		{% endif %}
+
+		{% if page.product.translated.customFields.zusatzfelder_meanwell_power_supply_characteristics %}
+		<tr>
+		<th>{{ "customFields.zusatzfelder_meanwell_power_supply_characteristics"|trans }}:</th>
+		{% if  page.product.translated.customFields.zusatzfelder_meanwell_power_supply_characteristics|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_meanwell_power_supply_characteristics|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_meanwell_power_supply_characteristics|trans|sw_sanitize }}</td>	
+					{% endif %}		
+		</tr>
+		{% endif %}
+
+		{% if page.product.translated.customFields.zusatzfelder_meanwell_application %}
+		<tr>
+		<th>{{ "customFields.zusatzfelder_meanwell_application"|trans }}:</th>
+		{% if  page.product.translated.customFields.zusatzfelder_meanwell_application|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_meanwell_application|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_meanwell_application|trans|sw_sanitize }}</td>	
+					{% endif %}		
+		</tr>
+		{% endif %}
+
+		{% if page.product.translated.customFields.zusatzfelder_meanwell_power_supply_type %}
+		<tr>
+		<th>{{ "customFields.zusatzfelder_meanwell_power_supply_type"|trans }}:</th>
+		{% if  page.product.translated.customFields.zusatzfelder_meanwell_power_supply_type|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_meanwell_power_supply_type|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_meanwell_power_supply_type|trans|sw_sanitize }}</td>	
+					{% endif %}		
+		</tr>
+		{% endif %}
+
+		{% if page.product.translated.customFields.zusatzfelder_meanwell_series %}
+		<tr>
+		<th>{{ "customFields.zusatzfelder_meanwell_series"|trans }}:</th>
+		{% if  page.product.translated.customFields.zusatzfelder_meanwell_series|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_meanwell_series|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_meanwell_series|trans|sw_sanitize }}</td>	
+					{% endif %}		
+		</tr>
+		{% endif %}
+
+		{% if page.product.translated.customFields.zusatzfelder_meanwell_hinweis %}
+		<tr>
+			<th>{{ "customFields.zusatzfelder_meanwell_hinweis"|trans }}:</th>
+			<td>{{ page.product.translated.customFields.zusatzfelder_meanwell_hinweis|trans|sw_sanitize }}</td>	
+		</tr>
+		{% endif %}
+
+ 
+	{% endif %}
+{% endblock %}

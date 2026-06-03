@@ -1,0 +1,31 @@
+{% sw_extends '@Storefront/storefront/component/address/address-form.html.twig' %}
+
+{#{% block component_address_form_country_select %}#}
+{#	{% if context.currentCustomerGroup.id == '28df66ad5b754d62be2ba02d5115decf' and context.customer is not null %}#}
+	   {#  <select class="country-select form-select{% if violationPath %} is-invalid{% endif %}"
+	            id="{{ idPrefix ~ prefix }}AddressCountry"
+	            name="{{ prefix }}[countryId]"
+	            required="required"
+	            data-initial-country-id="{{ initialCountryId }}">
+	        {% if not initialCountryId %}
+	            <option disabled="disabled"
+	                    value=""
+	                    selected="selected">
+	                {{ "address.countryPlaceholder"|trans|sw_sanitize }}
+	            </option>
+	        {% endif %}
+	        {% for country in page.countries %}
+	        	{% if country.id == 'edcd2f8760d74eaa9b864a1ced422262' %}
+		            <option selected="selected"
+		                    value="{{ country.id }}"
+		                    data-vat-id-required="{{ country.vatIdRequired }}">
+		                {{ country.translated.name }}{% if feature('FEATURE_NEXT_15707') and showNoShippingPostfix and not country.shippingAvailable %} {{ "address.countryPostfixNoShipping"|trans|sw_sanitize }}{% endif %}
+		            </option>
+	            {% endif %}
+	        {% endfor %}
+	    </select> #}
+{#	    {{ parent() }}#}
+{#	{% else %}#}
+{#		{{ parent() }}#}
+{#	{% endif %}#}
+{#{% endblock %}#}

@@ -1,0 +1,46 @@
+{% sw_extends '@Storefront/storefront/element/cms-element-product-description-reviews.html.twig' %}
+
+
+
+
+{% block element_product_description_reviews_tabs_navigation_review %}
+    {{ parent() }}
+
+
+{#    {% set product = page.product %}#}
+{#    {% set manufacturer = product.manufacturer %}#}
+
+{#    {% if manufacturer is defined and manufacturer is not null and manufacturer.translated.description is defined and manufacturer.translated.description is not null %}#}
+{#        <li class="nav-item">#}
+{#            <a class="nav-link product-detail-tab-navigation-link" id="hde-gpsr" data-bs-toggle="tab" data-offcanvas-tabs="true" href="#hde-gpsr-pane" role="tab" aria-controls="hde-gpsr-pane" aria-selected="true">#}
+{#                {{ "twt.detail.tabManufacturer.headlineManufacturer" | trans }}#}
+{#                <span class="product-detail-tab-navigation-icon">#}
+{#	                {% sw_icon 'arrow-medium-right' style {'pack':'solid'} %}#}
+{#	            </span>#}
+{#            </a>#}
+{#        </li>#}
+{#    {% endif %}#}
+
+{% endblock %}
+
+
+{#{% block element_product_description_reviews_tabs_content_review  %}#}
+{#    {{ parent() }}#}
+
+
+
+{#    {% set product = page.product %}#}
+{#    {% set manufacturer = product.manufacturer %}#}
+
+{#    {% if manufacturer is defined and manufacturer is not null and manufacturer.translated.description is defined and manufacturer.translated.description is not null %}#}
+{#        <div class="tab-pane fade show"#}
+{#             id="hde-gpsr-pane"#}
+{#             role="tabpanel"#}
+{#             aria-labelledby="hde-gpsr">#}
+{#            {% sw_include '@Storefront/storefront/hde/custom-tab.html.twig' with {#}
+{#                custom_tab_content: manufacturer.translated.description#}
+{#            } %}#}
+{#        </div>#}
+{#    {% endif %}#}
+
+{#{% endblock %}#}

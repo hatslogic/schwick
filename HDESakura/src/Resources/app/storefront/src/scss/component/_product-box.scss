@@ -1,0 +1,23 @@
+.product-box {
+	min-height:280px;
+}
+
+
+@include media-breakpoint-up(md) {
+	.product-variant-characteristics .product-variant-characteristics-text{
+		height:unset;
+	}
+
+	.product-variant-characteristics{
+		min-height:unset;
+	}
+
+	.product-details ul.p-0{
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
+}
+
+.hde-tech-info-add-list:empty{
+	display:none;
+}

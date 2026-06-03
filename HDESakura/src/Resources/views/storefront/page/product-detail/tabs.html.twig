@@ -1,0 +1,109 @@
+{% sw_extends '@Storefront/storefront/page/product-detail/tabs.html.twig' %}
+
+{% block page_product_detail_tabs_navigation_container %}
+    <ul class="nav nav-tabs product-detail-tab-navigation-list"
+        id="product-detail-tabs"
+        role="tablist">
+        {% block page_product_detail_tabs_navigation_description %}
+            {{ parent() }}
+        {% endblock %}
+
+        {% block page_product_detail_tabs_navigation_technical_data %}
+            <li class="nav-item">
+                <a class="nav-link product-detail-tab-navigation-link"
+                   id="technical-data-tab"
+                   data-bs-toggle="tab"
+                   data-offcanvas-tabs="true"
+                   href="#technical-data-tab-pane"
+                   role="tab"
+                   aria-controls="technical-data-tab-pane"
+                   aria-selected="true">
+                    {{ "hde_tech_data_title"|trans }}
+                    <span class="product-detail-tab-navigation-icon">
+						{% sw_icon 'arrow-medium-right' style {'pack':'solid'} %}
+					</span>
+                </a>
+            </li>
+        {% endblock %}
+
+        {% block page_product_detail_tabs_navigation_downloads %}
+            <li class="nav-item">
+                <a class="nav-link product-detail-tab-navigation-link"
+                   id="downloads-tab"
+                   data-bs-toggle="tab"
+                   data-offcanvas-tabs="true"
+                   href="#downloads-tab-pane"
+                   role="tab"
+                   aria-controls="downloads-tab-pane"
+                   aria-selected="true">
+                    {{ "hde_downloads_title" | trans }}
+                    <span class="product-detail-tab-navigation-icon">
+						{% sw_icon 'arrow-medium-right' style {'pack':'solid'} %}
+					</span>
+                </a>
+            </li>
+        {% endblock %}
+
+        {% block page_product_detail_tabs_navigation_review %}
+            {{ parent() }}
+        {% endblock %}
+
+        {% block page_product_detail_tabs_navigation_product_safety_information %}
+            <li class="nav-item">
+                <a class="nav-link product-detail-tab-navigation-link"
+                   id="product-safety-information-tab"
+                   data-bs-toggle="tab"
+                   data-offcanvas-tabs="true"
+                   href="#product-safety-information-tab-pane"
+                   role="tab"
+                   aria-controls="product-safety-information-tab-pane"
+                   aria-selected="true">
+                    {{ "hde_product_safety_information_title" | trans }}
+                    <span class="product-detail-tab-navigation-icon">
+						{% sw_icon 'arrow-medium-right' style {'pack':'solid'} %}
+					</span>
+                </a>
+            </li>
+        {% endblock %}
+
+    </ul>
+{% endblock %}
+
+{% block page_product_detail_tabs_content_container %}
+    <div class="tab-content">
+        {% block page_product_detail_tabs_content_description %}
+            {{ parent() }}
+        {% endblock %}
+
+        {% block page_product_detail_tabs_content_review %}
+            {{ parent() }}
+        {% endblock %}
+
+        {% block page_product_detail_tabs_content_technical_data %}
+            <div class="tab-pane fade show"
+                 id="technical-data-tab-pane"
+                 role="tabpanel"
+                 aria-labelledby="technical-data-tab">
+                {% sw_include '@Storefront/storefront/page/product-detail/technical-data.html.twig' %}
+            </div>
+        {% endblock %}
+
+        {% block page_product_detail_tabs_content_downloads %}
+            <div class="tab-pane fade show"
+                 id="downloads-tab-pane"
+                 role="tabpanel"
+                 aria-labelledby="downloads-tab">
+                {% sw_include '@Storefront/storefront/page/product-detail/downloads.html.twig' %}
+            </div>
+        {% endblock %}
+
+        {% block page_product_detail_tabs_content_product_safety_information %}
+            <div class="tab-pane fade show"
+                 id="product-safety-information-tab-pane"
+                 role="tabpanel"
+                 aria-labelledby="product-safety-information-tab">
+                {% sw_include '@Storefront/storefront/page/product-detail/product-safety-information.html.twig' %}
+            </div>
+        {% endblock %}
+    </div>
+{% endblock %}

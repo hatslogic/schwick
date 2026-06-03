@@ -1,0 +1,54 @@
+{% sw_extends '@Storefront/storefront/utilities/offcanvas.html.twig' %}
+
+
+{% block utilities_offcanvas_content %}
+    {% block page_product_detail_product_safety_information_container %}
+        {% if page.product.translated.customFields.custom_gpsr1_hersteller is defined and page.product.translated.customFields.custom_gpsr1_hersteller is not empty %}
+            {% block page_product_detail_manufacturer_container %}
+                <div class="product-detail-manufacturer tab-pane-container mb-5">
+                    {% block page_product_detail_manufacturer_title %}
+                        <div class="h3 product-detail-manufacturer-title">
+                            {{ "customFields.custom_gpsr1_hersteller" | trans | sw_sanitize }}
+                        </div>
+                    {% endblock %}
+                    {% block page_product_detail_manufacturer_content %}
+                        <div> {{ page.product.translated.customFields.custom_gpsr1_hersteller | raw }}</div>
+
+                    {% endblock %}
+                </div>
+            {% endblock %}
+        {% endif %}
+    {% endblock %}
+
+
+    {% block page_product_detail_responsible_person_container %}
+        {% if page.product.translated.customFields.custom_gpsr1_eu_person is defined and page.product.translated.customFields.custom_gpsr1_eu_person is not empty %}
+            <div class="product-detail-responsible-person tab-pane-container mb-5">
+                {% block page_product_detail_responsible_person_title %}
+                    <div class="h3 product-detail-responsible-person-title">
+                        {{ "customFields.custom_gpsr1_eu_person" | trans | sw_sanitize}}
+                    </div>
+                {% endblock %}
+                {% block page_product_detail_responsible_person_content %}
+                    <div>{{ page.product.translated.customFields.custom_gpsr1_eu_person | raw }}</div>
+                {% endblock %}
+            </div>
+        {% endif %}
+    {% endblock %}
+
+
+    {% block page_product_detail_safety_instructions_container %}
+        {% if page.product.translated.customFields.custom_gpsr1_sicherheitshinweise is defined and page.product.translated.customFields.custom_gpsr1_sicherheitshinweise is not empty %}
+        <div class="product-detail-safety-instructions tab-pane-container mb-5">
+            {% block page_product_detail_safety_instructions_title %}
+                <div class="h3 product-detail-safety-instructions-title">
+                    {{ "customFields.custom_gpsr1_sicherheitshinweise" | trans | sw_sanitize }}
+                </div>
+            {% endblock %}
+            {% block page_product_detail_safety_instructions_content %}
+                <div>{{ page.product.translated.customFields.custom_gpsr1_sicherheitshinweise | raw }}</div>
+            {% endblock %}
+        </div>
+        {% endif %}
+    {% endblock %}
+{% endblock %}

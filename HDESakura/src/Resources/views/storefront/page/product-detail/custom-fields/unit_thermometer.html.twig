@@ -1,0 +1,129 @@
+
+{% if page.product.translated.customFields.zusatzfelder_unit_thermometer_active == "Yes" %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_thermometer_temperature_range %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_thermometer_temperature_range"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_thermometer_temperature_range|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_thermometer_operating_temperature %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_thermometer_operating_temperature"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_thermometer_operating_temperature|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_thermometer_spectral_response %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_thermometer_spectral_response"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_thermometer_spectral_response|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_thermometer_laser_power %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_thermometer_laser_power"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_thermometer_laser_power|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+
+{% if page.product.translated.customFields.zusatzfelder_unit_thermometer_auto_power_off %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_thermometer_auto_power_off"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_thermometer_auto_power_off|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_thermometer_auto_power_off|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_thermometer_auto_power_off|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}{% if page.product.translated.customFields.zusatzfelder_unit_thermometer_data_hold %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_thermometer_data_hold"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_thermometer_data_hold|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_thermometer_data_hold|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_thermometer_data_hold|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}{% if page.product.translated.customFields.zusatzfelder_unit_thermometer_low_battery_indication %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_thermometer_low_battery_indication"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_thermometer_low_battery_indication|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_thermometer_low_battery_indication|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_thermometer_low_battery_indication|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}{% if page.product.translated.customFields.zusatzfelder_unit_thermometer_max_min_function %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_thermometer_max_min_function"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_thermometer_max_min_function|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_thermometer_max_min_function|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_thermometer_max_min_function|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}
+
+
+
+
+
+{% if page.product.translated.customFields.zusatzfelder_unit_thermometer_display_size %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_thermometer_display_size"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_thermometer_display_size|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+
+{% if page.product.translated.customFields.zusatzfelder_unit_thermometer_power_supply %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_thermometer_power_supply"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_thermometer_power_supply|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+
+
+      {% if page.product.weight %}
+      <tr>
+      <th>{{ "customFields.zusatzfelder_unit_thermometer_weight"|trans }}:</th>      
+        <td>{{ page.product.weight|trans|sw_sanitize|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}kg</td>           
+      </tr>
+      {% endif %}
+
+      
+
+      {% if page.product.length %}
+      <tr>
+      <th>{{ "customFields.zusatzfelder_unit_thermometer_size"|trans }}:</th>
+        <td>
+          {{ page.product.length|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+
+          {% if page.product.width %}
+             x {{ page.product.width|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+            {% if page.product.height %}
+              x {{ page.product.height|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+            {% endif %}
+
+          {% endif %}
+                  
+        </td>           
+      </tr>
+      {% endif %}
+
+
+
+{% endif %}

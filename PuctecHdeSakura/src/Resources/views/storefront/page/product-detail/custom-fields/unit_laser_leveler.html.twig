@@ -1,0 +1,102 @@
+
+{% if page.product.translated.customFields.zusatzfelder_unit_laser_leveler_active == "Yes" %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_laser_leveler_operating_distance %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_laser_leveler_operating_distance"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_laser_leveler_operating_distance|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_laser_leveler_laser_lines %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_laser_leveler_laser_lines"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_laser_leveler_laser_lines|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_laser_leveler_laser_class %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_laser_leveler_laser_class"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_laser_leveler_laser_class|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_laser_leveler_laser_type %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_laser_leveler_laser_type"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_laser_leveler_laser_type|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_laser_leveler_light_source %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_laser_leveler_light_source"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_laser_leveler_light_source|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_laser_leveler_laser_wavelenght %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_laser_leveler_laser_wavelenght"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_laser_leveler_laser_wavelenght|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_laser_leveler_accuracy %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_laser_leveler_accuracy"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_laser_leveler_accuracy|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_laser_leveler_self_leveling_range %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_laser_leveler_self_leveling_range"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_laser_leveler_self_leveling_range|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_laser_leveler_self_leveling_time %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_laser_leveler_self_leveling_time"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_laser_leveler_self_leveling_time|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_laser_leveler_power_supply %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_laser_leveler_power_supply"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_laser_leveler_power_supply|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+      {% if page.product.weight %}
+      <tr>
+      <th>{{ "customFields.zusatzfelder_unit_laser_leveler_weight"|trans }}:</th>      
+        <td>{{ page.product.weight|trans|sw_sanitize|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}kg</td>           
+      </tr>
+      {% endif %}
+
+      
+
+      {% if page.product.length %}
+      <tr>
+      <th>{{ "customFields.zusatzfelder_unit_laser_leveler_size"|trans }}:</th>
+        <td>
+          {{ page.product.length|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+
+          {% if page.product.width %}
+             x {{ page.product.width|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+            {% if page.product.height %}
+              x {{ page.product.height|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+            {% endif %}
+
+          {% endif %}
+                  
+        </td>           
+      </tr>
+      {% endif %}
+
+
+{% endif %}

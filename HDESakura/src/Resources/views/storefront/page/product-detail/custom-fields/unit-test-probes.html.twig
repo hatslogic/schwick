@@ -1,0 +1,51 @@
+
+
+{# UNIT TEST PROBES #}
+
+{% block custom_fields_unit_test_probes %}
+
+	{% if page.product.translated.customFields.zusatzfelder_unit_test_probes_active == "Yes" %}
+
+		{% if page.product.translated.customFields.zusatzfelder_unit_test_probes_leads_length %}
+		<tr>
+		<th>{{ "customFields.zusatzfelder_unit_test_probes_leads_length"|trans }}:</th>
+		{% if    page.product.translated.customFields.zusatzfelder_unit_test_probes_leads_length|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_unit_test_probes_leads_length|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_unit_test_probes_leads_length|trans|sw_sanitize }}</td>	
+					{% endif %}	
+		</tr>
+		{% endif %}
+
+		{% if page.product.translated.customFields.zusatzfelder_unit_test_probes_tip_length %}
+		<tr>
+		<th>{{ "customFields.zusatzfelder_unit_test_probes_tip_length"|trans }}:</th>
+		{% if    page.product.translated.customFields.zusatzfelder_unit_test_probes_tip_length|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_unit_test_probes_tip_length|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_unit_test_probes_tip_length|trans|sw_sanitize }}</td>	
+					{% endif %}	
+		</tr>
+		{% endif %}
+
+		{% if page.product.translated.customFields.zusatzfelder_unit_test_probes_safety_level %}
+		<tr>
+		<th>{{ "customFields.zusatzfelder_unit_test_probes_safety_level"|trans }}:</th>
+		{% if    page.product.translated.customFields.zusatzfelder_unit_test_probes_safety_level|trans|sw_sanitize  == 1 %}
+							<td>✓</td>
+					{% elseif page.product.translated.customFields.zusatzfelder_unit_test_probes_safety_level|trans|sw_sanitize == 0 %}
+							<td>✗</td>
+					{% else	%}	
+							<td>{{ page.product.translated.customFields.zusatzfelder_unit_test_probes_safety_level|trans|sw_sanitize }}</td>	
+					{% endif %}	
+		</tr>
+		{% endif %}
+
+	{% endif %}
+
+{% endblock %}
+

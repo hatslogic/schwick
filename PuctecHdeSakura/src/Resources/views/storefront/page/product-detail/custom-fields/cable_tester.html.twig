@@ -1,0 +1,192 @@
+{% block custom_fields_unit_cable_tester %}
+        {% if page.product.translated.customFields.zusatzfelder_unit_cable_tester_active == "Yes" %}
+                {% if page.product.translated.customFields.zusatzfelder_unit_cable_tester_auto_power_off %}
+                <tr>
+                    <th>{{ "customFields.zusatzfelder_unit_cable_tester_auto_power_off"|trans }}:</th>
+                    {% if page.product.translated.customFields.zusatzfelder_unit_cable_tester_auto_power_off|trans|sw_sanitize == 1 %}
+                    <td>✓</td>
+                    {% elseif page.product.translated.customFields.zusatzfelder_unit_cable_tester_auto_power_off|trans|sw_sanitize == 0 %}
+                    <td>✗</td>
+                    {% else %}
+                    <td>{{ page.product.translated.customFields.zusatzfelder_unit_cable_tester_auto_power_off|trans|sw_sanitize }}</td>
+                    {% endif %}
+                </tr>
+                {% endif %}
+                {% if page.product.translated.customFields.zusatzfelder_unit_cable_tester_conducting_test %}
+                <tr>
+                    <th>{{ "customFields.zusatzfelder_unit_cable_tester_conducting_test"|trans }}:</th>
+                    {% if page.product.translated.customFields.zusatzfelder_unit_cable_tester_conducting_test|trans|sw_sanitize == 1 %}
+                    <td>✓</td>
+                    {% elseif page.product.translated.customFields.zusatzfelder_unit_cable_tester_conducting_test|trans|sw_sanitize == 0 %}
+                    <td>✗</td>
+                    {% else %}
+                    <td>{{ page.product.translated.customFields.zusatzfelder_unit_cable_tester_conducting_test|trans|sw_sanitize }}</td>
+                    {% endif %}
+                </tr>
+                {% endif %}
+                {% if page.product.translated.customFields.zusatzfelder_unit_cable_tester_crossed_test %}
+                <tr>
+                    <th>{{ "customFields.zusatzfelder_unit_cable_tester_crossed_test"|trans }}:</th>
+                    {% if page.product.translated.customFields.zusatzfelder_unit_cable_tester_crossed_test|trans|sw_sanitize == 1 %}
+                    <td>✓</td>
+                    {% elseif page.product.translated.customFields.zusatzfelder_unit_cable_tester_crossed_test|trans|sw_sanitize == 0 %}
+                    <td>✗</td>
+                    {% else %}
+                    <td>{{ page.product.translated.customFields.zusatzfelder_unit_cable_tester_crossed_test|trans|sw_sanitize }}</td>
+                    {% endif %}
+                </tr>
+                {% endif %}
+                {% if page.product.translated.customFields.zusatzfelder_unit_cable_tester_fast_test %}
+                <tr>
+                    <th>{{ "customFields.zusatzfelder_unit_cable_tester_fast_test"|trans }}:</th>
+                    {% if page.product.translated.customFields.zusatzfelder_unit_cable_tester_fast_test|trans|sw_sanitize == 1 %}
+                    <td>✓</td>
+                    {% elseif page.product.translated.customFields.zusatzfelder_unit_cable_tester_fast_test|trans|sw_sanitize == 0 %}
+                    <td>✗</td>
+                    {% else %}
+                    <td>{{ page.product.translated.customFields.zusatzfelder_unit_cable_tester_fast_test|trans|sw_sanitize }}</td>
+                    {% endif %}
+                </tr>
+                {% endif %}
+                {% if page.product.translated.customFields.zusatzfelder_unit_cable_tester_open_circuit_test %}
+                <tr>
+                    <th>{{ "customFields.zusatzfelder_unit_cable_tester_open_circuit_test"|trans }}:</th>
+                    {% if page.product.translated.customFields.zusatzfelder_unit_cable_tester_open_circuit_test|trans|sw_sanitize == 1 %}
+                    <td>✓</td>
+                    {% elseif page.product.translated.customFields.zusatzfelder_unit_cable_tester_open_circuit_test|trans|sw_sanitize == 0 %}
+                    <td>✗</td>
+                    {% else %}
+                    <td>{{ page.product.translated.customFields.zusatzfelder_unit_cable_tester_open_circuit_test|trans|sw_sanitize }}</td>
+                    {% endif %}
+                </tr>
+                {% endif %}
+                {% if page.product.translated.customFields.zusatzfelder_unit_cable_tester_operating_humidty %}
+                <tr>
+                    <th>{{ "customFields.zusatzfelder_unit_cable_tester_operating_humidty"|trans }}:</th>
+                    {% if page.product.translated.customFields.zusatzfelder_unit_cable_tester_operating_humidty|trans|sw_sanitize == 1 %}
+                    <td>✓</td>
+                    {% elseif page.product.translated.customFields.zusatzfelder_unit_cable_tester_operating_humidty|trans|sw_sanitize == 0 %}
+                    <td>✗</td>
+                    {% else %}
+                    <td>{{ page.product.translated.customFields.zusatzfelder_unit_cable_tester_operating_humidty|trans|sw_sanitize }}</td>
+                    {% endif %}
+                </tr>
+                {% endif %}
+                {% if page.product.translated.customFields.zusatzfelder_unit_cable_tester_operating_temperature %}
+                <tr>
+                    <th>{{ "customFields.zusatzfelder_unit_cable_tester_operating_temperature"|trans }}:</th>
+                    {% if page.product.translated.customFields.zusatzfelder_unit_cable_tester_operating_temperature|trans|sw_sanitize == 1 %}
+                    <td>✓</td>
+                    {% elseif page.product.translated.customFields.zusatzfelder_unit_cable_tester_operating_temperature|trans|sw_sanitize == 0 %}
+                    <td>✗</td>
+                    {% else %}
+                    <td>{{ page.product.translated.customFields.zusatzfelder_unit_cable_tester_operating_temperature|trans|sw_sanitize }}</td>
+                    {% endif %}
+                </tr>
+                {% endif %}
+                {% if page.product.translated.customFields.zusatzfelder_unit_cable_tester_power_supply %}
+                <tr>
+                    <th>{{ "customFields.zusatzfelder_unit_cable_tester_power_supply"|trans }}:</th>
+                    {% if page.product.translated.customFields.zusatzfelder_unit_cable_tester_power_supply|trans|sw_sanitize == 1 %}
+                    <td>✓</td>
+                    {% elseif page.product.translated.customFields.zusatzfelder_unit_cable_tester_power_supply|trans|sw_sanitize == 0 %}
+                    <td>✗</td>
+                    {% else %}
+                    <td>{{ page.product.translated.customFields.zusatzfelder_unit_cable_tester_power_supply|trans|sw_sanitize }}</td>
+                    {% endif %}
+                </tr>
+                {% endif %}
+                {% if page.product.translated.customFields.zusatzfelder_unit_cable_tester_short_circuit_test %}
+                <tr>
+                    <th>{{ "customFields.zusatzfelder_unit_cable_tester_short_circuit_test"|trans }}:</th>
+                    {% if page.product.translated.customFields.zusatzfelder_unit_cable_tester_short_circuit_test|trans|sw_sanitize == 1 %}
+                    <td>✓</td>
+                    {% elseif page.product.translated.customFields.zusatzfelder_unit_cable_tester_short_circuit_test|trans|sw_sanitize == 0 %}
+                    <td>✗</td>
+                    {% else %}
+                    <td>{{ page.product.translated.customFields.zusatzfelder_unit_cable_tester_short_circuit_test|trans|sw_sanitize }}</td>
+                    {% endif %}
+                </tr>
+                {% endif %}
+                {% if page.product.translated.customFields.zusatzfelder_unit_cable_tester_size %}
+                <tr>
+                    <th>{{ "customFields.zusatzfelder_unit_cable_tester_size"|trans }}:</th>
+                    {% if page.product.translated.customFields.zusatzfelder_unit_cable_tester_size|trans|sw_sanitize == 1 %}
+                    <td>✓</td>
+                    {% elseif page.product.translated.customFields.zusatzfelder_unit_cable_tester_size|trans|sw_sanitize == 0 %}
+                    <td>✗</td>
+                    {% else %}
+                    <td>{{ page.product.translated.customFields.zusatzfelder_unit_cable_tester_size|trans|sw_sanitize }}</td>
+                    {% endif %}
+                </tr>
+                {% endif %}
+                {% if page.product.translated.customFields.zusatzfelder_unit_cable_tester_slow_test %}
+                <tr>
+                    <th>{{ "customFields.zusatzfelder_unit_cable_tester_slow_test"|trans }}:</th>
+                    {% if page.product.translated.customFields.zusatzfelder_unit_cable_tester_slow_test|trans|sw_sanitize == 1 %}
+                    <td>✓</td>
+                    {% elseif page.product.translated.customFields.zusatzfelder_unit_cable_tester_slow_test|trans|sw_sanitize == 0 %}
+                    <td>✗</td>
+                    {% else %}
+                    <td>{{ page.product.translated.customFields.zusatzfelder_unit_cable_tester_slow_test|trans|sw_sanitize }}</td>
+                    {% endif %}
+                </tr>
+                {% endif %}
+                {% if page.product.translated.customFields.zusatzfelder_unit_cable_tester_storage_humidity %}
+                <tr>
+                    <th>{{ "customFields.zusatzfelder_unit_cable_tester_storage_humidity"|trans }}:</th>
+                    {% if page.product.translated.customFields.zusatzfelder_unit_cable_tester_storage_humidity|trans|sw_sanitize == 1 %}
+                    <td>✓</td>
+                    {% elseif page.product.translated.customFields.zusatzfelder_unit_cable_tester_storage_humidity|trans|sw_sanitize == 0 %}
+                    <td>✗</td>
+                    {% else %}
+                    <td>{{ page.product.translated.customFields.zusatzfelder_unit_cable_tester_storage_humidity|trans|sw_sanitize }}</td>
+                    {% endif %}
+                </tr>
+                {% endif %}
+                {% if page.product.translated.customFields.zusatzfelder_unit_cable_tester_storage_temperature %}
+                <tr>
+                    <th>{{ "customFields.zusatzfelder_unit_cable_tester_storage_temperature"|trans }}:</th>
+                    {% if page.product.translated.customFields.zusatzfelder_unit_cable_tester_storage_temperature|trans|sw_sanitize == 1 %}
+                    <td>✓</td>
+                    {% elseif page.product.translated.customFields.zusatzfelder_unit_cable_tester_storage_temperature|trans|sw_sanitize == 0 %}
+                    <td>✗</td>
+                    {% else %}
+                    <td>{{ page.product.translated.customFields.zusatzfelder_unit_cable_tester_storage_temperature|trans|sw_sanitize }}</td>
+                    {% endif %}
+                </tr>
+                {% endif %}
+                {% if page.product.translated.customFields.zusatzfelder_unit_cable_tester_weight %}
+                <tr>
+                    <th>{{ "customFields.zusatzfelder_unit_cable_tester_weight"|trans }}:</th>
+                    {% if page.product.translated.customFields.zusatzfelder_unit_cable_tester_weight|trans|sw_sanitize == 1 %}
+                    <td>✓</td>
+                    {% elseif page.product.translated.customFields.zusatzfelder_unit_cable_tester_weight|trans|sw_sanitize == 0 %}
+                    <td>✗</td>
+                    {% else %}
+                    <td>{{ page.product.translated.customFields.zusatzfelder_unit_cable_tester_weight|trans|sw_sanitize }}</td>
+                    {% endif %}
+                </tr>
+                {% endif %}
+                        {% if page.product.weight %}
+                        <tr>
+                            <th>{{ "customFields.zusatzfelder_unit_cable_tester_weight"|trans }}:</th>
+                            <td>{{ page.product.weight|trans|sw_sanitize|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}kg</td>
+                        </tr>
+                        {% endif %}
+                {% if page.product.length %}
+                <tr>
+                    <th>{{ "customFields.zusatzfelder_unit_cable_tester_size"|trans }}:</th>
+                    <td>
+                        {{ page.product.length|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+                        {% if page.product.width %}
+                                x {{ page.product.width|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+                                {% if page.product.height %}
+                                        x {{ page.product.height|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+                                {% endif %}
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endif %}
+        {% endif %}
+{% endblock %}

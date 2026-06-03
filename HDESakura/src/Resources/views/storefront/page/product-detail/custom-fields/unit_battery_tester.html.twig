@@ -1,0 +1,200 @@
+{% block custom_fields_unit_battery_tester %}
+
+
+
+{% if page.product.translated.customFields.zusatzfelder_unit_battery_tester_active == "Yes" %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_battery_tester_12v_battery_test %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_battery_tester_12v_battery_test"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_battery_tester_12v_battery_test|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_battery_tester_12v_24v_cranking_system_test %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_battery_tester_12v_24v_cranking_system_test"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_battery_tester_12v_24v_cranking_system_test|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_battery_tester_12v_24v_charging_system_test %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_battery_tester_12v_24v_charging_system_test"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_battery_tester_12v_24v_charging_system_test|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_battery_tester_battery_test %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_battery_tester_battery_test"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_battery_tester_battery_test|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_battery_tester_battery_capacity %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_battery_tester_battery_capacity"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_battery_tester_battery_capacity|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_battery_tester_battery_standard_and_range %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_battery_tester_battery_standard_and_range"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_battery_tester_battery_standard_and_range|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+
+
+
+{% if page.product.translated.customFields.zusatzfelder_unit_battery_tester_over_voltage_protection %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_battery_tester_over_voltage_protection"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_battery_tester_over_voltage_protection|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_battery_tester_over_voltage_protection|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_battery_tester_over_voltage_protection|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}
+
+                {% if page.product.translated.customFields.zusatzfelder_unit_battery_tester_reverse_connection_protection %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_battery_tester_reverse_connection_protection"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_battery_tester_reverse_connection_protection|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_battery_tester_reverse_connection_protection|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_battery_tester_reverse_connection_protection|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}
+
+                {% if page.product.translated.customFields.zusatzfelder_unit_battery_tester_a_prompt_of_poor_contact %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_battery_tester_a_prompt_of_poor_contact"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_battery_tester_a_prompt_of_poor_contact|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_battery_tester_a_prompt_of_poor_contact|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_battery_tester_a_prompt_of_poor_contact|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}
+
+                {% if page.product.translated.customFields.zusatzfelder_unit_battery_tester_battery_status_display %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_battery_tester_battery_status_display"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_battery_tester_battery_status_display|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_battery_tester_battery_status_display|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_battery_tester_battery_status_display|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}
+
+
+                {% if page.product.translated.customFields.zusatzfelder_unit_battery_tester_battery_internal_resistance_display %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_battery_tester_battery_internal_resistance_display"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_battery_tester_battery_internal_resistance_display|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_battery_tester_battery_internal_resistance_display|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_battery_tester_battery_internal_resistance_display|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}
+
+
+                {% if page.product.translated.customFields.zusatzfelder_unit_battery_tester_printing_function %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_battery_tester_printing_function"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_battery_tester_printing_function|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_battery_tester_printing_function|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_battery_tester_printing_function|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}
+
+
+                                {% if page.product.translated.customFields.zusatzfelder_unit_battery_tester_usb %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_battery_tester_usb"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_battery_tester_usb|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_battery_tester_usb|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_battery_tester_usb|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_battery_tester_display_size %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_battery_tester_display_size"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_battery_tester_display_size|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+
+{% if page.product.translated.customFields.zusatzfelder_unit_battery_tester_power_supply %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_battery_tester_power_supply"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_battery_tester_power_supply|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+
+
+
+      {% if page.product.weight %}
+      <tr>
+      <th>{{ "customFields.zusatzfelder_unit_battery_tester_weight"|trans }}:</th>      
+        <td>{{ page.product.weight|trans|sw_sanitize|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}kg</td>           
+      </tr>
+      {% endif %}
+
+      
+
+      {% if page.product.length %}
+      <tr>
+      <th>{{ "customFields.zusatzfelder_unit_battery_tester_size"|trans }}:</th>
+        <td>
+          {{ page.product.length|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+
+          {% if page.product.width %}
+             x {{ page.product.width|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+            {% if page.product.height %}
+              x {{ page.product.height|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+            {% endif %}
+
+          {% endif %}
+                  
+        </td>           
+      </tr>
+      {% endif %}
+
+
+
+
+
+
+{% endif %}
+
+
+
+{% endblock %}

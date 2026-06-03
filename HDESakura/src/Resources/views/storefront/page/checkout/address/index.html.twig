@@ -1,0 +1,26 @@
+{% sw_extends '@Storefront/storefront/page/checkout/address/index.html.twig' %}
+
+{% block page_checkout_address_login %}
+    {#
+    <div class="show" id="loginCollapse">
+        {% block page_checkout_address_login_card %}
+            {% sw_include '@Storefront/storefront/component/account/login.html.twig' %}
+        {% endblock %}
+    </div>
+    <div>    	
+        {{ "hde_top_bar_link2"|trans|raw }}        
+    </div>
+    #}
+
+    {{ parent() }}
+
+{% endblock %}
+
+
+{% block page_checkout_address_register %}
+
+
+    {{ parent() }}
+
+
+{% endblock %}

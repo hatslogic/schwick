@@ -1,0 +1,24 @@
+#top-bar-announcement {
+	background-color: $sw-color-brand-primary;
+	color: white;
+}
+
+.topbar-service-menu-list {
+	a {
+		color: $sw-text-color;
+		&:hover {
+			color: $sw-color-brand-primary;
+		}
+	}
+}
+
+@include media-breakpoint-down(md) {
+	/*
+	.header-search-col .row.d-flex{
+		flex-direction: column;
+	}*/	
+
+	.hde-top-bar-link{
+		display: none;
+	}
+}

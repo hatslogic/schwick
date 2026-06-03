@@ -1,0 +1,159 @@
+{% block custom_fields_unit_laser_meter %}
+   												  
+		{% if page.product.translated.customFields.zusatzfelder_unit_laser_meter_active == "Yes" %}
+
+
+
+{% if page.product.translated.customFields.zusatzfelder_unit_laser_meter_accuracy %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_laser_meter_accuracy"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_laser_meter_accuracy|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_laser_meter_accuracy|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_laser_meter_accuracy|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}
+{% if page.product.translated.customFields.zusatzfelder_unit_laser_meter_auto_laser_off %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_laser_meter_auto_laser_off"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_laser_meter_auto_laser_off|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_laser_meter_auto_laser_off|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_laser_meter_auto_laser_off|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}
+{% if page.product.translated.customFields.zusatzfelder_unit_laser_meter_auto_power_off %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_laser_meter_auto_power_off"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_laser_meter_auto_power_off|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_laser_meter_auto_power_off|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_laser_meter_auto_power_off|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}
+{% if page.product.translated.customFields.zusatzfelder_unit_laser_meter_continious_measurement %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_laser_meter_continious_measurement"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_laser_meter_continious_measurement|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_laser_meter_continious_measurement|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_laser_meter_continious_measurement|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}
+{% if page.product.translated.customFields.zusatzfelder_unit_laser_meter_laser_class %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_laser_meter_laser_class"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_laser_meter_laser_class|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_laser_meter_laser_class|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_laser_meter_laser_class|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}
+{% if page.product.translated.customFields.zusatzfelder_unit_laser_meter_laser_type %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_laser_meter_laser_type"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_laser_meter_laser_type|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_laser_meter_laser_type|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_laser_meter_laser_type|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}
+{% if page.product.translated.customFields.zusatzfelder_unit_laser_meter_min_max_function %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_laser_meter_min_max_function"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_laser_meter_min_max_function|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_laser_meter_min_max_function|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_laser_meter_min_max_function|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}
+{% if page.product.translated.customFields.zusatzfelder_unit_laser_meter_power_supply %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_laser_meter_power_supply"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_laser_meter_power_supply|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_laser_meter_power_supply|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_laser_meter_power_supply|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}
+{% if page.product.translated.customFields.zusatzfelder_unit_laser_meter_range %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_laser_meter_range"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_laser_meter_range|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_laser_meter_range|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_laser_meter_range|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}
+{% if page.product.translated.customFields.zusatzfelder_unit_laser_meter_single_measurement %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_laser_meter_single_measurement"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_laser_meter_single_measurement|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_laser_meter_single_measurement|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_laser_meter_single_measurement|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}
+
+
+			{% if page.product.weight %}
+			<tr>
+			<th>{{ "customFields.zusatzfelder_unit_laser_meter_weight"|trans }}:</th>			
+				<td>{{ page.product.weight|trans|sw_sanitize|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}kg</td>						
+			</tr>
+			{% endif %}
+
+			
+
+			{% if page.product.length %}
+			<tr>
+			<th>{{ "customFields.zusatzfelder_unit_laser_meter_size"|trans }}:</th>
+				<td>
+					{{ page.product.length|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+
+					{% if page.product.width %}
+						 x {{ page.product.width|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+						{% if page.product.height %}
+							x {{ page.product.height|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+						{% endif %}
+
+					{% endif %}
+									
+				</td>						
+			</tr>
+			{% endif %}
+
+
+        {% endif %}
+
+{% endblock %}

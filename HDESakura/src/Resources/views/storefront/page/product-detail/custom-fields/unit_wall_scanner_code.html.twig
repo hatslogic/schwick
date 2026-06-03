@@ -1,0 +1,89 @@
+
+
+
+{% if page.product.translated.customFields.zusatzfelder_unit_wall_scanner_active == "Yes" %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_wall_scanner_detect_principle %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_wall_scanner_detect_principle"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_wall_scanner_detect_principle|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_wall_scanner_detect %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_wall_scanner_detect"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_wall_scanner_detect|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_wall_scanner_metal_scan_depth %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_wall_scanner_metal_scan_depth"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_wall_scanner_metal_scan_depth|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_wall_scanner_stud_scan_depth %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_wall_scanner_stud_scan_depth"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_wall_scanner_stud_scan_depth|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_wall_scanner_ac_electric_wire_depth %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_wall_scanner_ac_electric_wire_depth"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_wall_scanner_ac_electric_wire_depth|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_wall_scanner_accuracy %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_wall_scanner_accuracy"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_wall_scanner_accuracy|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_wall_scanner_power_supply %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_wall_scanner_power_supply"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_wall_scanner_power_supply|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+
+
+
+
+{% if page.product.weight %}
+      <tr>
+      <th>{{ "customFields.zusatzfelder_unit_wall_scanner_weight"|trans }}:</th>      
+        <td>{{ page.product.weight|trans|sw_sanitize|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}kg</td>           
+      </tr>
+      {% endif %}
+
+      
+
+      {% if page.product.length %}
+      <tr>
+      <th>{{ "customFields.zusatzfelder_unit_wall_scanner_size"|trans }}:</th>
+        <td>
+          {{ page.product.length|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+
+          {% if page.product.width %}
+             x {{ page.product.width|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+            {% if page.product.height %}
+              x {{ page.product.height|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+            {% endif %}
+
+          {% endif %}
+                  
+        </td>           
+      </tr>
+      {% endif %}
+
+
+
+{% endif %}
+

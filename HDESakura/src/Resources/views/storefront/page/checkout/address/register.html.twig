@@ -1,0 +1,14 @@
+{% sw_extends '@Storefront/storefront/component/account/register.html.twig' %}
+
+
+{% block page_checkout_register_personal_guest_input %}
+    <input type="checkbox"
+           class="form-check-input"
+           name="createCustomerAccount"
+           value="false"
+           id="personalGuest"
+           checked="checked"
+           data-form-field-toggle="false"
+           data-form-field-toggle-target=".js-form-field-toggle-guest-mode"
+           data-form-field-toggle-value="false">
+{% endblock %}

@@ -1,0 +1,39 @@
+{% sw_extends '@Storefront/storefront/layout/header/header.html.twig' %}
+
+    {% block layout_top_bar %}
+        {{ parent() }}
+    {% endblock %}
+
+{% block layout_header_search %}
+    <div class="col-12 order-2 col-sm order-sm-1 header-search-col">
+        <div class="row d-flex align-items-center justify-content-center">
+        	{#
+            <span class="hde-top-bar-link">
+                {{ "hde_top_bar_link1"|trans|raw }}
+            </span>
+            #}
+            <div class="col-sm-auto d-none d-sm-block d-lg-none">
+                {% block layout_header_navigation_toggle_tablet %}
+                    <div class="nav-main-toggle">
+                        {% block layout_header_navigation_toggle_tablet_button %}
+                            <button class="btn nav-main-toggle-btn header-actions-btn"
+                                    type="button"
+                                    data-offcanvas-menu="true"
+                                    aria-label="{{ "general.menuLink"|trans|striptags }}">
+                                {% block layout_header_navigation_toggle_tablet_button_icon %}
+                                    {% sw_icon 'stack' %}
+                                {% endblock %}
+                            </button>
+                        {% endblock %}
+                    </div>
+                {% endblock %}
+            </div>
+            <div class="col">
+                {% sw_include '@Storefront/storefront/layout/header/search.html.twig' %}
+            </div>
+            <span class="hde-top-bar-link w-auto">
+                {{ "hde_top_bar_link2"|trans|raw }}
+            </span>
+        </div>
+    </div>
+{% endblock %}

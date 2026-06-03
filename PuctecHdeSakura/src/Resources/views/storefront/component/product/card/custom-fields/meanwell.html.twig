@@ -1,0 +1,35 @@
+{# MWEANWELL #}
+
+{% block custom_fields_meanwell %}
+
+
+{% if product.customFields.zusatzfelder_meanwell_active == "Yes" %}
+	
+	{% if product.customFields.zusatzfelder_meanwell_output_voltage %}
+		<li>
+		{{ "customFields.zusatzfelder_meanwell_output_voltage"|trans }}: {{ product.customFields.zusatzfelder_meanwell_output_voltage|trans|sw_sanitize }}
+		</li>		
+	{% endif %}
+
+
+	{% if product.customFields.zusatzfelder_meanwell_output_current %}
+		<li>
+		{{ "customFields.zusatzfelder_meanwell_output_current"|trans }}: {{ product.customFields.zusatzfelder_meanwell_output_current|trans|sw_sanitize  }}
+		</li>
+	{% endif %}
+
+
+	{% if product.customFields.zusatzfelder_meanwell_power %}
+		<li>
+		{{ "customFields.zusatzfelder_meanwell_power"|trans }}: {{ product.customFields.zusatzfelder_meanwell_power|trans|sw_sanitize }}
+		</li>
+	{% endif %}
+
+	{% if product.customFields.zusatzfelder_meanwell_series %}
+		<li>
+		{{ "customFields.zusatzfelder_meanwell_series"|trans }}: {{ product.customFields.zusatzfelder_meanwell_series|trans|sw_sanitize }}
+		</li>
+	{% endif %}
+
+{% endif %}
+{% endblock %}

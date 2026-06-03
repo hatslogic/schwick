@@ -1,0 +1,36 @@
+{% sw_extends '@Storefront/storefront/component/product/listing.html.twig' %}
+
+{% block element_product_listing_row %}
+{#    <div class="hde-listing-header">#}
+{#        <span class="name">{{ "hde_listing_header_title"|trans }}</span>#}
+{#        <span class="price">{{ "hde_listing_header_price"|trans }}</span>#}
+{#        <span class="amount">{{ "hde_listing_header_quantity"|trans }}</span>#}
+{#    </div>#}
+    <div class="cms-listing-row js-listing-wrapper row">
+        {% if searchResult.total > 0 %}
+            {% block element_product_listing_col %}
+                {% for product in searchResult %}
+                    <div class="cms-listing-col col col-md-6 col-lg-4">
+                        {% block element_product_listing_box %}
+                            {% sw_include '@Storefront/storefront/component/product/card/box.html.twig' with {
+                                'layout': boxLayout,
+                                'displayMode': displayMode
+                            } %}
+                        {% endblock %}
+                    </div>
+                {% endfor %}
+            {% endblock %}
+        {% else %}
+            {% block element_product_listing_col_empty %}
+                <div class="cms-listing-col col-12">
+                    {% block element_product_listing_col_empty_alert %}
+                        {% sw_include '@Storefront/storefront/utilities/alert.html.twig' with {
+                            type: 'info',
+                            content: 'listing.emptyResultMessage'|trans|sw_sanitize
+                        } %}
+                    {% endblock %}
+                </div>
+            {% endblock %}
+        {% endif %}
+    </div>
+{% endblock %}

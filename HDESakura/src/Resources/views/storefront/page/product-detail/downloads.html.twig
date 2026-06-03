@@ -1,0 +1,95 @@
+{% sw_extends '@Storefront/storefront/utilities/offcanvas.html.twig' %}
+
+
+{% block utilities_offcanvas_content %}
+	{% block page_product_detail_description_container %}
+		<div class="product-detail-description tab-pane-container">
+			{% block page_product_detail_description_title %}
+				<div class="h3 product-detail-description-title">
+					{{ "hde_downloads_title" | trans }}
+				</div>
+			{% endblock %}
+ 
+			{% block page_product_detail_description_content %}
+				<div class="table-responsive">
+				  <table class="table">
+					<tbody>
+
+						{# |trans  - removed because of strange bug #}
+						{# |replace({'schwick-shop': 'schwick'}) 
+							-- quick fix added after domain change #}
+						{# MEANWELL #} 						
+						{% if page.product.translated.customFields.zusatzfelder_meanwell_pdf %}
+							<tr>							
+								<th>{{ "customFields.zusatzfelder_meanwell_pdf"|trans }}: </th>
+								<td>
+									<a href="{{ page.product.translated.customFields.zusatzfelder_meanwell_pdf|sw_sanitize|replace({'schwick-shop': 'schwick'}) }}" target="_blank">
+
+									{% set filename = page.product.translated.customFields.zusatzfelder_meanwell_pdf|sw_sanitize|split('/') %}	
+										{{ filename|last }}	
+									</a>
+								</td>
+							</tr>
+						{% endif %}
+						
+						{# OTHER #}						
+						{% if page.product.translated.customFieldszusatzfelder_unit_pdf_flyer %}
+							<tr>							
+								<th>{{ "customFieldszusatzfelder_unit_pdf_flyer"|trans }}: </th>
+								<td>
+									<a href="{{ page.product.translated.customFieldszusatzfelder_unit_pdf_flyer|sw_sanitize|replace({'schwick-shop': 'schwick'}) }}" target="_blank">
+
+									{% set filename = page.product.translated.customFieldszusatzfelder_unit_pdf_flyer|sw_sanitize|split('/') %}	
+										{{ filename|last }}	
+									</a>
+								</td>
+							</tr>
+						{% endif %}
+
+						{% if page.product.translated.customFields.zusatzfelder_unit_pdf_flyer %}
+							<tr>							
+								<th>{{ "customFields.zusatzfelder_unit_pdf_flyer"|trans }}: </th>
+								<td>
+									<a href="{{ page.product.translated.customFields.zusatzfelder_unit_pdf_flyer|sw_sanitize|replace({'schwick-shop': 'schwick'}) }}" target="_blank">
+
+									{% set filename = page.product.translated.customFields.zusatzfelder_unit_pdf_flyer|sw_sanitize|split('/') %}	
+										{{ filename|last }}	
+									</a>
+								</td>
+							</tr>
+						{% endif %}
+
+						{% if page.product.translated.customFields.zusatzfelder_unit_pdf_manual %}
+							<tr>							
+								<th>{{ "customFields.zusatzfelder_unit_pdf_manual"|trans }}: </th>
+								<td>
+									<a href="{{ page.product.translated.customFields.zusatzfelder_unit_pdf_manual|sw_sanitize|replace({'schwick-shop': 'schwick'}) }}" target="_blank">
+
+									{% set filename = page.product.translated.customFields.zusatzfelder_unit_pdf_manual|sw_sanitize|split('/') %}	
+										{{ filename|last }}	
+									</a>
+								</td>
+							</tr>
+						{% endif %}
+
+						{% if page.product.translated.customFields.zusatzfelder_unit_pdf_other %}
+							<tr>							
+								<th>{{ "customFields.zusatzfelder_unit_pdf_other"|trans }}: </th>
+								<td>
+									<a href="{{ page.product.translated.customFields.zusatzfelder_unit_pdf_other|sw_sanitize|replace({'schwick-shop': 'schwick'}) }}" target="_blank">
+
+									{% set filename = page.product.translated.customFields.zusatzfelder_unit_pdf_other|sw_sanitize|split('/') %}	
+										{{ filename|last }}	
+									</a>
+								</td>
+							</tr>						
+						{% endif %}
+										
+					</tbody>
+				  </table>
+				</div>
+			{% endblock %}
+
+		</div>
+	{% endblock %}
+{% endblock %}

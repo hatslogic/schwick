@@ -1,0 +1,17 @@
+{% sw_extends '@MaxiaListingBlockPrices6/storefront/plugins/maxia_listing_block_prices/table.html.twig' %}
+
+{% block plugins_maxia_listing_block_prices_table_container %}
+
+	{#{% if context.customer is null %}#}
+		{# hide price listing #}
+		
+	{#{% else %}#}
+		{# show price listing #}
+
+		{{ parent() }}
+
+	{#{% endif %}#}
+
+{% endblock %}
+
+

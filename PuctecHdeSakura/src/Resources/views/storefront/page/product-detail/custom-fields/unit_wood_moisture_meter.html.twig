@@ -1,0 +1,137 @@
+
+{% if page.product.translated.customFields.zusatzfelder_unit_wood_moisture_meter_active == "Yes" %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_wood_moisture_meter_wood_moisture %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_wood_moisture_meter_wood_moisture"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_wood_moisture_meter_wood_moisture|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_wood_moisture_meter_stromversorgung %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_wood_moisture_meter_stromversorgung"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_wood_moisture_meter_stromversorgung|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_wood_moisture_meter_wood_categories %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_wood_moisture_meter_wood_categories"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_wood_moisture_meter_wood_categories|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+
+{% if page.product.translated.customFields.zusatzfelder_unit_wood_moisture_meter_ambient_temperature_correction %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_wood_moisture_meter_ambient_temperature_correction"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_wood_moisture_meter_ambient_temperature_correction|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_wood_moisture_meter_ambient_temperature_correction|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_wood_moisture_meter_ambient_temperature_correction|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}
+
+
+
+{% if page.product.translated.customFields.zusatzfelder_unit_wood_moisture_meter_auto_range %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_wood_moisture_meter_auto_range"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_wood_moisture_meter_auto_range|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_wood_moisture_meter_auto_range|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_wood_moisture_meter_auto_range|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}{% if page.product.translated.customFields.zusatzfelder_unit_wood_moisture_meter_auto_power_off %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_wood_moisture_meter_auto_power_off"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_wood_moisture_meter_auto_power_off|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_wood_moisture_meter_auto_power_off|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_wood_moisture_meter_auto_power_off|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}{% if page.product.translated.customFields.zusatzfelder_unit_wood_moisture_meter_datahold %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_wood_moisture_meter_datahold"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_wood_moisture_meter_datahold|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_wood_moisture_meter_datahold|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_wood_moisture_meter_datahold|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}{% if page.product.translated.customFields.zusatzfelder_unit_wood_moisture_meter_min_max_function %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_wood_moisture_meter_min_max_function"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_wood_moisture_meter_min_max_function|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_wood_moisture_meter_min_max_function|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_wood_moisture_meter_min_max_function|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}{% if page.product.translated.customFields.zusatzfelder_unit_wood_moisture_meter_backlight %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_wood_moisture_meter_backlight"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_wood_moisture_meter_backlight|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_wood_moisture_meter_backlight|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_wood_moisture_meter_backlight|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}
+
+
+
+{% if page.product.translated.customFields.zusatzfelder_unit_wood_moisture_meter_display_size %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_wood_moisture_meter_display_size"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_wood_moisture_meter_display_size|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+
+{% if page.product.weight %}
+      <tr>
+      <th>{{ "customFields.zusatzfelder_unit_wood_moisture_meter_weight"|trans }}:</th>      
+        <td>{{ page.product.weight|trans|sw_sanitize|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}kg</td>           
+      </tr>
+      {% endif %}
+
+      
+
+      {% if page.product.length %}
+      <tr>
+      <th>{{ "customFields.zusatzfelder_unit_wood_moisture_meter_size"|trans }}:</th>
+        <td>
+          {{ page.product.length|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+
+          {% if page.product.width %}
+             x {{ page.product.width|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+            {% if page.product.height %}
+              x {{ page.product.height|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+            {% endif %}
+
+          {% endif %}
+                  
+        </td>           
+      </tr>
+      {% endif %}
+
+
+
+{% endif %}

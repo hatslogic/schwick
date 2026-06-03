@@ -1,0 +1,14 @@
+/*
+Override variable defaults
+==================================================
+This file is used to override default SCSS variables from the Shopware Storefront or Bootstrap.
+
+Because of the !default flags, theme variable overrides have to be declared beforehand.
+https://getbootstrap.com/docs/4.0/getting-started/theming/#variable-defaults
+*/
+
+.btn-buy.text-dark {
+  color: #212529!important;
+  border-radius: 3px;
+  padding: 2px 12px;
+}

@@ -1,0 +1,610 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"scale",
+				"scale(1.0)"
+			],
+			[
+				"sca",
+				"scale(1.0)"
+			],
+			[
+				"cms",
+				"cmsPage"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"max-",
+				"max-height"
+			],
+			[
+				"pad",
+				"padding-bottom"
+			],
+			[
+				"alig",
+				"align-content"
+			],
+			[
+				"al",
+				"align-items"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"inl",
+				"inline-table"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"over",
+				"overflow-y"
+			],
+			[
+				"sele",
+				"selected"
+			],
+			[
+				"backgr",
+				"background-color"
+			],
+			[
+				"if",
+				"if?\t$… = ( … ) ? … : …"
+			],
+			[
+				"mysqli_erro",
+				"mysqli_errno〔function〕"
+			],
+			[
+				"site_",
+				"$site_lang〔variable〕"
+			],
+			[
+				"art",
+				"article_id"
+			],
+			[
+				"ar",
+				"article_id"
+			],
+			[
+				"article_",
+				"article_id_en"
+			],
+			[
+				"opt",
+				"option\tTag"
+			],
+			[
+				"text",
+				"textarea\tTag"
+			],
+			[
+				"ver",
+				"verifi"
+			],
+			[
+				"margin",
+				"margin-top\tproperty"
+			],
+			[
+				"nav",
+				"nav_depth_parent"
+			],
+			[
+				"mysqli_err",
+				"mysqli_error〔function〕"
+			],
+			[
+				"mar",
+				"margin-bottom\tproperty"
+			],
+			[
+				"fun",
+				"function〔keyword〕"
+			],
+			[
+				"vgwo",
+				"vgwortok2020"
+			],
+			[
+				"space-",
+				"space-between\tjustify-content"
+			],
+			[
+				"backgro",
+				"background\tproperty"
+			],
+			[
+				"c",
+				"class\tAttr"
+			],
+			[
+				"overflow",
+				"overflow-x\tproperty"
+			],
+			[
+				"max",
+				"max-height\tproperty"
+			],
+			[
+				"for",
+				"foreach\tforeach …"
+			],
+			[
+				"default",
+				"default_a"
+			],
+			[
+				"face",
+				"facebook0000-21"
+			],
+			[
+				"meta",
+				"meta_description"
+			],
+			[
+				"var",
+				"var_dump〔function〕"
+			],
+			[
+				"search",
+				"search-analytics"
+			],
+			[
+				"op",
+				"option\tTag"
+			],
+			[
+				"desc",
+				"description"
+			],
+			[
+				"image_height",
+				"image_height_error"
+			],
+			[
+				"fig",
+				"figcaption\tTag"
+			],
+			[
+				"inline",
+				"inline-block\tdisplay"
+			],
+			[
+				"mysqli_fe",
+				"mysqli_fetch_object〔function〕"
+			],
+			[
+				"wid",
+				"width\tproperty"
+			],
+			[
+				"text-a",
+				"text-align\tproperty"
+			],
+			[
+				"font-s",
+				"font-size\tproperty"
+			],
+			[
+				"link",
+				"link_en"
+			],
+			[
+				"ingre",
+				"ingredient_en"
+			],
+			[
+				"serach",
+				"search_term"
+			],
+			[
+				"re",
+				"required\tAttr"
+			],
+			[
+				"backgorund",
+				"background-color\tproperty"
+			],
+			[
+				"overflo",
+				"overflow-y\tproperty"
+			],
+			[
+				"overfl",
+				"overflow-x\tproperty"
+			],
+			[
+				"contn",
+				"content_page_builder"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"theme",
+				"UI: Select Theme"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Install Package Control"
+			],
+			[
+				"search",
+				"File: Search Files"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"packaage",
+				"Package Control: List Packages"
+			],
+			[
+				"searc",
+				"File: Search Files"
+			],
+			[
+				"emmet",
+				"Preferences: Emmet Settings"
+			],
+			[
+				"remove ",
+				"Package Control: Remove Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 136.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/ryuseihosono/Desktop/SW6/GRCN",
+		"/Users/ryuseihosono/Desktop/SW6/GRCN/custom",
+		"/Users/ryuseihosono/Desktop/SW6/GRCN/custom/plugins",
+		"/Users/ryuseihosono/Desktop/SW6/GRCN/vendor"
+	],
+	"file_history":
+	[
+		"/Users/ryuseihosono/Desktop/SW6/GRCN/sftp-config.json",
+		"/Users/ryuseihosono/Desktop/SW6/GRCN/test.txt",
+		"/Users/ryuseihosono/Desktop/SW6/Schwick/custom/plugins/HDESakura/src/Resources/views/storefront/page/product-detail/technical-data.html.twig",
+		"/Users/ryuseihosono/Desktop/SW6/Schwick/custom/plugins/HDESakura/src/Resources/views/storefront/page/product-detail/tabs.html.twig",
+		"/Users/ryuseihosono/Desktop/SW6/Schwick/vendor/storefront/Resources/views/storefront/page/product-detail/tabs.html.twig",
+		"/Users/ryuseihosono/Desktop/SW6/Schwick/vendor/storefront/Resources/views/storefront/element/cms-element-product-description-reviews.html.twig",
+		"/Users/ryuseihosono/Desktop/SW6/Schwick/vendor/storefront/Resources/app/storefront/src/scss/page/product-detail/_tabs.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Schwick/custom/plugins/HDESakura/src/Resources/views/storefront/page/product-detail/buy-widget.html.twig",
+		"/Users/ryuseihosono/Desktop/SW6/Schwick/vendor/storefront/Resources/views/storefront/page/product-detail/buy-widget.html.twig",
+		"/Users/ryuseihosono/Desktop/SW6/Schwick/vendor/storefront/Resources/app/storefront/vendor/bootstrap/dist/css/bootstrap-grid.css",
+		"/Users/ryuseihosono/Desktop/SW6/Schwick/vendor/storefront/Resources/views/storefront/component/buy-widget/buy-widget.html.twig",
+		"/Users/ryuseihosono/Desktop/SW6/Schwick/custom/plugins/HDESakura/src/Resources/views/storefront/component/buy-widget/buy-widget.html.twig",
+		"/Users/ryuseihosono/Desktop/SW6/Schwick/sftp-config.json",
+		"/Users/ryuseihosono/Desktop/SW6/Schwick/test.txt",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/HDESakura/src/Resources/app/storefront/src/scss/layout/_footer.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/HDESakura/src/Resources/app/storefront/src/scss/page/product-detail/_product-detail.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/HDESakura/src/Resources/views/storefront/layout/footer/footer.html.twig",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/HDESakura/src/Resources/views/storefront/layout/meta.html.twig",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/vendor/shopware/storefront/Resources/views/storefront/layout/meta.html.twig",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/HDESakura/src/Resources/app/storefront/src/scss/layout/_hde-base.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/HDESakura/src/Resources/views/storefront/layout/header/actions/cart-widget.html.twig",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/HDESakura/src/Resources/app/storefront/src/scss/layout/_header.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/vendor/shopware/storefront/Resources/app/storefront/src/scss/skin/shopware/layout/_header.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/vendor/shopware/storefront/Resources/views/storefront/layout/header/actions/cart-widget.html.twig",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/RHWebFurnitureone/src/Resources/views/storefront/layout/header/actions/cart-widget.html.twig",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/HDESakura/src/Resources/app/storefront/src/scss/component/_product-box.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/HDESakura/src/Resources/app/storefront/src/scss/rhweb-cms/_shop-the-look.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/HDESakura/src/Resources/app/storefront/src/scss/rhweb-theme/includes/_flyouts.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/HDESakura/src/Resources/app/storefront/src/scss/base.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/HDESakura/src/Resources/app/storefront/src/scss/rhweb-theme/includes/_animations.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/HDESakura/src/Resources/app/storefront/src/scss/rhweb-theme/includes/_productbox.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/HDESakura/src/Resources/app/storefront/src/scss/rhweb-theme/includes/_preloader.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/HDESakura/src/Resources/app/storefront/src/scss/component/_sub-category.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/RHWebFurnitureone/src/Resources/app/storefront/src/scss/rhweb-theme/includes/preloader.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/HDESakura/src/Resources/app/storefront/src/scss/layout/_container.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/HDESakura/src/Resources/app/storefront/src/scss/rhweb-cms/brand-slider.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/RHWebFurnitureone/src/Resources/app/storefront/src/scss/rhweb-cms/brand-slider.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/RHWebFurnitureone/src/Resources/app/storefront/src/scss/rhweb-cms/shop-the-look.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/HDESakura/src/Resources/app/storefront/src/scss/rhweb-cms/includes/productbox.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/HDESakura/src/Resources/app/storefront/src/scss/rhweb-cms/includes/flyouts.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/HDESakura/src/Resources/app/storefront/src/scss/rhweb-cms/includes/animations.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/RHWebFurnitureone/src/Resources/app/storefront/src/scss/rhweb-theme/includes/flyout.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/RHWebFurnitureone/src/Resources/app/storefront/src/scss/rhweb-theme/includes/animations.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/RHWebFurnitureone/src/Resources/app/storefront/src/scss/rhweb-theme/includes/productbox.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/HDESakura/src/Resources/app/storefront/src/scss/component/_modal.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/HDESakura/src/Resources/views/storefront/layout/header/actions/service-menu-widget.html.twig",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/HDESakura/src/Resources/app/storefront/src/scss/page/checkout/_confirm.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/RHWebFurnitureone/src/Resources/views/storefront/layout/header/actions/service-menu-widget.html.twig",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/HDESakura/src/Resources/app/storefront/src/scss/includes/_slider.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/HDESakura/src/Resources/app/storefront/src/scss/layout/_blog.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/HDESakura/src/Resources/app/storefront/src/scss/component/_offcanvas.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/HDESakura/src/Resources/app/storefront/src/scss/rhweb-cms/cta-banner-slider.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/HDESakura/src/Resources/app/storefront/src/scss/layout/_navigation-offcanvas.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/RHWebFurnitureone/src/Resources/theme.json",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/Resources/app/storefront/src/scss/layout/_account-menu.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/HDESakura/src/Resources/views/storefront/base.html.twig",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/HDESakura/src/Resources/views/storefront/custom-rhweb/home/slider.html.twig",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/HDESakura/src/Resources/app/storefront/src/scss/layout/_account-menu.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/HDESakura/src/Resources/app/storefront/src/scss/layout/_cookie-permission.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/vendor/shopware/storefront/Resources/app/storefront/src/scss/component/_offcanvas.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/HDESakura/src/Resources/app/storefront/src/main.js",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/RHWebFurnitureone/src/Resources/views/storefront/custom-rhweb/home/slider.html.twig",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/RHWebFurnitureone/src/Resources/views/storefront/layout/cookie/cookie-permission.html.twig",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/RHWebFurnitureone/src/Resources/views/storefront/layout/footer/footer.html.twig",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/vendor/shopware/storefront/Resources/app/storefront/src/scss/component/_address-editor.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/RHWebFurnitureone/src/Resources/app/storefront/src/scss/rhweb-theme/includes/header.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/HDESakura/src/Resources/views/storefront/custom-rhweb/snippets/rhweb-newsletter.html.twig",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/sftp-config.json",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/RHWebFurnitureone/src/Resources/views/storefront/custom-rhweb/snippets/rhweb-newsletter.html.twig",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/HDESakura/src/Resources/app/storefront/src/scss/component/_cms-element.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/HDESakura/src/Resources/app/storefront/src/scss/includes/_moori.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/HDESakura/src/Resources/views/storefront/layout/navigation/offcanvas/show-active-link.html.twig",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/vendor/shopware/storefront/Resources/views/storefront/layout/navigation/offcanvas/show-active-link.html.twig",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/HDESakura/src/Resources/views/storefront/layout/navigation/offcanvas/show-all-link.html.twig",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/vendor/shopware/storefront/Resources/views/storefront/layout/navigation/offcanvas/general-headline.html.twig",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/vendor/shopware/storefront/Resources/views/storefront/layout/navigation/offcanvas/show-all-link.html.twig",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/vendor/shopware/storefront/Resources/app/storefront/src/scss/component/_cms-block.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/vendor/shopware/storefront/Resources/app/storefront/src/scss/component/_cms-element.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/HDESakura/src/Resources/views/storefront/page/product-detail/headline.html.twig",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/HDESakura/src/Resources/app/storefront/src/scss/page/content/_breadcrumb.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/vendor/shopware/storefront/Resources/views/storefront/page/product-detail/headline.html.twig",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/vendor/shopware/storefront/Resources/app/storefront/src/scss/skin/shopware/page/product-detail/_review.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/vendor/shopware/storefront/Resources/views/storefront/base.html.twig",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/vendor/shopware/storefront/Resources/views/storefront/page/content/index.html.twig",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/RHWebFurnitureone/src/Resources/views/storefront/base.html.twig",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/vendor/shopware/storefront/Resources/views/storefront/layout/navigation/flyout.html.twig",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/vendor/shopware/storefront/Resources/views/storefront/page/product-detail/index.html.twig",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/custom/plugins/HDESakura/src/Resources/app/storefront/src/scss/vendor/_fonts.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Wetschermaxshop/test.txt",
+		"/Users/ryuseihosono/Downloads/payment_icons_for_product_and_cart_page.svg",
+		"/Users/ryuseihosono/Downloads/hde-ebaycss.css",
+		"/Users/ryuseihosono/Downloads/bootstrap.min.css",
+		"/Users/ryuseihosono/Downloads/theme_export__www-hyggins-pet-wokiee-2-1__09DEC2021-0922am/assets/theme.js",
+		"/Users/ryuseihosono/Desktop/SW5/d-t-s/themes/Frontend/Dtstemplate/frontend/_public/src/less/_components/tab-menu.less",
+		"/Users/ryuseihosono/Desktop/SW5/d-t-s/themes/Frontend/Dtstemplate/frontend/_public/src/less/_components/image-slider.less",
+		"/Users/ryuseihosono/Desktop/SW5/d-t-s/themes/Frontend/Dtstemplate/frontend/_public/src/less/all.less",
+		"/Users/ryuseihosono/Desktop/SW5/d-t-s/themes/Frontend/Dtstemplate/frontend/_public/src/less/_modules/detail.less",
+		"/Users/ryuseihosono/Desktop/SW5/d-t-s/themes/Frontend/Dtstemplate/frontend/_public/src/less/_components/scroll-to-top.less",
+		"/Users/ryuseihosono/Desktop/SW5/d-t-s/themes/Frontend/Dtstemplate/frontend/_public/src/less/_plugins/trusted-shops.less",
+		"/Users/ryuseihosono/Desktop/SW5/d-t-s/themes/Frontend/Responsive/frontend/_public/src/less/_components/tab-menu.less",
+		"/Users/ryuseihosono/Desktop/SW5/d-t-s/themes/Frontend/Dtstemplate/frontend/_public/src/less/_modules/sidebar.less",
+		"/Users/ryuseihosono/Desktop/SW5/d-t-s/themes/Frontend/Responsive/frontend/_public/src/less/_variables/structure.less",
+		"/Users/ryuseihosono/Desktop/SW5/d-t-s/themes/Frontend/Bare/frontend/index/index.tpl",
+		"/Users/ryuseihosono/Desktop/SW5/d-t-s/sftp-config.json",
+		"/Users/ryuseihosono/Desktop/SW5/d-t-s/test.txt",
+		"/Users/ryuseihosono/Downloads/hde-ebaystyles.css",
+		"/Users/ryuseihosono/Desktop/SW6/Sparvoll/custom/plugins/HDESakura/src/Resources/views/storefront/layout/footer/footer.html.twig",
+		"/Users/ryuseihosono/Desktop/SW6/Sparvoll/custom/plugins/HDESakura/src/Resources/app/storefront/src/scss/base/_base.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Sparvoll/custom/plugins/HDESakura/src/Resources/app/storefront/src/scss/base.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Sparvoll/custom/plugins/HDESakura/src/Resources/app/storefront/src/scss/layout/_footer.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Sparvoll/custom/plugins/HDESakura/src/Resources/views/storefront/layout/meta.html.twig",
+		"/Users/ryuseihosono/Downloads/footer.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Sparvoll/custom/plugins/HDESakura/src/Resources/app/storefront/src/scss/page/product-detail/_product-detail.scss",
+		"/Users/ryuseihosono/Desktop/SW6/Sparvoll/vendor/shopware/storefront/Resources/views/storefront/layout/footer/footer.html.twig",
+		"/Users/ryuseihosono/Desktop/SW6/Sparvoll/sftp-config.json",
+		"/Users/ryuseihosono/Desktop/SW6/Sparvoll/test.txt",
+		"/private/var/folders/d0/9gbrdl314zq_gkq1b3d52dr40000gn/T/fz3temp-2/cmsJS.js",
+		"/private/var/folders/d0/9gbrdl314zq_gkq1b3d52dr40000gn/T/fz3temp-2/wp-config.php",
+		"/private/var/folders/d0/9gbrdl314zq_gkq1b3d52dr40000gn/T/fz3temp-2/.htaccess",
+		"/Users/ryuseihosono/Downloads/shopware-magb1-master/README.md",
+		"/Users/ryuseihosono/Downloads/Shopify2018.xlsx",
+		"/Users/ryuseihosono/Desktop/SW5/Prometheus Bikes/themes/Frontend/HDEPrometheusBikes/frontend/index/footer.tpl",
+		"/Users/ryuseihosono/Desktop/SW5/Prometheus Bikes/themes/Frontend/Bare/frontend/index/footer.tpl",
+		"/Users/ryuseihosono/Desktop/SW5/Prometheus Bikes/themes/Frontend/HDEPrometheusBikes/frontend/detail/tabs.tpl",
+		"/Users/ryuseihosono/Desktop/SW5/Prometheus Bikes/themes/Frontend/HDEPrometheusBikes/frontend/_public/src/less/all.less",
+		"/Users/ryuseihosono/Desktop/SW5/Prometheus Bikes/themes/Frontend/HDEPrometheusBikes/frontend/_public/src/less/_modules/_tabs.less",
+		"/Users/ryuseihosono/Desktop/SW5/Prometheus Bikes/themes/Frontend/HDEPrometheusBikes/frontend/detail/tabs/ausstattungen.tpl",
+		"/Users/ryuseihosono/Desktop/SW5/Prometheus Bikes/testl.txt"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 107.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 41.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SFTP":
+	{
+		"height": 198.0
+	},
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 132.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 121.0
+	},
+	"pinned_build_system": "",
+	"project": "grcnc.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"html/.htaccess"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 376.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -1,0 +1,73 @@
+{
+  "name": "HDESakura",
+  "author": "HosonoDE E-Commerce Agentur",
+  "description": {
+    "en-GB": "SAKURA theme by HosonoDE",
+    "de-DE": "SAKURA Theme by HosonoDE"
+  },
+  "previewMedia": "app/storefront/dist/assets/HDESakuraPreview.jpg",
+  "views": [
+     "@Storefront",
+     "@Plugins",
+     "@HDESakura"
+  ],
+  "style": [
+    "app/storefront/src/scss/overrides.scss",
+    "@Storefront",
+    "app/storefront/src/scss/base.scss"
+  ],
+  "script": [
+    "@Storefront",
+    "app/storefront/dist/storefront/js/HDESakura.js"
+  ],
+  "asset": [
+    "@Storefront",
+    "app/storefront/src/assets"
+  ],
+  "config": {
+    "blocks": {
+      "themeSizes": {
+        "label": {
+          "en-GB": "Theme sizes",
+          "de-DE": "Theme-Größen"
+        }
+      }
+    },
+    "fields": {
+      "themeContainerSize": {
+        "label": {
+          "en-GB": "Container Size (px)",
+          "de-DE": "Container Größe (px)"
+        },
+        "type": "number",
+        "value": 1200,
+        "editable": true,
+        "block": "themeSizes",
+        "tab": "Layout",
+        "helpText": {
+          "en-GB": "To change to width of the site",
+          "de-DE": "Um die Breite der Seite zu ändern"
+        },
+        "order": 100
+      },
+      "sw-logo-desktop": {
+        "tab": "Media",
+        "fullWidth": false
+      },
+      "sw-logo-tablet": {
+        "tab": "Media",
+        "fullWidth": false
+      },
+      "sw-logo-mobile": {
+        "tab": "Media",
+        "fullWidth": false
+      },
+      "sw-logo-share": {
+        "tab": "Media"
+      },
+      "sw-logo-favicon": {
+        "tab": "Media"
+      }
+    }
+  }
+}

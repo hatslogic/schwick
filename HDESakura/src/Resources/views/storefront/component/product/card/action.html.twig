@@ -1,0 +1,100 @@
+{% sw_extends '@Storefront/storefront/component/product/card/action.html.twig' %}
+
+{% block component_product_box_action_inner %}
+
+{#    {% if context.customer is null %}
+        {# hide buy button if not logged in #}
+{#			<div class="me-2 price-blocked">
+				<strong>{{ "neti-next-access-manager.store-front.product.price-blocked"|trans({ '%accountLoginController%': path('frontend.account.login.page') })|sw_sanitize }}</strong>
+			</div>
+    {% else %} #}
+
+
+
+		{% set id = product.id %}
+		<div class="product-action d-flex align-items-center flex-column align-self-center">
+			{% set isAvailable = not product.isCloseout or (product.availableStock >= product.minPurchase) %}
+			{% set displayFrom = product.calculatedPrices.count > 1 %}
+			{% set displayBuyButton = isAvailable and product.childCount <= 0 %}
+			{#
+			{% block buy_widget_delivery_informations %}
+				<div class="product-detail-delivery-information m-0 mb-2 text-center">
+					{% sw_include '@Storefront/storefront/component/delivery-information.html.twig' %}
+				</div>
+			{% endblock %}
+			#}
+			{% if displayBuyButton and config('core.listing.allowBuyInListing') %}
+				{% block component_product_box_action_buy %}
+					{# @var product \Shopware\Core\Content\Product\SalesChannel\SalesChannelProductEntity #}
+					<form action="{{ path('frontend.checkout.line-item.add') }}"
+						  method="post"
+						  class="buy-widget"
+						  data-add-to-cart="true">
+{#NON EXISTING ANYMORE#}
+{#						{% block component_product_box_action_buy_csrf %}#}
+{#							{{ parent() }}#}
+{#						{% endblock % }#}
+
+						{% block component_product_box_action_form %}
+							{% if page.netiAMblockedPrices is null %} {# IS NOT BLOCKED BY B2B PLUGIN #}
+								{% block component_product_box_action_buy_redirect_input %}
+									{{ parent() }}
+								{% endblock %}
+
+								{% block page_product_detail_buy_product_buy_info %}
+										<div class="menge">
+											<p>{{ "hde_min_quantity" | trans }} <strong>{{ product.minPurchase }}</strong></p>
+										</div>
+										<input type="hidden"
+											   name="lineItems[{{ id }}][id]"
+											   value="{{ id }}">
+										<input type="hidden"
+											   name="lineItems[{{ id }}][referencedId]"
+											   value="{{ id }}">
+										<input type="hidden"
+											   name="lineItems[{{ id }}][type]"
+											   value="product">
+										<input type="hidden"
+											   name="lineItems[{{ id }}][stackable]"
+											   value="1">
+										<input type="hidden"
+											   name="lineItems[{{ id }}][removable]"
+											   value="1">
+										<div class="quantity-select-container">
+											<button class="buy_quantity_minus" type="button">-</button>
+											<input id="product-detail-quantity-select-input{{ id }}" name="lineItems[{{ id }}][quantity]"
+													class="product-detail-quantity-select" value="{{ product.minPurchase }}" min="{{ product.minPurchase }}" max="{{ product.calculatedMaxPurchase }}" type="number" >
+											<button class="buy_quantity_plus" type="button">+</button>
+										</div>
+								{% endblock %}
+
+								{# {% block page_product_detail_product_buy_meta %}
+									{{ parent() }}
+								{% endblock %} #}
+
+								{% block page_product_detail_product_buy_button %}
+									<div class="d-flex w-100">
+										<button class="btn btn-buy text-dark" title="In den Warenkorb" style="width: 100%;">
+											{{ "detail.addProduct" | trans }}
+										</button>
+									</div>
+								{% endblock %}
+							{% endif %}
+						{% endblock %}
+					</form>
+				{% endblock %}
+			{% else %}
+				{% block component_product_box_action_detail %}
+					{{ parent() }}
+				{% endblock %}
+			{% endif %}
+		</div>
+
+		{# {% block component_product_box_action_meta %}
+			{{ parent() }}
+		{% endblock %} #}
+
+
+	{#{% endif %}#}
+
+{% endblock %}

@@ -1,0 +1,35 @@
+{
+  "name": "PuctecHdeSakura",
+  "author": "HosonoDE E-Commerce Agentur",
+  "description": {
+    "en-GB": "SAKURA theme by HosonoDE",
+    "de-DE": "SAKURA Theme by HosonoDE"
+  },
+  "previewMedia": "app/storefront/dist/assets/HDESakuraPreview.jpg",
+  "views": [
+     "@Storefront",
+     "@Plugins",
+     "@PuctecHdeSakura"
+  ],
+  "style": [
+    "../../../HDESakura/src/Resources/app/storefront/src/scss/overrides.scss",
+    "app/storefront/src/scss/overrides.scss",
+    "@Storefront",
+    "@HDESakura",
+    "app/storefront/src/scss/base.scss"
+  ],
+  "script": [
+    "@Storefront",
+    "app/storefront/dist/storefront/js/puctec-hde-sakura.js"
+  ],
+
+  "asset": [
+    "@Storefront",
+    "@HDESakura",
+    "app/storefront/src/assets"
+  ],
+  "configInheritance": [
+    "@Storefront",
+    "@HDESakura"
+  ]
+}

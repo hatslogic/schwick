@@ -1,0 +1,9 @@
+.header-actions-col {
+  @include media-breakpoint-down(sm) {
+    .col-auto {
+      padding: 0!important;
+      padding-left: 0!important;
+      padding-right: 0!important;
+    }
+  }
+}

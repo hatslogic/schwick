@@ -1,0 +1,208 @@
+{% sw_extends '@Storefront/storefront/component/product/card/box-standard.html.twig' %}
+
+
+
+{# IF AGREES WITH THE NEW LAYOUT
+
+	div class="cms-listing-row js-listing-wrapper ->>row"
+	div cms-listing-col --> col col-md-6 col-lg-4
+
+
+#}
+
+
+
+{% block component_product_box_content %}
+	<div class="card-body align-items-center">
+		{% block component_product_box_badges %}
+			{{ parent() }}
+		{% endblock %}
+
+{# NON EXISTING ANYMORE		#}
+{#		{% block component_product_box_rich_snippets %}#}
+{#			{{ parent() }}#}
+{#		{% endblock %}#}
+
+		<div class="col-auto  hde-product-img mx-auto">
+			{% block component_product_box_image %}
+				{{ parent() }}
+			{% endblock %}
+		</div>
+
+		{% block component_product_box_info %}
+			{% block component_product_box_rating %}{% endblock %}
+
+{#			<div class="col">#}
+				{% block component_product_box_name %}
+					<div class="product-details title d-flex flex-column ps-2 mx-auto text-center text-lg-left">
+						<a href="{{ seoUrl('frontend.detail.page', {'productId': id}) }}"
+							   class="product-name ps-0"
+							   title="{{ name }}">
+								{{ product.name | trans }}
+						</a>
+
+{#						<div class="product-details">#}
+{#							<ul class="p-0">#}
+
+
+{#								<li>{{ "hde_product_number_text"|trans }}: <strong>{{ product.productNumber }}</strong></li>#}
+
+{#								{% if product.ean %}#}
+{#									<li>{{ "hde_ean"|trans }}: <strong>{{ product.ean }}</strong></li>#}
+{#								{% endif %}#}
+
+{#								{% if product.manufacturer.name %}#}
+{#									<li>{{'listing.filterManufacturerDisplayName'|trans}}: <strong>{{ product.manufacturer.name }}</strong></li>#}
+{#								{% endif %}#}
+
+{#								{% if product.manufacturerNumber %}#}
+{#									<li>{{'component.product.feature.label.manufacturerNumber'|trans}} <strong>{{product.manufacturerNumber}}</strong></li>#}
+{#								{% endif %}#}
+
+
+{#								<li>#}
+{#								    <a class="collapsed" data-bs-toggle="collapse" href="#showMoreCollapse{{ product.id }}" role="button" aria-expanded="false"#}
+{#								        aria-controls="showMoreCollapse{{ product.id }}">#}
+{#								        {{ 'hde.productCard.showMore' | trans | raw }}#}
+{#								    </a>#}
+{#								    <div class="collapse" id="showMoreCollapse{{ product.id }}">#}
+{#								        <div class="card card-body">#}
+{#								            <ul class="p-0 hde-tech-info-add-list">#}
+{#								#}{# custom fields #}
+{#								{% sw_include '@Storefront/storefront/component/product/card/custom-fields/meanwell.html.twig' ignore missing %}#}
+{#								{% sw_include '@Storefront/storefront/component/product/card/custom-fields/pcenergy.html.twig' ignore missing %}#}
+{#								{% sw_include '@Storefront/storefront/component/product/card/custom-fields/voltage-tester.html.twig' ignore missing %}#}
+{#								{% sw_include '@Storefront/storefront/component/product/card/custom-fields/sound-level-meter.html.twig' ignore missing %}#}
+{#								{% sw_include '@Storefront/storefront/component/product/card/custom-fields/multimeter.html.twig' ignore missing %}#}
+{#								{% sw_include '@Storefront/storefront/component/product/card/custom-fields/clamp-meter.html.twig' ignore missing %}#}
+{#								{% sw_include '@Storefront/storefront/component/product/card/custom-fields/pcwork.html.twig' ignore missing %}#}
+{#								            </ul>#}
+{#								        </div>#}
+{#								    </div>#}
+{#								</li>#}
+
+{#							</ul>#}
+
+{#						</div>#}
+					</div>
+				{% endblock %}
+				{% block component_product_box_variant_characteristics %}{% endblock %}
+
+
+{#			</div>#}
+
+			<div class="product-info col px-2">
+
+				{% block component_product_box_description %}{% endblock %}
+			
+				{% block component_product_box_price %}
+					{% if page.netiAMblockedPrices is null %} {# IS NOT BLOCKED BY B2B PLUGIN #}						
+							{{ parent() }}						
+					{% else %}
+						{# hide #}
+					{% endif %}
+				{% endblock %}
+
+
+				{% block component_product_box_action %}	
+
+				{# delivery information #}
+				{# copy of delivery-information.html.twig #}
+				{# added "product available" even if shipping time is not set #}
+				<div class="product-detail-delivery-information m-0 my-2 text-center px-2">
+							{% if product.shippingFree %}
+					            {% block component_delivery_information_shipping_free %}
+					                <p class="delivery-information delivery-shipping-free">
+					                    <span class="delivery-status-indicator bg-info"></span>
+					                    {{ "general.deliveryShippingFree"|trans|sw_sanitize }}
+					                </p>
+					            {% endblock %}
+					        {% endif %}
+
+					        {% if not product.active %}
+					            {% block component_delivery_information_not_available %}
+					                <link itemprop="availability"
+					                      href="http://schema.org/LimitedAvailability"/>
+					                <p class="delivery-information delivery-not-available">
+					                    <span class="delivery-status-indicator bg-danger"></span>
+					                    {{ "general.deliveryNotAvailable"|trans|sw_sanitize }}
+					                </p>
+					            {% endblock %}
+					        {% elseif product.releaseDate and product.releaseDate|date('U') > "now"|date('U') %}
+					            {% block component_delivery_information_pre_order %}
+					                <link itemprop="availability"
+					                      href="http://schema.org/PreOrder"/>
+					                <p class="delivery-information delivery-preorder">
+					                    <span class="delivery-status-indicator bg-warning"></span>
+					                    {{ "general.deliveryShipping"|trans|sw_sanitize }} {{ product.releaseDate|format_date('long', locale=app.request.locale) }}
+					                </p>
+					            {% endblock %}
+					        {% elseif (product.availableStock >= product.minPurchase or (downloadFlag in product.states and not product.isCloseout)) and product.deliveryTime %}
+					            {% block component_delivery_information_available %}
+					                <link itemprop="availability" href="http://schema.org/InStock"/>
+					                <p class="delivery-information delivery-available">
+					                    <span class="delivery-status-indicator bg-success"></span>
+
+					                    {{ "detail.deliveryTimeAvailable"|trans({
+					                        '%name%': product.deliveryTime.translation('name')
+					                    })|sw_sanitize }}
+					                </p>
+					            {% endblock %}
+					        {% elseif product.isCloseout and product.availableStock < product.minPurchase %}
+					            {% block component_delivery_information_soldout %}
+					                <link itemprop="availability" href="http://schema.org/OutOfStock"/>
+					                <p class="delivery-information delivery-soldout">
+					                    <span class="delivery-status-indicator bg-danger"></span>
+					                    {{ "detail.soldOut"|trans|sw_sanitize }}
+					                </p>
+					            {% endblock %}
+					        {% elseif product.availableStock < product.minPurchase and product.deliveryTime and product.restockTime %}
+					            {% block component_delivery_information_restock %}
+					                <link itemprop="availability" href="http://schema.org/LimitedAvailability"/>
+					                <p class="delivery-information delivery-restock">
+					                    <span class="delivery-status-indicator bg-warning"></span>
+					                    {{ "detail.deliveryTimeRestock"|trans({
+					                        '%count%': product.restockTime,
+					                        '%restockTime%': product.restockTime,
+					                        '%name%': product.deliveryTime.translation('name')
+					                    })|sw_sanitize }}
+					                </p>
+					            {% endblock %}
+					        {% elseif (product.availableStock >= product.minPurchase or (downloadFlag in product.states and not product.isCloseout)) %}
+
+					            {% block hde_product_available %}
+					                <link itemprop="availability" href="http://schema.org/InStock"/>
+					                <p class="delivery-information delivery-available">
+					                    <span class="delivery-status-indicator bg-success"></span>
+					                    {{ "hde.productCard.productAvailable"|trans }}
+					                </p>
+					            {% endblock %}
+
+					        {% endif %}
+
+				</div>
+
+						{# hide buy button if not logged in #}
+					    
+					    {#{% if context.customer is null %}#}	
+					        {# hide buy button #}
+						    
+						    {#
+						    <div class="me-2 price-blocked">
+								<strong>{{ "neti-next-access-manager.store-front.product.price-blocked"|trans({ '%accountLoginController%': path('frontend.account.login.page') })|sw_sanitize }}</strong>
+							</div>				        
+							#}
+
+					    {#{% else %}						        #}
+					        {{ parent() }}
+					    {#{% endif %} 	#}
+				{% endblock %}
+
+
+
+
+
+			</div>
+		{% endblock %}
+	</div>
+{% endblock %}

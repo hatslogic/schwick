@@ -1,0 +1,75 @@
+{% block custom_fields_unit_multimeter %}
+	{% if product.customFields.zusatzfelder_unit_multimeter_active == "Yes" %}
+		
+		{% if product.customFields.zusatzfelder_unit_multimeter_dc_voltage %}
+			<li>
+			{{ "customFields.zusatzfelder_unit_multimeter_dc_voltage"|trans }}: {{ product.customFields.zusatzfelder_unit_multimeter_dc_voltage|trans|sw_sanitize }}
+			</li>		
+		{% endif %}
+
+
+		{% if product.customFields.zusatzfelder_unit_multimeter_AC_Voltage %}
+			<li>
+			{{ "customFields.zusatzfelder_unit_multimeter_AC_Voltage"|trans }}: {{ product.customFields.zusatzfelder_unit_multimeter_AC_Voltage|trans|sw_sanitize  }}
+			</li>
+		{% endif %}
+
+
+		{% if product.customFields.zusatzfelder_unit_multimeter_dc_current %}
+			<li>
+			{{ "customFields.zusatzfelder_unit_multimeter_dc_current"|trans }}: {{ product.customFields.zusatzfelder_unit_multimeter_dc_current|trans|sw_sanitize }}
+			</li>
+		{% endif %}
+
+		{% if product.customFields.zusatzfelder_unit_multimeter_AC_Current %}
+			<li>
+			{{ "customFields.zusatzfelder_unit_multimeter_AC_Current"|trans }}: {{ product.customFields.zusatzfelder_unit_multimeter_AC_Current|trans|sw_sanitize }}
+			</li>
+		{% endif %}
+
+		{% if product.customFields.zusatzfelder_unit_multimeter_Rating %}
+			<li>
+			{{ "customFields.zusatzfelder_unit_multimeter_Rating"|trans }}: {{ product.customFields.zusatzfelder_unit_multimeter_Rating|trans|sw_sanitize }}
+			</li>
+		{% endif %}
+
+		{% if product.customFields.zusatzfelder_unit_multimeter_display_count %}
+			<li>
+			{{ "customFields.zusatzfelder_unit_multimeter_display_count"|trans }}: {{ product.customFields.zusatzfelder_unit_multimeter_display_count|trans|sw_sanitize }}
+			</li>
+		{% endif %}
+
+
+
+
+		{% if product.translated.customFields.zusatzfelder_unit_multimeter_true_rms %}
+			<li>
+			{{ "customFields.zusatzfelder_unit_multimeter_true_rms"|trans }}:
+
+					{% if  product.translated.customFields.zusatzfelder_unit_multimeter_true_rms|trans|sw_sanitize  == 1 %}
+							✓
+					{% elseif product.translated.customFields.zusatzfelder_unit_multimeter_true_rms|trans|sw_sanitize == 0 %}
+							✗
+					{% else	%}	
+							{{ product.translated.customFields.zusatzfelder_unit_multimeter_true_rms|trans|sw_sanitize }}
+					{% endif %}				
+			</li>
+		{% endif %}
+
+		{% if product.translated.customFields.zusatzfelder_unit_multimeter_auto_range %}
+			<li>
+			{{ "customFields.zusatzfelder_unit_multimeter_auto_range"|trans }}:
+
+					{% if  product.translated.customFields.zusatzfelder_unit_multimeter_auto_range|trans|sw_sanitize  == 1 %}
+							✓
+					{% elseif product.translated.customFields.zusatzfelder_unit_multimeter_auto_range|trans|sw_sanitize == 0 %}
+							✗
+					{% else	%}	
+							{{ product.translated.customFields.zusatzfelder_unit_multimeter_auto_range|trans|sw_sanitize }}
+					{% endif %}				
+			</li>
+		{% endif %}
+
+
+	{% endif %}
+{% endblock %}

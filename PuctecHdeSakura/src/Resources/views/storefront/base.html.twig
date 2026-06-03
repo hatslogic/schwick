@@ -1,0 +1,13 @@
+{% sw_extends '@Storefront/storefront/base.html.twig' %}
+
+{% block base_header %}
+    <header class="header-main">
+        <div id="top-bar-announcement" class="text-center py-2">
+            {{ "topbar.announcement.text"|trans|raw }}
+        </div>
+
+        {% block base_header_inner %}
+            {{ parent() }}
+        {% endblock %}
+    </header>
+{% endblock %}

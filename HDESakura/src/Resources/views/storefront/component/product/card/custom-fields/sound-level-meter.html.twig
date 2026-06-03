@@ -1,0 +1,34 @@
+
+{% block custom_fields_sound_level_meters %}
+        {% if product.customFields.zusatzfelder_sound_level_meters_active == "Yes" %}
+                
+                {% if product.customFields.zusatzfelder_sound_level_meters_noise %}
+                        <li>
+                        {{ "customFields.zusatzfelder_sound_level_meters_noise"|trans }}: {{ product.customFields.zusatzfelder_sound_level_meters_noise|trans|sw_sanitize }}
+                        </li>           
+                {% endif %}
+
+
+                {% if product.customFields.zusatzfelder_sound_level_meters_sampling_rate %}
+                        <li>
+                        {{ "customFields.zusatzfelder_sound_level_meters_sampling_rate"|trans }}: {{ product.customFields.zusatzfelder_sound_level_meters_sampling_rate|trans|sw_sanitize  }}
+                        </li>
+                {% endif %}
+
+
+                {% if product.customFields.zusatzfelder_sound_level_meters_resolution %}
+                        <li>
+                        {{ "customFields.zusatzfelder_sound_level_meters_resolution"|trans }}: {{ product.customFields.zusatzfelder_sound_level_meters_resolution|trans|sw_sanitize }}
+                        </li>
+                {% endif %}
+
+                {% if product.customFields.zusatzfelder_sound_level_meters_frequency_rate %}
+                        <li>
+                        {{ "customFields.zusatzfelder_sound_level_meters_frequency_rate"|trans }}: {{ product.customFields.zusatzfelder_sound_level_meters_frequency_rate|trans|sw_sanitize }}
+                        </li>
+                {% endif %}
+        {% endif %}
+{% endblock %}
+
+
+

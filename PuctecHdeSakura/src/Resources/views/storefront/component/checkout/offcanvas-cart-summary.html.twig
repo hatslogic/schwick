@@ -1,0 +1,23 @@
+{% sw_extends '@Storefront/storefront/component/checkout/offcanvas-cart-summary.html.twig' %}
+
+{% block component_offcanvas_summary_content_info %}
+    <div class="row offcanvas-shipping-info">
+        <span class="col-7 shipping-label shipping-cost">
+				{% set grosskundenGroupId = 'checkout.summaryShipping.bigCustomersGroupId'|trans|sw_sanitize %}
+				{% if context.customer.groupId is same as(grosskundenGroupId) %}
+					<strong>{{ 'checkout.summaryShipping.bigCustomersText'|trans|sw_sanitize }}</strong>
+				{% else %}
+					<strong>{{ 'checkout.summaryShipping'|trans|sw_sanitize }}</strong>
+				{% endif %}
+                    {% if loop.first %}
+                        <small {% if page.shippingMethods|length %}class="js-toggle-shipping-selection"{% endif %}>
+                        ({{ activeShipping.shippingMethod.translated.name }})
+                    </small>
+                {% endif %}
+        </span>
+
+        <span class="col-5 pb-2 shipping-value shipping-cost">
+            <strong>+ {{ activeShipping.shippingCosts.totalPrice|currency }}</strong>
+        </span>
+    </div>
+{% endblock %}

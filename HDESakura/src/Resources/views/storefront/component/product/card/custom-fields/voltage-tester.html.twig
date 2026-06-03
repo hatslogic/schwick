@@ -1,0 +1,16 @@
+{% block custom_fields_voltage_tester %}
+	{% if product.customFields.zusatzfelder_voltage_tester_active == "Yes" %}
+		
+		{% if product.customFields.zusatzfelder_voltage_tester_rating %}
+			<li>
+			{{ "customFields.zusatzfelder_voltage_tester_rating"|trans }}: {{ product.customFields.zusatzfelder_voltage_tester_rating|trans|sw_sanitize }}
+			</li>		
+		{% endif %}
+		{% if product.customFields.zusatzfelder_voltage_tester_ip_protection_rating %}
+			<li>
+			{{ "customFields.zusatzfelder_voltage_tester_ip_protection_rating"|trans }}: {{ product.customFields.zusatzfelder_voltage_tester_ip_protection_rating|trans|sw_sanitize }}
+			</li>		
+		{% endif %}
+
+	{% endif %}
+{% endblock %}

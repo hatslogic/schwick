@@ -1,0 +1,148 @@
+
+{% if page.product.translated.customFields.zusatzfelder_unit_conductance_capacity_meter_active == "Yes" %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_conductance_capacity_meter_resistance %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_conductance_capacity_meter_resistance"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_conductance_capacity_meter_resistance|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_conductance_capacity_meter_capacitance %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_conductance_capacity_meter_capacitance"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_conductance_capacity_meter_capacitance|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_conductance_capacity_meter_inductance %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_conductance_capacity_meter_inductance"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_conductance_capacity_meter_inductance|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+
+
+
+{% if page.product.translated.customFields.zusatzfelder_unit_conductance_capacity_meter_manual_range %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_conductance_capacity_meter_manual_range"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_conductance_capacity_meter_manual_range|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_conductance_capacity_meter_manual_range|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_conductance_capacity_meter_manual_range|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}{% if page.product.translated.customFields.zusatzfelder_unit_conductance_capacity_meter_low_battery_indication %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_conductance_capacity_meter_low_battery_indication"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_conductance_capacity_meter_low_battery_indication|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_conductance_capacity_meter_low_battery_indication|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_conductance_capacity_meter_low_battery_indication|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}{% if page.product.translated.customFields.zusatzfelder_unit_conductance_capacity_meter_transistor %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_conductance_capacity_meter_transistor"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_conductance_capacity_meter_transistor|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_conductance_capacity_meter_transistor|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_conductance_capacity_meter_transistor|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}{% if page.product.translated.customFields.zusatzfelder_unit_conductance_capacity_meter_diode_test %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_conductance_capacity_meter_diode_test"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_conductance_capacity_meter_diode_test|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_conductance_capacity_meter_diode_test|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_conductance_capacity_meter_diode_test|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}{% if page.product.translated.customFields.zusatzfelder_unit_conductance_capacity_meter_continuity_test %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_unit_conductance_capacity_meter_continuity_test"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_unit_conductance_capacity_meter_continuity_test|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_unit_conductance_capacity_meter_continuity_test|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_unit_conductance_capacity_meter_continuity_test|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}
+
+
+
+
+
+
+
+
+{% if page.product.translated.customFields.zusatzfelder_unit_conductance_capacity_meter_display_count %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_conductance_capacity_meter_display_count"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_conductance_capacity_meter_display_count|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_conductance_capacity_meter_display_size %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_conductance_capacity_meter_display_size"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_conductance_capacity_meter_display_size|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+{% if page.product.translated.customFields.zusatzfelder_unit_conductance_capacity_meter_power_supply %}
+<tr>
+<th>{{ "customFields.zusatzfelder_unit_conductance_capacity_meter_power_supply"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_unit_conductance_capacity_meter_power_supply|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+{% if page.product.weight %}
+      <tr>
+      <th>{{ "customFields.zusatzfelder_unit_conductance_capacity_meter_weight"|trans }}:</th>      
+        <td>{{ page.product.weight|trans|sw_sanitize|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}kg</td>           
+      </tr>
+      {% endif %}
+
+      
+
+      {% if page.product.length %}
+      <tr>
+      <th>{{ "customFields.zusatzfelder_unit_conductance_capacity_meter_size"|trans }}:</th>
+        <td>
+          {{ page.product.length|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+
+          {% if page.product.width %}
+             x {{ page.product.width|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+            {% if page.product.height %}
+              x {{ page.product.height|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+            {% endif %}
+
+          {% endif %}
+                  
+        </td>           
+      </tr>
+      {% endif %}
+
+
+
+
+
+{% endif %}
+
+
+
+

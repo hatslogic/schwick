@@ -1,0 +1,40 @@
+{% sw_extends '@Storefront/storefront/page/account/order-history/order-detail.html.twig' %}
+
+{% block page_account_order_item_detail_amount_label %}
+	<dt class="col-6 col-md-8">
+	
+		{% set kleingewerbeGroupId = '28df66ad5b754d62be2ba02d5115decf' %}
+		{% if context.customer.groupId is same as(kleingewerbeGroupId) %}
+			
+			{% if order.isTaxFree %}
+				{{ "account.orderItemNetTotal_Kleingewerbe"|trans|sw_sanitize }}
+			{% else %}
+				{{ "account.orderItemTotal_Kleingewerbe"|trans|sw_sanitize }}
+			{% endif %}	
+			
+		{% else %}
+			
+			{% if order.isTaxFree %}
+				{{ "account.orderItemNetTotal"|trans|sw_sanitize }}
+			{% else %}
+				{{ "account.orderItemTotal"|trans|sw_sanitize }}
+			{% endif %}
+					
+		{% endif %}   
+				
+	</dt>
+{% endblock %}
+
+
+{% block page_account_order_item_detail_shipping_costs_label %}
+    <dt class="col-6 col-md-8">
+
+    	{% set kleingewerbeGroupId = '28df66ad5b754d62be2ba02d5115decf' %}
+		{% if context.customer.groupId is same as(kleingewerbeGroupId) %}
+			{{ "account.orderItemShippingcosts_Kleingewerbe"|trans|sw_sanitize }}
+		{% else %}
+			{{ "account.orderItemShippingcosts"|trans|sw_sanitize }}
+		{% endif %}   
+
+    </dt>
+{% endblock %}

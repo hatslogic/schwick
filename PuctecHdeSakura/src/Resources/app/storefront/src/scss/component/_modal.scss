@@ -1,0 +1,17 @@
+.js-pseudo-modal {
+	.modal {
+		padding-right: 0 !important;
+
+		.modal-dialog {
+			max-width: 1220px;
+		}
+
+		.js-pseudo-modal-template-content-element {
+			padding: 0;
+
+			@include media-breakpoint-up(sm) {
+				padding: 1rem;
+			}
+		}
+	}
+}

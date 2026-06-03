@@ -1,0 +1,20 @@
+///*
+//Basic styles
+//==================================================
+//Contains the imports to all basic styles.
+//
+//The file organization follows the 7-1 pattern architecture
+//https://sass-guidelin.es/#the-7-1-pattern
+//*/
+//
+///*
+// * Variables, Mixins, Functions
+// * ---------------------------- */
+@import 'component/hde-slider-minimal';
+@import "component/cms-element";
+@import "component/product-box";
+@import "component/cms-sections";
+@import "page/account/login";
+@import "element/cms-category-listing";
+@import "component/hosono-de";
+@import "layout/footer";

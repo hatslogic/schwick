@@ -1,0 +1,180 @@
+
+
+{% if page.product.translated.customFields.zusatzfelder_sound_level_meters_active == "Yes" %}
+
+
+
+{% if page.product.translated.customFields.zusatzfelder_sound_level_meters_bluetooth %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_sound_level_meters_bluetooth"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_sound_level_meters_bluetooth|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_sound_level_meters_bluetooth|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_sound_level_meters_bluetooth|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}
+
+{% if page.product.translated.customFields.zusatzfelder_sound_level_meters_noise %}
+<tr>
+<th>{{ "customFields.zusatzfelder_sound_level_meters_noise"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_sound_level_meters_noise|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+
+{% if page.product.translated.customFields.zusatzfelder_sound_level_meters_resolution %}
+<tr>
+<th>{{ "customFields.zusatzfelder_sound_level_meters_resolution"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_sound_level_meters_resolution|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+{% if page.product.translated.customFields.zusatzfelder_sound_level_meters_sampling_rate %}
+<tr>
+<th>{{ "customFields.zusatzfelder_sound_level_meters_sampling_rate"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_sound_level_meters_sampling_rate|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+{% if page.product.translated.customFields.zusatzfelder_sound_level_meters_frequency_rate %}
+<tr>
+<th>{{ "customFields.zusatzfelder_sound_level_meters_frequency_rate"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_sound_level_meters_frequency_rate|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+
+
+
+
+
+
+
+
+
+{% if page.product.translated.customFields.zusatzfelder_sound_level_meters_auto_power_off %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_sound_level_meters_auto_power_off"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_sound_level_meters_auto_power_off|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_sound_level_meters_auto_power_off|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_sound_level_meters_auto_power_off|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}{% if page.product.translated.customFields.zusatzfelder_sound_level_meters_data_hold %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_sound_level_meters_data_hold"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_sound_level_meters_data_hold|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_sound_level_meters_data_hold|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_sound_level_meters_data_hold|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}{% if page.product.translated.customFields.zusatzfelder_sound_level_meters_min_max_function %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_sound_level_meters_min_max_function"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_sound_level_meters_min_max_function|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_sound_level_meters_min_max_function|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_sound_level_meters_min_max_function|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}{% if page.product.translated.customFields.zusatzfelder_sound_level_meters_LCD_backlight %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_sound_level_meters_LCD_backlight"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_sound_level_meters_LCD_backlight|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_sound_level_meters_LCD_backlight|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_sound_level_meters_LCD_backlight|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}{% if page.product.translated.customFields.zusatzfelder_sound_level_meters_low_battery_indication %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_sound_level_meters_low_battery_indication"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_sound_level_meters_low_battery_indication|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_sound_level_meters_low_battery_indication|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_sound_level_meters_low_battery_indication|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}{% if page.product.translated.customFields.zusatzfelder_sound_level_meters_overload_indication %}
+                <tr>
+                <th>{{ "customFields.zusatzfelder_sound_level_meters_overload_indication"|trans }}:</th>
+                {% if    page.product.translated.customFields.zusatzfelder_sound_level_meters_overload_indication|trans|sw_sanitize  == 1 %}
+                                                        <td>✓</td>
+                                        {% elseif page.product.translated.customFields.zusatzfelder_sound_level_meters_overload_indication|trans|sw_sanitize == 0 %}
+                                                        <td>✗</td>
+                                        {% else        %}        
+                                                        <td>{{ page.product.translated.customFields.zusatzfelder_sound_level_meters_overload_indication|trans|sw_sanitize }}</td>        
+                                        {% endif %}        
+                </tr>
+                {% endif %}
+
+
+
+
+{% if page.product.translated.customFields.zusatzfelder_sound_level_meters_display_size %}
+<tr>
+<th>{{ "customFields.zusatzfelder_sound_level_meters_display_size"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_sound_level_meters_display_size|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+
+
+{% if page.product.translated.customFields.zusatzfelder_sound_level_meters_power_supply %}
+<tr>
+<th>{{ "customFields.zusatzfelder_sound_level_meters_power_supply"|trans }}:</th>
+<td>{{ page.product.translated.customFields.zusatzfelder_sound_level_meters_power_supply|trans|sw_sanitize }}</td>
+</tr>
+{% endif %}
+
+
+
+
+      {% if page.product.weight %}
+      <tr>
+      <th>{{ "customFields.zusatzfelder_sound_level_meters_weight"|trans }}:</th>      
+        <td>{{ page.product.weight|trans|sw_sanitize|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}kg</td>           
+      </tr>
+      {% endif %}
+
+      
+
+      {% if page.product.length %}
+      <tr>
+      <th>{{ "customFields.zusatzfelder_sound_level_meters_size"|trans }}:</th>
+        <td>
+          {{ page.product.length|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+
+          {% if page.product.width %}
+             x {{ page.product.width|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+            {% if page.product.height %}
+              x {{ page.product.height|number_format(5, '.', ',')|trim('0','right')|trim('.','right') }}mm
+            {% endif %}
+
+          {% endif %}
+                  
+        </td>           
+      </tr>
+      {% endif %}
+
+
+
+
+
+
+{% endif %}
