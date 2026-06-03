@@ -1,223 +1,327 @@
-$( document ).ready(function() {
-    $('body').on('click', '.buy_quantity_minus', function() {
-        if ($(this).siblings(".product-detail-quantity-select").val() > 0) {
-            let inputValue = $(this).siblings(".product-detail-quantity-select").val();
-            inputValue--;
-            $(this).siblings(".product-detail-quantity-select").val(inputValue);
-        }
-    });
-    $('body').on('click', '.buy_quantity_plus', function() {
-        //find element
-        if ($(this).siblings(".product-detail-quantity-select").val() >= 0) {
-            let inputValue = $(this).siblings(".product-detail-quantity-select").val();
-            inputValue++;
-            $(this).siblings(".product-detail-quantity-select").val(inputValue);
+document.addEventListener('DOMContentLoaded', () => {
+
+let productBoxQuantityBox = document.querySelectorAll('.quantity-select-container');
+
+    productBoxQuantityBox.forEach(box => {
+      const minusBtn = box.querySelector('.buy_quantity_minus');
+      const plusButton = box.querySelector('.buy_quantity_plus');
+      const input = box.querySelector('.product-detail-quantity-select');
+
+    minusBtn.addEventListener('click', event => {
+        console.log('minus button clicked');
+        if (minusBtn) {
+             if (input && Number(input.value) > 0) {
+                input.value = Number(input.value) - 1;
+            } 
         }
     });
 
-    //logic for 2 types of registration
-    if (window.location.href.indexOf("account/login") > -1
-        || window.location.href.indexOf("checkout/register") > -1
-        || window.location.href.indexOf("account/register") > -1
+     plusButton.addEventListener('click', event => {
+        console.log('plus button clicked');
+        if (plusButton) {
+             if (input && Number(input.value) < 10) { // Assuming a maximum value of 10
+                input.value = Number(input.value) + 1;
+            } 
+        }
+    });
+});
+console.log("hello from main.js");
+
+    // Logic for 2 types of registration
+    if (
+        window.location.href.includes('account/login') ||
+        window.location.href.includes('checkout/register') ||
+        window.location.href.includes('account/register')
     ) {
-
-        //hide option create no account
-        $('.register-guest-control').hide();
+        document.querySelectorAll('.register-guest-control').forEach(el => {
+            el.style.display = 'none';
+        });
 
         changeRegistrationType();
     }
 
-    //show text on top of form (select default choice)
-    if (window.location.href.indexOf("checkout/register") > -1 ){
-        $('.hde-registration-smallbusiness').show();
-
+    // Show text on top of form
+    if (window.location.href.includes('checkout/register')) {
+        document.querySelectorAll('.hde-registration-smallbusiness').forEach(el => {
+            el.style.display = '';
+        });
     }
 
-    //hide show more in product boxes
-    $(".hde-tech-info-add-list").each(function() {
-        var techInfoAddList = $(this);
+    // Hide empty tech info blocks
+    document.querySelectorAll('.hde-tech-info-add-list').forEach(el => {
+        if (!el.innerHTML.trim()) {
+            const parent = el.parentElement?.parentElement?.parentElement;
 
-        if ($.trim(techInfoAddList.html()) === '') {
-            techInfoAddList.parent().parent().parent().hide();
+            if (parent) {
+                parent.style.display = 'none';
+            }
         }
     });
-
-
 });
 
-function changeRegistrationType(){
+
+
+
+
+function changeRegistrationType() {
     let group = getUrlParameter('group');
-    if(window.location.href.indexOf("checkout/register") > -1 ){
-        group = "smallbusiness";
+
+    if (window.location.href.includes('checkout/register')) {
+        group = 'smallbusiness';
     }
 
-    let smallbusinessGroupID = '28df66ad5b754d62be2ba02d5115decf';
-    let distributorGroupID = '91e80d36381c4b6796eb685c719abe46';
-    let germanySelectID = 'edcd2f8760d74eaa9b864a1ced422262';
-    const e = new Event("change");
-    const element = document.querySelector('#accountType');
+    const smallbusinessGroupID = '28df66ad5b754d62be2ba02d5115decf';
+    const distributorGroupID = '91e80d36381c4b6796eb685c719abe46';
+    const germanySelectID = 'edcd2f8760d74eaa9b864a1ced422262';
 
-    // We don't need DOM reference for the elements, but just a string with html.
-    // With the clone() approach, you can't append these elements in different places because you'll be appending the same elements, resulting in only the "latest" append working.
+    const accountType = document.getElementById('accountType');
+    const changeEvent = new Event('change');
 
-    // var originalSelectOptions = $('#billingAddressAddressCountry option').clone();
-    var originalSelectOptions = $('#billingAddressAddressCountry option').map(function() {
-        return this.outerHTML;
-    }).get().join('');
-    $('#shippingAddressAddressCountry option:not(:selected)').remove();
-    var germanSelectOption = $('#billingAddressAddressCountry option[value="' + germanySelectID + '"]')[0].outerHTML;
-    var placeholderOption = document.querySelector("#billingAddressAddressCountry option[disabled='disabled']").outerHTML;
+    const billingCountry = document.getElementById('billingAddressAddressCountry');
+    const shippingCountry = document.getElementById('shippingAddressAddressCountry');
 
-    var smallBusinessOptions = [placeholderOption, germanSelectOption].join("");
+    const originalSelectOptions = Array.from(
+        document.querySelectorAll('#billingAddressAddressCountry option')
+    )
+        .map(option => option.outerHTML)
+        .join('');
 
-    //texts on top
-    if(group == "smallbusiness"){
+    const germanyOption =
+        document.querySelector(
+            `#billingAddressAddressCountry option[value="${germanySelectID}"]`
+        )?.outerHTML || '';
 
-        $('.register-card').parent().show();
-        $('.register-card').show();
+    const placeholderOption =
+        document.querySelector(
+            "#billingAddressAddressCountry option[disabled='disabled']"
+        )?.outerHTML || '';
 
-        $('.hde-registration-smallbusiness').show();
-        $('.hde-registration-distributor').hide();
-        $('#accountType option[value="'+smallbusinessGroupID+'"]').attr('selected', 'selected');
-        element.dispatchEvent(e);
+    const smallBusinessOptions = placeholderOption + germanyOption;
 
-        //hide login form
-        $('.login-card').parent().hide();
+    if (group === 'smallbusiness') {
+        document.querySelectorAll('.register-card').forEach(el => {
+            el.style.display = '';
+            if (el.parentElement) {
+                el.parentElement.style.display = '';
+            }
+        });
 
-        //for smallbusiness allow only Deustchland for country
-        $('#billingAddressAddressCountry').empty();
-        $('#shippingAddressAddressCountry').empty();
-        // Remove all other options except the selected one
+        document.querySelectorAll('.hde-registration-smallbusiness').forEach(el => {
+            el.style.display = '';
+        });
 
-        $('#billingAddressAddressCountry').append(smallBusinessOptions);
-        $('#shippingAddressAddressCountry').append(smallBusinessOptions);
+        document.querySelectorAll('.hde-registration-distributor').forEach(el => {
+            el.style.display = 'none';
+        });
 
-        //for small business VAT ID is required
-        //if element not yet on page, wait and repeat
-        /*
-        if (document.getElementById("vatIds") == null) {
-            setTimeout(setVatIdRequired(), 1000);
-        }else{
-            setVatIdRequired();
+        const option = document.querySelector(
+            `#accountType option[value="${smallbusinessGroupID}"]`
+        );
+
+        if (option) {
+            option.selected = true;
         }
-        */
 
-    } else if (group == "distributor"){
+        accountType?.dispatchEvent(changeEvent);
 
-        $('.register-card').parent().show();
-        $('.register-card').show();
+        document.querySelectorAll('.login-card').forEach(el => {
+            if (el.parentElement) {
+                el.parentElement.style.display = 'none';
+            }
+        });
 
-        $('.hde-registration-smallbusiness').hide();
-        $('.hde-registration-distributor').show();
-        $('#accountType option[value="'+distributorGroupID+'"]').attr('selected', 'selected');
-        element.dispatchEvent(e);
+        if (billingCountry) {
+            billingCountry.innerHTML = smallBusinessOptions;
+        }
 
-        //for distributor set Firma required
-        $('label[for="billingAddresscompany"]').append('<span>*</span>');
-        $('#billingAddresscompany').prop('required', true);
+        if (shippingCountry) {
+            shippingCountry.innerHTML = smallBusinessOptions;
+        }
+    } else if (group === 'distributor') {
+        document.querySelectorAll('.register-card').forEach(el => {
+            el.style.display = '';
+            if (el.parentElement) {
+                el.parentElement.style.display = '';
+            }
+        });
 
-        //hide login form
-        $('.login-card').parent().hide();
+        document.querySelectorAll('.hde-registration-smallbusiness').forEach(el => {
+            el.style.display = 'none';
+        });
+
+        document.querySelectorAll('.hde-registration-distributor').forEach(el => {
+            el.style.display = '';
+        });
+
+        const option = document.querySelector(
+            `#accountType option[value="${distributorGroupID}"]`
+        );
+
+        if (option) {
+            option.selected = true;
+        }
+
+        accountType?.dispatchEvent(changeEvent);
+
+        const companyLabel = document.querySelector(
+            'label[for="billingAddresscompany"]'
+        );
+
+        if (companyLabel && !companyLabel.querySelector('span')) {
+            companyLabel.insertAdjacentHTML('beforeend', '<span>*</span>');
+        }
+
+        document.getElementById('billingAddresscompany')?.setAttribute(
+            'required',
+            ''
+        );
+
+        document.querySelectorAll('.login-card').forEach(el => {
+            if (el.parentElement) {
+                el.parentElement.style.display = 'none';
+            }
+        });
     } else {
-        $('.login-card').show();
-        //hide registration form if no parameter but show on checkout page
-        if( window.location.href.indexOf("checkout/register") > -1 ) {
-            // show login + form
-            $('.register-card').parent().show();
-            $('.register-card').show();
+        document.querySelectorAll('.login-card').forEach(el => {
+            el.style.display = '';
+        });
+
+        if (window.location.href.includes('checkout/register')) {
+            document.querySelectorAll('.register-card').forEach(el => {
+                el.style.display = '';
+                if (el.parentElement) {
+                    el.parentElement.style.display = '';
+                }
+            });
         }
     }
 
-    $('select#accountType').on('change', function() {
-        if(this.value == smallbusinessGroupID ){
-            $('.hde-registration-smallbusiness').show();
-            $('.hde-registration-distributor').hide();
-            //for smallbusiness allow only Deustchland for country
-            $('#billingAddressAddressCountry').empty();
-            $('#shippingAddressAddressCountry').empty();
-            // Remove all other options except the selected one
+    accountType?.addEventListener('change', function () {
+        if (this.value === smallbusinessGroupID) {
+            document.querySelectorAll('.hde-registration-smallbusiness').forEach(el => {
+                el.style.display = '';
+            });
 
-            $('#billingAddressAddressCountry').append(smallBusinessOptions);
-            $('#shippingAddressAddressCountry').append(smallBusinessOptions);
-            $('#billingAddresscompany').prop('required', false);
-            // }else if(this.value == distributorGroupID){
-            // 	$('.hde-registration-smallbusiness').hide();
-            // 	$('.hde-registration-distributor').show();
-            // 	//reset selectoption to all countries
-            // 	// Empty the select element
-            // 	$('#billingAddressAddressCountry').empty();
-            // 	$('#shippingAddressAddressCountry').empty();
-            // 	// Append the original options back to the select element
-            // 	$('#billingAddressAddressCountry').append(originalSelectOptions);
-            // 	$('#shippingAddressAddressCountry').append(originalSelectOptions);
-            // 	//for distributor set Firma required
-            // 	$('label[for="billingAddresscompany"]').append('<span>*</span>');
-            // 	$('#billingAddresscompany').prop('required', true);
-            // }
-        }else {
-            $('.hde-registration-smallbusiness').hide();
-            $('.hde-registration-distributor').show();
-            //reset selectoption to all countries
-            // Empty the select element
-            $('#billingAddressAddressCountry').empty();
-            $('#shippingAddressAddressCountry').empty();
-            // Append the original options back to the select element
-            $('#billingAddressAddressCountry').append(originalSelectOptions);
-            $('#shippingAddressAddressCountry').append(originalSelectOptions);
-            //for distributor set Firma required
-            $('label[for="billingAddresscompany"]').append('<span>*</span>');
-            $('#billingAddresscompany').prop('required', true);
-        }
-    });
+            document.querySelectorAll('.hde-registration-distributor').forEach(el => {
+                el.style.display = 'none';
+            });
 
-}
+            if (billingCountry) {
+                billingCountry.innerHTML = smallBusinessOptions;
+            }
 
-function setVatIdRequired(){
-    //VAT ID
-    //required only for smallbusiness
+            if (shippingCountry) {
+                shippingCountry.innerHTML = smallBusinessOptions;
+            }
 
-    $('#vatIds').attr('required', true);
-    $('label[for="vatIds"]').append('<span>*</span>');
+            const companyField = document.getElementById('billingAddresscompany');
 
-    var submitBtn = $('button[type="submit"]');
-
-    $('#vatIds').on('keyup', function(){
-        var inputValue = $(this).val();
-        var alertMsg = '';
-        if(inputValue.indexOf('DE') == -1){
-            alertMsg = '<span style="color: red;">Bitte gib eine gültige deutsche VAT ein. Wenn dein Unternehmen nicht in Deutschland ansässig ist, benutze bitte das <a href="/Registrierungsformular-Grosskundenregistrierung">Großkundenregistrierung Formular</a></span>';
-            submitBtn.prop('disabled', true);
+            if (companyField) {
+                companyField.required = false;
+            }
         } else {
-            submitBtn.prop('disabled', false);
+            document.querySelectorAll('.hde-registration-smallbusiness').forEach(el => {
+                el.style.display = 'none';
+            });
+
+            document.querySelectorAll('.hde-registration-distributor').forEach(el => {
+                el.style.display = '';
+            });
+
+            if (billingCountry) {
+                billingCountry.innerHTML = originalSelectOptions;
+            }
+
+            if (shippingCountry) {
+                shippingCountry.innerHTML = originalSelectOptions;
+            }
+
+            const companyLabel = document.querySelector(
+                'label[for="billingAddresscompany"]'
+            );
+
+            if (companyLabel && !companyLabel.querySelector('span')) {
+                companyLabel.insertAdjacentHTML('beforeend', '<span>*</span>');
+            }
+
+            const companyField = document.getElementById('billingAddresscompany');
+
+            if (companyField) {
+                companyField.required = true;
+            }
         }
-        $('label[for="vatIds"]').find('.alert-msg').remove();
-        $('label[for="vatIds"]').append('<span class="alert-msg">' + alertMsg + '</span>');
     });
 }
 
+function setVatIdRequired() {
+    const vatInput = document.getElementById('vatIds');
 
-function removeRequired(){
-    //Company not required remove required and "*"
-    let label = $("label[for='billingAddresscompany']");
-    labelText = label.text().replace("*", '');
-    label.text(labelText);
-    $('input#billingAddresscompany').removeAttr('required');
+    if (!vatInput) {
+        return;
+    }
+
+    vatInput.required = true;
+
+    const label = document.querySelector('label[for="vatIds"]');
+
+    if (label && !label.querySelector('.required-mark')) {
+        label.insertAdjacentHTML(
+            'beforeend',
+            '<span class="required-mark">*</span>'
+        );
+    }
+
+    const submitBtn = document.querySelector('button[type="submit"]');
+
+    vatInput.addEventListener('keyup', function () {
+        const value = this.value;
+
+        let alertMsg = '';
+
+        if (!value.includes('DE')) {
+            alertMsg = `
+                <span style="color:red;">
+                    Bitte gib eine gültige deutsche VAT ein.
+                    Wenn dein Unternehmen nicht in Deutschland ansässig ist,
+                    benutze bitte das
+                    <a href="/Registrierungsformular-Grosskundenregistrierung">
+                        Großkundenregistrierung Formular
+                    </a>
+                </span>
+            `;
+
+            submitBtn?.setAttribute('disabled', '');
+        } else {
+            submitBtn?.removeAttribute('disabled');
+        }
+
+        label?.querySelector('.alert-msg')?.remove();
+
+        if (label) {
+            label.insertAdjacentHTML(
+                'beforeend',
+                `<span class="alert-msg">${alertMsg}</span>`
+            );
+        }
+    });
 }
 
+function removeRequired() {
+    const label = document.querySelector(
+        "label[for='billingAddresscompany']"
+    );
 
-var getUrlParameter = function getUrlParameter(sParam) {
-    var sPageURL = window.location.search.substring(1),
-        sURLVariables = sPageURL.split('&'),
-        sParameterName,
-        i;
-
-    for (i = 0; i < sURLVariables.length; i++) {
-        sParameterName = sURLVariables[i].split('=');
-
-        if (sParameterName[0] === sParam) {
-            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
-        }
+    if (label) {
+        label.textContent = label.textContent.replace('*', '');
     }
-    return false;
-};
 
+    document
+        .querySelector('input#billingAddresscompany')
+        ?.removeAttribute('required');
+}
+
+function getUrlParameter(name) {
+    const params = new URLSearchParams(window.location.search);
+
+    return params.get(name) || false;
+}

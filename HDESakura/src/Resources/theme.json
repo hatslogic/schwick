@@ -18,7 +18,7 @@
   ],
   "script": [
     "@Storefront",
-    "app/storefront/dist/storefront/js/HDESakura.js"
+    "app/storefront/dist/storefront/js/h-d-e-sakura/h-d-e-sakura.js"
   ],
   "asset": [
     "@Storefront",
