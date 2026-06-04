@@ -1,0 +1,7 @@
+{% sw_extends '@Storefront/storefront/element/cms-element-html.html.twig' %}
+
+{% block element_html_inner %}
+    {% sw_include '@PuctecHdeSakura/storefront/utilities/cms-legacy-navigation-content.html.twig' with {
+        content: element.data.content
+    } only %}
+{% endblock %}
