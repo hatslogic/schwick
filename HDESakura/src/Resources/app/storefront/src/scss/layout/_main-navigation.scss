@@ -1,10 +1,21 @@
 .nav-main {
 	background-color: $sw-color-brand-primary;
-	nav.main-navigation-menu > a {
+	.main-navigation-menu{
+		padding: rem(2) 0;
+	}
+	.nav-item{
+		padding-right: rem(32);
+	}
+	.main-navigation-menu-list a {
 		color: white;
 		font-weight: bold;
-		&:hover {
+		
+		&:hover,
+		&.active {
 			color: $sw-text-color;
+		}
+		&::after{
+			display: none;
 		}
 	}
 }

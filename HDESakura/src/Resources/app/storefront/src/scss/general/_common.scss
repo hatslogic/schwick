@@ -1,0 +1,51 @@
+:root{
+    --bs-body-font-size: 0.875rem;
+    --bs-body-font-weight: 400;
+    --bs-body-line-height: 1.5;
+    --bs-body-color: #2b3136;
+}
+body{
+    font-size: var(--bs-body-font-size);
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+    color: var(--bs-body-color);
+}
+a{
+    text-decoration: none;
+}
+.breadcrumb a {
+    font-size: 0.875rem;
+}
+ol, ul, dl {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6{
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+p {
+    margin-bottom: 1rem;
+}
+.form-control {
+    font-size: 14px;
+    &::-webkit-input-placeholder {
+        font-size: 14px;
+        color: #878994;
+    }
+    &:-ms-input-placeholder {
+        font-size: 14px;
+        color: #878994;
+    }
+}
+.btn-primary, .btn-outline-primary{
+    font-size: 14px;
+}
+.header-cart-total{
+    margin-left: 8px;
+}
+.footer-link{
+    &:hover{
+        text-decoration: underline;
+    }
+}

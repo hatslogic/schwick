@@ -9,3 +9,39 @@
 		justify-content: space-between;
 	}
 }
+.cms-element-product-listing{
+	.cms-listing-row{
+		.product-box{
+			.card-body{
+				& > .col{
+					flex: auto;
+					width: 100%;
+				}
+				.product-details{
+					font-size: 14px;
+					ol,ul{
+						font-size: inherit;
+					}
+				}
+				.product-price-info {
+					display: none;
+				}
+				.maxia-listing-price-table-heading{
+					font-size: 12px;
+				}
+				.maxia-listing-price-table-quantity{
+					font-size: 12px;
+				}
+				.maxia-listing-price-table-price {
+					font-size: 14px;
+				}
+				.product-detail-delivery-information {
+					font-size: 14px;
+				}
+				.maxia-listing-price-table-discount-cell{
+					display: none;
+				}
+			}
+		}
+	}
+}
