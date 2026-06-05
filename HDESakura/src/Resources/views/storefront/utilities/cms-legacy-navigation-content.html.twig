@@ -1,16 +1,20 @@
 {% block cms_legacy_navigation_content %}
-    {% set cmsContent = content ?? '' %}
+    {# {% set cmsContent = content ?? '' %} #}
+    {% if not cmsContent %}
+        {% set cmsContent = '' %}
+    {% endif %}
+    
 
     {% if 'page.header.navigation.active' in cmsContent and page.category is defined and page.category %}
         {% set legacyName = page.category.translated.name|e('html') %}
         {% set legacyId = page.category.id|e('html') %}
-        {% set cmsContent = cmsContent|replace({
+
+        {% set cmsData = cmsContent|replace({
             '{{ page.header.navigation.active.translated.name }}': legacyName,
-            '{{ page.header.navigation.active.translated.name | raw }}': legacyName,
-            '{{ page.header.navigation.active.name }}': legacyName,
+            '<h1>{{ page.header.navigation.active.translated.name }}</h1>': legacyName,
+            '<h1></h1>': legacyName,
             '{{ page.header.navigation.active.id }}': legacyId,
         }) %}
     {% endif %}
-
-    {{ cmsContent|raw }}
+    {{ cmsData|raw }}
 {% endblock %}

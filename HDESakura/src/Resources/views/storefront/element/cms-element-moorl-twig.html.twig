@@ -1,0 +1,26 @@
+
+{% sw_extends '@Storefront/storefront/element/cms-element-moorl-twig.html.twig' %}
+
+{% block element_moorl_twig %}
+    {% set elementContent %}
+        {% if element.config.contentCSS.value %}
+            <style type="text/css">{{ element.config.contentCSS.value|raw }}</style>
+        {% endif %}
+        {# {{ element.translated.config.contentHTML.value|raw }} #}
+        <pre>
+            {{ dump(element.translated.config.contentHTML.value) }}
+        </pre>
+         {% sw_include '@Storefront/storefront/utilities/cms-legacy-navigation-content.html.twig' with {
+        cmsContent: element.translated.config.contentHTML.value
+    } only %}
+
+        {% if element.config.contentJS.value %}
+            <script type="text/javascript">{{ element.config.contentJS.value|raw }}</script>
+        {% endif %}
+    {% endset %}
+    {% if element.config.useTwig.value %}
+        {% include(template_from_string(elementContent)) %}
+    {% else %}
+        {{ elementContent }}
+    {% endif %}
+{% endblock %}
