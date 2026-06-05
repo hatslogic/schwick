@@ -24,6 +24,273 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6{
     line-height: 1.2;
     margin-bottom: 10px;
 }
+
+h1,.h1 {
+    line-height: 40px;
+}
+
+h2,.h2 {
+    line-height: 34px;
+}
+
+h3,.h3 {
+    line-height: 33px;
+}
+
+h4,.h4 {
+    line-height: 24px;
+}
+
+h5,.h5 {
+    line-height: 21px;
+}
+
+h6,.h6 {
+    line-height: 20px;
+}
+
+.alert .icon {
+    margin: 0.5rem;
+    flex: 0 0 auto
+}
+
+.alert .icon svg {
+    top: 0
+}
+
+.alert-has-icon {
+    align-items: normal
+}
+
+.alert-content-container {
+    padding: 0.5rem;
+    flex-grow: 1
+}
+
+.alert-primary {
+    background-color: #FFCB04
+}
+
+.alert-primary .alert-content-container {
+    background-color: #fff5cd;
+    color: #FFCB04
+}
+
+.alert-primary .icon {
+    color: #fff
+}
+
+.alert-secondary {
+    background-color: #FFCB04
+}
+
+.alert-secondary .alert-content-container {
+    background-color: #fff5cd;
+    color: #FFCB04
+}
+
+.alert-secondary .icon {
+    color: #fff
+}
+
+.alert-success {
+    background-color: #3cc261
+}
+
+.alert-success .alert-content-container {
+    background-color: #d8f3df;
+    color: #3cc261
+}
+
+.alert-success .icon {
+    color: #fff
+}
+
+.alert-info {
+    background-color: #26b6cf
+}
+
+.alert-info .alert-content-container {
+    background-color: #d4f0f5;
+    color: #26b6cf
+}
+
+.alert-info .icon {
+    color: #fff
+}
+
+.alert-warning {
+    background-color: #FFCB04
+}
+
+.alert-warning .alert-content-container {
+    background-color: #fff5cd;
+    color: #FFCB04
+}
+
+.alert-warning .icon {
+    color: #fff
+}
+
+.alert-danger {
+    background-color: #e52427
+}
+
+.alert-danger .alert-content-container {
+    background-color: #fad3d4;
+    color: #e52427
+}
+
+.alert-danger .icon {
+    color: #fff
+}
+
+.alert-light {
+    background-color: #f9f9f9
+}
+
+.alert-light .alert-content-container {
+    background-color: #fefefe;
+    color: #f9f9f9
+}
+
+.alert-light .icon {
+    color: #fff
+}
+
+.alert-dark {
+    background-color: #4a545b
+}
+
+.alert-dark .alert-content-container {
+    background-color: #dbddde;
+    color: #4a545b
+}
+
+.alert-dark .icon {
+    color: #fff
+}
+
+.badge {
+    border: 0;
+    box-sizing: content-box;
+    height: 20px;
+    line-height: 20px;
+    margin: 0 5px;
+    min-width: 10px
+}
+
+.badge-lg {
+    height: 28px;
+    line-height: 28px;
+    padding: 0 10px
+}
+
+.breadcrumb svg {
+    height: 0.875rem;
+    width: auto;
+    top: 3px
+}
+
+.breadcrumb .breadcrumb-container {
+    display: flex
+}
+
+.breadcrumb .breadcrumb-placeholder {
+    margin: 0 0.5rem
+}
+
+.breadcrumb a {
+    color: #2b3136;
+    font-size: 0.875rem
+}
+
+.breadcrumb a:hover {
+    color: #FFCB04;
+    text-decoration: none
+}
+
+.breadcrumb a.is-active {
+    color: #FFCB04;
+    font-weight: bolder
+}
+
+.btn {
+    --bs-btn-disabled-color: #bcc1c7;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+// .btn-buy {
+//     --bs-btn-color: #fff;
+//     --bs-btn-bg: #FFCB04;
+//     --bs-btn-border-color: #FFCB04;
+//     --bs-btn-hover-color: #000;
+//     --bs-btn-hover-bg: #d9ad03;
+//     --bs-btn-hover-border-color: #cca203;
+//     --bs-btn-focus-shadow-rgb: 255, 211, 42;
+//     --bs-btn-active-color: #000;
+//     --bs-btn-active-bg: #cca203;
+//     --bs-btn-active-border-color: #bf9803;
+//     --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+//     --bs-btn-disabled-color: #000;
+//     --bs-btn-disabled-bg: #FFCB04;
+//     --bs-btn-disabled-border-color: #FFCB04
+// }
+
+.btn-buy.disabled,.btn-buy:disabled {
+    opacity: 1;
+    background: #eee;
+    border-color: #eee;
+    color: #bcc1c7
+}
+
+.btn-link {
+    --bs-btn-font-weight: 600
+}
+
+.card-title {
+    border-bottom: 1px solid #1b1b1b;
+    padding-bottom: 10px
+}
+
+.custom-select {
+    cursor: pointer
+}
+
+.custom-select:invalid {
+    color: #c3c3c3
+}
+
+.custom-select:hover {
+    border-color: #FFCB04;
+    color: #FFCB04
+}
+
+.form-group {
+    margin-bottom: 20px
+}
+
+.modal-content {
+    box-shadow: var(--bs-modal-box-shadow)
+}
+
+.modal-content .modal-title {
+    margin: 0;
+    line-height: 1.5
+}
+
+.js-pseudo-modal-back-btn .icon {
+    color: currentColor;
+    margin-right: 0.5rem
+}
+
+.product-box {
+    border-color: #1b1b1b;
+    background-color: #fff
+}
+
 p {
     margin-bottom: 1rem;
 }
