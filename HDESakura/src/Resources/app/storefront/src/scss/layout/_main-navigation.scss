@@ -2,19 +2,26 @@
 	background-color: $sw-color-brand-primary;
 	.main-navigation-menu{
 		padding: rem(2) 0;
-	}
-	.nav-item{
-		padding-right: rem(32);
-		.main-navigation-link-text{
+		.nav-item{
+			&:not(:last-child){
+				@media (min-width: 768px){
+				padding-right: rem(32);
+				}
+			}
 			@media (min-width: 768px){
-				height: 25px;
-        		display: block;
+					display: block;
+				}
+			.main-navigation-link-text{
+				@media (min-width: 768px){
+					display: block;
+				}
 			}
 		}
 	}
 	.main-navigation-menu-list .main-navigation-link {
 		color: #ffffff;
 		font-weight: bold;
+		line-height: 1.3;
 		
 		&:hover {
 			color: $sw-text-color;

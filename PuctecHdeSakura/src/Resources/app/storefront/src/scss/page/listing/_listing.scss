@@ -1,11 +1,17 @@
-.cms-listing-row {
-	.product-image-wrapper {
-		width: 250px;
-	}
-	.price-blocked {
-		max-width: 300px;
-	}
-	.product-info {
-		justify-content: space-between;
+.cms-element-product-listing{
+	.product-box{
+		.card-body{
+			position: relative;
+		}
+		.product-name{
+			&:after {
+				content: '';
+				width:100%;
+				height: 215px;
+				position: absolute;
+				top: 8px;
+				left: 8px;
+			}
+		}
 	}
 }
