@@ -17,10 +17,12 @@
 /*center login form (registration form hidden)*/
 /* Ryusei: After 6.4 to 6.5 Update removed, but don't really know why it was there*/
 // Marco: After updating live, we needed o add this to center the login form on loginpage
-.is-act-loginpage .account-register>.row:first-child{
+.is-act-loginpage .account-register>h1{
+	    display: none;
+}
+.is-act-loginpage .account-register>.row{
 	    justify-content: center;
 }
-
 /* hide registration type texts and select option */
 // Marco: After 6.5 update - this blocks also on the checkout page! added class to not include checkout page
 .is-ctl-register:not(.is-act-checkoutregisterpage), .is-act-loginpage {

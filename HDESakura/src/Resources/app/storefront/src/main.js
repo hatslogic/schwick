@@ -1,31 +1,34 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-let productBoxQuantityBox = document.querySelectorAll('.quantity-select-container');
+    let productBoxQuantityBox = document.querySelectorAll('.quantity-select-container');
 
     productBoxQuantityBox.forEach(box => {
-      const minusBtn = box.querySelector('.buy_quantity_minus');
-      const plusButton = box.querySelector('.buy_quantity_plus');
-      const input = box.querySelector('.product-detail-quantity-select');
+        const minusBtn = box.querySelector('.buy_quantity_minus');
+        const plusButton = box.querySelector('.buy_quantity_plus');
+        const input = box.querySelector('.product-detail-quantity-select');
 
-    minusBtn.addEventListener('click', event => {
-        console.log('minus button clicked');
-        if (minusBtn) {
-             if (input && Number(input.value) > 0) {
-                input.value = Number(input.value) - 1;
-            } 
-        }
+        minusBtn.addEventListener('click', event => {
+            console.log('minus button clicked');
+            if (minusBtn) {
+                if (input && Number(input.value) > 0) {
+                    input.value = Number(input.value) - 1;
+                }
+            }
+        });
+
+        plusButton.addEventListener('click', event => {
+            console.log('plus button clicked');
+            if (plusButton) {
+                if (input && Number(input.value) < 10) { // Assuming a maximum value of 10
+                    input.value = Number(input.value) + 1;
+                }
+            }
+        });
+
+
     });
 
-     plusButton.addEventListener('click', event => {
-        console.log('plus button clicked');
-        if (plusButton) {
-             if (input && Number(input.value) < 10) { // Assuming a maximum value of 10
-                input.value = Number(input.value) + 1;
-            } 
-        }
-    });
-});
-console.log("hello from main.js");
+    console.log("hello from main.js");
 
     // Logic for 2 types of registration
     if (
@@ -38,12 +41,13 @@ console.log("hello from main.js");
         });
 
         changeRegistrationType();
+        console.log('registration type logic executed');
     }
 
     // Show text on top of form
     if (window.location.href.includes('checkout/register')) {
         document.querySelectorAll('.hde-registration-smallbusiness').forEach(el => {
-            el.style.display = '';
+            el.style.display = 'block';
         });
     }
 
@@ -64,6 +68,7 @@ console.log("hello from main.js");
 
 
 function changeRegistrationType() {
+     console.log('registration type logic started');
     let group = getUrlParameter('group');
 
     if (window.location.href.includes('checkout/register')) {
@@ -100,14 +105,14 @@ function changeRegistrationType() {
 
     if (group === 'smallbusiness') {
         document.querySelectorAll('.register-card').forEach(el => {
-            el.style.display = '';
+            el.style.display = 'block';
             if (el.parentElement) {
-                el.parentElement.style.display = '';
+                el.parentElement.style.display = 'block';
             }
         });
 
         document.querySelectorAll('.hde-registration-smallbusiness').forEach(el => {
-            el.style.display = '';
+            el.style.display = 'block';
         });
 
         document.querySelectorAll('.hde-registration-distributor').forEach(el => {
@@ -139,9 +144,9 @@ function changeRegistrationType() {
         }
     } else if (group === 'distributor') {
         document.querySelectorAll('.register-card').forEach(el => {
-            el.style.display = '';
+            el.style.display = 'block';
             if (el.parentElement) {
-                el.parentElement.style.display = '';
+                el.parentElement.style.display = 'block';
             }
         });
 
@@ -150,7 +155,7 @@ function changeRegistrationType() {
         });
 
         document.querySelectorAll('.hde-registration-distributor').forEach(el => {
-            el.style.display = '';
+            el.style.display = 'block';
         });
 
         const option = document.querySelector(
@@ -183,14 +188,14 @@ function changeRegistrationType() {
         });
     } else {
         document.querySelectorAll('.login-card').forEach(el => {
-            el.style.display = '';
+            el.style.display = 'block';
         });
 
         if (window.location.href.includes('checkout/register')) {
             document.querySelectorAll('.register-card').forEach(el => {
-                el.style.display = '';
+                el.style.display = 'block';
                 if (el.parentElement) {
-                    el.parentElement.style.display = '';
+                    el.parentElement.style.display = 'block';
                 }
             });
         }
@@ -199,7 +204,7 @@ function changeRegistrationType() {
     accountType?.addEventListener('change', function () {
         if (this.value === smallbusinessGroupID) {
             document.querySelectorAll('.hde-registration-smallbusiness').forEach(el => {
-                el.style.display = '';
+                el.style.display = 'block';
             });
 
             document.querySelectorAll('.hde-registration-distributor').forEach(el => {
@@ -225,7 +230,7 @@ function changeRegistrationType() {
             });
 
             document.querySelectorAll('.hde-registration-distributor').forEach(el => {
-                el.style.display = '';
+                el.style.display = 'block';
             });
 
             if (billingCountry) {
