@@ -1,20 +1,12 @@
 {% block cms_legacy_navigation_content %}
-    {# {% set cmsContent = content ?? '' %} #}
-    {% if not cmsContent %}
-        {% set cmsContent = '' %}
-    {% endif %}
-    
+    {% set cmsContent = content ?? '' %}
 
     {% if 'page.header.navigation.active' in cmsContent and page.category is defined and page.category %}
         {% set legacyName = page.category.translated.name|e('html') %}
         {% set legacyId = page.category.id|e('html') %}
-
-        {% set cmsData = cmsContent|replace({
-            '{{ page.header.navigation.active.translated.name }}': legacyName,
-            '<h1>{{ page.header.navigation.active.translated.name }}</h1>': legacyName,
-            '<h1></h1>': legacyName,
-            '{{ page.header.navigation.active.id }}': legacyId,
-        }) %}
+        {% set cmsContent = cmsContent|preg_replace('/\\{\\{\\s*page\\.header\\.navigation\\.active(?:\\.translated)?\\.name(?:\\s*\\|\\s*raw)?\\s*\\}\\}/', legacyName) %}
+        {% set cmsContent = cmsContent|preg_replace('/\\{\\{\\s*page\\.header\\.navigation\\.active\\.id\\s*\\}\\}/', legacyId) %}
     {% endif %}
-    {{ cmsData|raw }}
+
+    {{ cmsContent|raw }}
 {% endblock %}
