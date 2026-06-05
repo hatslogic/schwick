@@ -39,6 +39,19 @@
 
 .cms-listing-col.hde-row {
 	margin-bottom: .5rem;
+	.product-box{
+		.product-name{
+			&:after {
+				content: '';
+				width: 250px;
+				height: 210px;
+				position: absolute;
+				top: 8px;
+				left: 8px;
+			}
+		}
+	}
+
 	.card-body{
 		flex-direction: row;
 		padding: .5rem;

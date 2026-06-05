@@ -5,14 +5,22 @@
 	}
 	.nav-item{
 		padding-right: rem(32);
+		.main-navigation-link-text{
+			@media (min-width: 768px){
+				height: 25px;
+        		display: block;
+			}
+		}
 	}
-	.main-navigation-menu-list a {
-		color: white;
+	.main-navigation-menu-list .main-navigation-link {
+		color: #ffffff;
 		font-weight: bold;
 		
-		&:hover,
-		&.active {
+		&:hover {
 			color: $sw-text-color;
+		}
+		&.active {
+			color: #ffffff;
 		}
 		&::after{
 			display: none;

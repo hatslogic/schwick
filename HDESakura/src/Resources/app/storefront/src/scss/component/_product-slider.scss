@@ -19,6 +19,22 @@
 .product-slider .tns-inner, .cart-product-slider .tns-inner {
     padding: 0 3rem 0 2px !important;
 }
+.product-slider{
+	.product-box{
+		.product-name{
+			&:after {
+				content: '';
+				width: calc(100% - 16px);
+				height: 200px;
+				position: absolute;
+				top: 8px;
+				left: 8px;
+			}
+		}
+	}
+
+}
+
 
 
 .tab-pane .hde-slider-item {
