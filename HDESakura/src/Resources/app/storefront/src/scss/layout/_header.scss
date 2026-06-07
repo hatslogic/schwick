@@ -6,4 +6,40 @@
       padding-right: 0!important;
     }
   }
+  .btn{
+    border: 0;
+  }
+}
+.top-bar-language{
+  .top-bar-nav-btn{
+    font-size: 14px;
+      .top-bar-list-icon{
+        margin-right: 8px;
+      }
+  }
+
+  .top-bar-list-item{
+    .dropdown-item{
+      font-size: 14px;
+    }
+  }
+}
+.topbar-service-menu-list{
+  .list-inline-item:not(:last-child){
+    margin-right: 24px;
+  }
+}
+.header-cart{
+  .header-cart-total{
+    font-size: 16px;
+    &::after{
+      content: '*';
+      margin-left: -4px;
+    }
+  }
+}
+.is-act-home{
+  .container-main{
+    padding-top: 4px;
+  }
 }

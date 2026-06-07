@@ -2,7 +2,7 @@
 
 {% block layout_header_top_bar %}
 	<div class="top-bar d-none d-lg-block">
-		<nav class="top-bar-nav justify-content-between align-items-center">
+		<nav class="top-bar-nav d-flex justify-content-between align-items-center">
 			<ul class="topbar-service-menu-list list-inline my-0">
 				{% for serviceMenuItem in header.extensions.serviceMenu %}
 					{% block layout_footer_service_menu_item %}

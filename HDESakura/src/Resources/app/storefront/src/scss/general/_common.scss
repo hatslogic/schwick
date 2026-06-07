@@ -200,6 +200,9 @@ h6,.h6 {
     margin: 0 0.5rem
 }
 
+.cms-breadcrumb.container{
+    margin-bottom: 32px;
+}
 .breadcrumb a {
     color: #2b3136;
     font-size: 0.875rem
@@ -222,22 +225,6 @@ h6,.h6 {
     white-space: nowrap
 }
 
-// .btn-buy {
-//     --bs-btn-color: #fff;
-//     --bs-btn-bg: #FFCB04;
-//     --bs-btn-border-color: #FFCB04;
-//     --bs-btn-hover-color: #000;
-//     --bs-btn-hover-bg: #d9ad03;
-//     --bs-btn-hover-border-color: #cca203;
-//     --bs-btn-focus-shadow-rgb: 255, 211, 42;
-//     --bs-btn-active-color: #000;
-//     --bs-btn-active-bg: #cca203;
-//     --bs-btn-active-border-color: #bf9803;
-//     --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-//     --bs-btn-disabled-color: #000;
-//     --bs-btn-disabled-bg: #FFCB04;
-//     --bs-btn-disabled-border-color: #FFCB04
-// }
 
 .btn-buy.disabled,.btn-buy:disabled {
     opacity: 1;
@@ -298,11 +285,13 @@ p {
     font-size: 14px;
     &::-webkit-input-placeholder {
         font-size: 14px;
-        color: #878994;
+        color: #c3c3c3;
+        opacity: 1
     }
     &:-ms-input-placeholder {
         font-size: 14px;
         color: #878994;
+        opacity: 1;
     }
 }
 .btn-primary, .btn-outline-primary{
@@ -315,4 +304,15 @@ p {
     &:hover{
         text-decoration: underline;
     }
+}
+
+.maxia-listing-price-table-price:after{
+  content: '*';
+}
+.cms-section .cms-section-sidebar > .row {
+    --bs-gutter-x: 40px;
+}
+.cms-section-sidebar.cms-section-sidebar-mobile-wrap.boxed{
+    padding-left: 40px;
+    padding-right: 40px;
 }
