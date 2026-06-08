@@ -3,3 +3,6 @@
       display: none !important;
     }
 }
+.footer-vat p:before {
+    content: '*';
+}

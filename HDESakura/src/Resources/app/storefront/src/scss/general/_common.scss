@@ -68,12 +68,12 @@ h6,.h6 {
 }
 
 .alert-primary {
-    background-color: #FFCB04
+    background-color: $sw-color-brand-primary;
 }
 
 .alert-primary .alert-content-container {
     background-color: #fff5cd;
-    color: #FFCB04
+    color: $sw-color-brand-primary;
 }
 
 .alert-primary .icon {
@@ -209,12 +209,12 @@ h6,.h6 {
 }
 
 .breadcrumb a:hover {
-    color: #FFCB04;
+    color: $sw-color-brand-primary;
     text-decoration: none
 }
 
 .breadcrumb a.is-active {
-    color: #FFCB04;
+    color: $sw-color-brand-primary;
     font-weight: bolder
 }
 
@@ -251,8 +251,8 @@ h6,.h6 {
 }
 
 .custom-select:hover {
-    border-color: #FFCB04;
-    color: #FFCB04
+    border-color: $sw-color-brand-primary;
+    color: $sw-color-brand-primary;
 }
 
 .form-group {
@@ -306,8 +306,12 @@ p {
     }
 }
 
-.maxia-listing-price-table-price:after{
-  content: '*';
+.maxia-listing-price-table-price{
+    font-size: 14px;
+    &:after{
+    content: '*';
+    margin-left: -4px;
+    }
 }
 .cms-section .cms-section-sidebar > .row {
     --bs-gutter-x: 40px;
@@ -315,4 +319,9 @@ p {
 .cms-section-sidebar.cms-section-sidebar-mobile-wrap.boxed{
     padding-left: 40px;
     padding-right: 40px;
+}
+.is-ctl-landingpage{
+    .cms-breadcrumb.container, .cms-section .cms-breadcrumb.boxed{
+        margin-bottom: 16px;
+    }
 }

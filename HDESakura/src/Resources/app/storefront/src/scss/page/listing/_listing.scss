@@ -8,6 +8,11 @@
 	.product-info {
 		justify-content: space-between;
 	}
+	.cms-listing-col.hde-row .card-body .product-name{
+		@media (min-width: 768px) {
+			padding-left: 0;
+		}
+	}
 }
 .cms-element-product-listing{
 	.cms-listing-row{
@@ -22,9 +27,6 @@
 					ol,ul{
 						font-size: inherit;
 					}
-				}
-				.product-price-info {
-					display: none;
 				}
 				.maxia-listing-price-table-heading{
 					font-size: 12px;
@@ -44,4 +46,7 @@
 			}
 		}
 	}
+}
+.filter-panel-item .filter-panel-item-toggle{
+	font-size: 14px;
 }

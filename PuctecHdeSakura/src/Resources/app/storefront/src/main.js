@@ -205,23 +205,36 @@
 
 
 
-document.addEventListener("DOMContentLoaded", function () {
-   const cookieBannerLink = document.querySelector("#cookie-banner-link");
-   console.log(cookieBannerLink);
-    if (cookieBannerLink) {
-        // Make it look clickable
-        cookieBannerLink.style.cursor = "pointer";
+document.addEventListener('click', function (event) {
+    const cookieBannerLink = event.target.closest('#cookie-banner-link');
 
-        // Add click listener
-        cookieBannerLink.addEventListener("click", function (event) {
-            event.preventDefault(); // optional — prevents default link behavior
-            if (typeof window.openCookieConsentManager === "function") {
-                window.openCookieConsentManager();
-            } else {
-                console.warn("openCookieConsentManager() is not defined.");
-            }
-        });
-    } else {
-        console.warn("Element with id #cookie-banner-link not found.");
+    if (!cookieBannerLink) {
+        return;
     }
+
+    // Shopware opens the offcanvas for links to frontend.cookie.offcanvas automatically.
+    if (cookieBannerLink.matches(`[href="${window.router?.['frontend.cookie.offcanvas']}"]`)) {
+        return;
+    }
+
+    event.preventDefault();
+
+    const cookiePermissionEl = document.querySelector('[data-cookie-permission]');
+
+    if (!cookiePermissionEl) {
+        console.warn('Shopware cookie consent is not enabled on this sales channel.');
+        return;
+    }
+
+    const cookieConfiguration = window.PluginManager.getPluginInstanceFromElement(
+        cookiePermissionEl,
+        'CookieConfiguration'
+    );
+
+    if (cookieConfiguration?.openOffCanvas) {
+        cookieConfiguration.openOffCanvas();
+        return;
+    }
+
+    document.querySelector('.js-cookie-configuration-button button')?.click();
 });

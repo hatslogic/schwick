@@ -20,7 +20,7 @@
   ],
   "script": [
     "@Storefront",
-    "app/storefront/dist/storefront/js/puctec-hde-sakura.js"
+    "app/storefront/dist/storefront/js/puctec-hde-sakura/puctec-hde-sakura.js"
   ],
 
   "asset": [

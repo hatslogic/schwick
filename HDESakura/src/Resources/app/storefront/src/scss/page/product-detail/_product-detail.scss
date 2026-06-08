@@ -87,3 +87,37 @@
 .product-detail-configurator-group {
     margin-bottom: 1rem
 }
+.is-ctl-product{
+    .cms-breadcrumb.container{
+        margin-bottom: 16px;
+    }
+}
+
+.base-slider{
+.tns-nav .base-slider-dot, 
+.tns-nav button, 
+.base-slider-dots .base-slider-dot, 
+ .base-slider-dots button{
+    background-color: #bcc1c7;
+    &:hover,
+    &.tns-nav-active{
+        background-color: #798490;
+    }
+ }
+}
+.product-detail-tabs{
+    .card-tabs .nav-link{
+        font-size: 14px;
+    }
+}
+
+.product-detail-price{
+    position: relative;
+		&::after{
+			content: '*';
+			margin-left: -4px;
+		}
+}
+.product-detail-description-title{
+    display: none;
+}

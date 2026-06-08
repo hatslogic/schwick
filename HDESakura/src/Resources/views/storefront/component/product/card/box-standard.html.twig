@@ -88,13 +88,11 @@
 				{% block component_product_box_description %}{% endblock %}
 			
 				{% block component_product_box_price %}
-					{% if page.netiAMblockedPrices is null %} {# IS NOT BLOCKED BY B2B PLUGIN #}						
-							{{ parent() }}						
+					{% if page.netiAMblockedPrices or product.extensions.netiAMblockedPrices %}
 					{% else %}
-						{# hide #}
+						{{ parent() }}
 					{% endif %}
 				{% endblock %}
-
 
 				{% block component_product_box_action %}	
 

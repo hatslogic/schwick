@@ -3,6 +3,22 @@
 	.product-price-tax-link {
 		display: none;
 	}
+	.product-price{
+		position: relative;
+		white-space: nowrap;
+		&::after{
+			content: '*';
+			margin-left: -4px;
+		}
+	}
+	.product-info{
+		.maxia-listing-price-table-heading{
+			font-size: 12px;
+		}
+		.maxia-listing-price-table-discount-cell {
+			display: none;
+		}
+	}
 }
 
 
