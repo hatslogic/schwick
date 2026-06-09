@@ -212,29 +212,24 @@ document.addEventListener('click', function (event) {
         return;
     }
 
-    // Shopware opens the offcanvas for links to frontend.cookie.offcanvas automatically.
-    if (cookieBannerLink.matches(`[href="${window.router?.['frontend.cookie.offcanvas']}"]`)) {
-        return;
-    }
-
     event.preventDefault();
 
-    const cookiePermissionEl = document.querySelector('[data-cookie-permission]');
-
-    if (!cookiePermissionEl) {
-        console.warn('Shopware cookie consent is not enabled on this sales channel.');
+    if (typeof window.openCookieConsentManager === 'function') {
+        window.openCookieConsentManager();
         return;
     }
 
-    const cookieConfiguration = window.PluginManager.getPluginInstanceFromElement(
-        cookiePermissionEl,
-        'CookieConfiguration'
+    const acrisCookieEl = document.querySelector('[data-acris-cookie-consent]');
+
+    if (!acrisCookieEl) {
+        console.warn('Acris cookie consent is not enabled on this sales channel.');
+        return;
+    }
+
+    const acrisCookieConsent = window.PluginManager.getPluginInstanceFromElement(
+        acrisCookieEl,
+        'AcrisCookieConsent'
     );
 
-    if (cookieConfiguration?.openOffCanvas) {
-        cookieConfiguration.openOffCanvas();
-        return;
-    }
-
-    document.querySelector('.js-cookie-configuration-button button')?.click();
+    acrisCookieConsent?.openOffCanvas?.();
 });

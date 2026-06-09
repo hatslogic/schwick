@@ -86,13 +86,17 @@
 			<div class="product-info col">
 
 				{% block component_product_box_description %}{% endblock %}
-			
+
 				{% block component_product_box_price %}
+					{{ parent() }}
+				{% endblock %}
+			
+				{# {% block component_product_box_price %}
 					{% if page.netiAMblockedPrices or product.extensions.netiAMblockedPrices %}
 					{% else %}
 						{{ parent() }}
 					{% endif %}
-				{% endblock %}
+				{% endblock %} #}
 
 				{% block component_product_box_action %}	
 

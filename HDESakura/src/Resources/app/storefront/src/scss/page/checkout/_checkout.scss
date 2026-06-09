@@ -1,0 +1,9 @@
+.login-form{
+    .form-group{
+        &.col-lg-12{
+            @media (min-width: 992px) {
+                width: 50%;
+            }
+        }
+    }
+}
