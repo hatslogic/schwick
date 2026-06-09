@@ -67,7 +67,11 @@
 .product-block-prices-grid .product-block-prices-cell {
     border: 0 none;
     padding: 10px 0 10px 16px;
-    line-height: 20px
+    line-height: 20px;
+    &>div{
+        content: '*';
+        margin-left: -4px;
+    }
 }
 
 .product-block-prices-grid .product-block-prices-cell.product-block-prices-cell-thin {
@@ -90,6 +94,20 @@
 .is-ctl-product{
     .cms-breadcrumb.container{
         margin-bottom: 16px;
+    }
+    .product-block-prices-grid thead {
+        .product-block-prices-row{
+            background-color: #f9f9f9;
+            .th.product-block-prices-cell{
+                background-color: #f9f9f9;
+            }
+        }
+        
+    }
+}
+.cms-block-product-heading{
+    .cms-block-container-row{
+        align-items: center;
     }
 }
 

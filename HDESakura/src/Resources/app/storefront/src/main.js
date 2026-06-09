@@ -19,12 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
         plusButton.addEventListener('click', event => {
             console.log('plus button clicked');
             if (plusButton) {
-                if (input && Number(input.value) < 10) { // Assuming a maximum value of 10
+                if (input && Number(input.value) >= 0) {
                     input.value = Number(input.value) + 1;
                 }
             }
         });
-
 
     });
 
