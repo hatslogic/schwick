@@ -28,7 +28,8 @@
         }
     }
 }
-.is-act-finishpage{
+.is-act-finishpage,
+.order-detail-content-list{
     .line-item-product{
         .line-item-quantity-select-wrapper{
             @media (min-width: 576px) {
@@ -49,6 +50,7 @@
         }
     }
 }
+
 button{
     &.line-item-remove-button{
         color: var(--bs-body-color);
