@@ -28,6 +28,27 @@
         }
     }
 }
+.is-act-finishpage{
+    .line-item-product{
+        .line-item-quantity-select-wrapper{
+            @media (min-width: 576px) {
+                .justify-content-sm-center{
+                    justify-content: flex-start;
+                }
+            }
+            @media (min-width: 768px) {
+                .justify-content-sm-center{
+                    justify-content: center;
+                }
+            }
+        }
+        .line-item-quantity-label{
+            @media (max-width: 575.98px) {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
 button{
     &.line-item-remove-button{
         color: var(--bs-body-color);
