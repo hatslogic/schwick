@@ -3,6 +3,13 @@
       display: none !important;
     }
 }
-.footer-vat p:before {
-    content: '*';
+// .footer-vat p:before {
+//     content: '*';
+// }
+
+span#cookie-banner-link {
+    cursor: pointer;
+    &:hover{
+        text-decoration: underline;
+    }
 }
