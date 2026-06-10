@@ -1,0 +1,19 @@
+{% sw_extends '@Storefront/storefront/cbax-sticky/base.html.twig' %}
+
+{% block sticky_header_actions_wishlist %}
+    <div class="col-auto">
+        <div class="header-wishlist">
+            <a class="btn header-wishlist-btn header-actions-btn"
+               href="{{ path('frontend.wishlist.page') }}"
+               title="{{ 'header.wishlist'|trans|striptags }}"
+               aria-labelledby="wishlist-basket-live-area">
+                <span class="header-wishlist-icon">
+                    {% sw_icon 'heart' %}
+                </span>
+                <span class="badge bg-primary header-wishlist-badge"
+                      data-wishlist-sticky-counter="true">
+                </span>
+            </a>
+        </div>
+    </div>
+{% endblock %}

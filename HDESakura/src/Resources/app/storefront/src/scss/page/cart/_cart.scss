@@ -1,4 +1,4 @@
-.is-offcanvas{
+.cart-offcanvas{
     .line-item-total-price{
         justify-content: flex-end;
     }
@@ -10,6 +10,13 @@
         &::before{
             content: "*";
         }
+    }
+    .quantity-selector-group .btn-outline-light svg{
+        top: 2px;
+    }
+    .offcanvas-cart-promotion-button{
+        color: var(--bs-body-color);
+        border-color: var(--bs-body-color);
     }
 }
 .card-title{
@@ -62,11 +69,18 @@ button{
 }
 .line-item-total-price-value,
 .summary-value.summary-total,
-.line-item-unit-price-value,
 .checkout-aside-summary-value:not(.summary-net, .summary-tax){
     &::after{
         content: "*";
         margin-left: -4px;
+    }
+}
+.line-item-unit-price-value{
+    .line-item-unit-price-value-descriptor{
+        &::before{
+             content: "*";
+             margin-left: -4px;
+        }
     }
 }
 .form-text{

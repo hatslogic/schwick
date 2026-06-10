@@ -1,3 +1,9 @@
+window.PluginManager.register(
+    'WishlistStickyCounterSync',
+    () => import('./plugin/wishlist-sticky-counter-sync.plugin'),
+    '[data-wishlist-sticky-counter]'
+);
+
 document.addEventListener('DOMContentLoaded', () => {
 
     let productBoxQuantityBox = document.querySelectorAll('.quantity-select-container');

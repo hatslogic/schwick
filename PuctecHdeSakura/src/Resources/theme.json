@@ -9,6 +9,7 @@
   "views": [
      "@Storefront",
      "@Plugins",
+     "@HDESakura",
      "@PuctecHdeSakura"
   ],
   "style": [
@@ -20,6 +21,7 @@
   ],
   "script": [
     "@Storefront",
+    "@HDESakura",
     "app/storefront/dist/storefront/js/puctec-hde-sakura/puctec-hde-sakura.js"
   ],
 
