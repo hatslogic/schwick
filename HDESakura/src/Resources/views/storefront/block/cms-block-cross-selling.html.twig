@@ -1,0 +1,10 @@
+{% sw_extends '@Storefront/storefront/block/cms-block-cross-selling.html.twig' %}
+
+{% block block_cross_selling %}
+     {{ parent() }}
+    <div class="product-detail-blog-assignment">
+        {% sw_include '@Storefront/storefront/page/product-detail/blog-assignment/tabs.html.twig' with {
+            blogs: page.extensions.sas_blogs
+        } %}
+    </div>
+{% endblock %}

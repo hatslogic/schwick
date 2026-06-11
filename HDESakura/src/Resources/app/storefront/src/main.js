@@ -4,6 +4,12 @@ window.PluginManager.register(
     '[data-wishlist-sticky-counter]'
 );
 
+window.PluginManager.register(
+    'DvaccessPositionOverride',
+    () => import('./plugin/dvaccess-position-override.plugin'),
+    'body'
+);
+
 document.addEventListener('DOMContentLoaded', () => {
 
     let productBoxQuantityBox = document.querySelectorAll('.quantity-select-container');

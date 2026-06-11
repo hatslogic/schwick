@@ -325,3 +325,6 @@ p {
         margin-bottom: 16px;
     }
 }
+
+// VerignDvAccessibilitySw6 renders inside a Shadow DOM (.dvaccess-shadow-root).
+// Theme SCSS cannot reach .dvaccess-toggle — see dvaccess-position-override.plugin.js.

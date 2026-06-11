@@ -1,4 +1,21 @@
 //Styling for Minimalistic Slider for PucTec home page
+.slider-price{
+  display: none;
+}
+
+.hde-slider-minimal{
+  .slider-price{
+    display: block;
+  }
+  .product-info{
+    &>.product-price-info{
+      display: none;
+    }
+  }
+  .maxia-listing-price-table{
+    display: none;
+  }
+}
 
 .product-slider  {
   .product-slider-item {

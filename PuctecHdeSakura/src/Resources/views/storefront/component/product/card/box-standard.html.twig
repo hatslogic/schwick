@@ -32,6 +32,9 @@
 				{% block component_product_box_description %}{% endblock %}
 			
 				{% block component_product_box_price %}
+				<div class="slider-price">
+					{% sw_include '@Storefront/storefront/component/product/card/price-unit.html.twig' %}
+				</div>
 					{{ parent() }}
 				{% endblock %}
 
