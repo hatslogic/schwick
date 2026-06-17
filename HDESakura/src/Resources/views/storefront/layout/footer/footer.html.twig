@@ -1,28 +1,5 @@
 {% sw_extends '@Storefront/storefront/layout/footer/footer.html.twig' %}
 
-{% block layout_footer_navigation_information_links %}
-	{% if loop.first %}
-		{{ parent() }}
-		{% block layout_footer_navigation_revocation_button %}
-			{% set cmsPath = 'frontend.cms.page.full' %}
-			{% set revocationRequestSnippetKey = 'footer.serviceRevocationRequestTextPage' %}
-			{% set revocationRequestCmsPageId = config('core.basicInformation.revocationRequestPage') %}
-			{% set showRevocationButton = config('core.basicInformation.showRevocationButton') %}
-
-			{% if revocationRequestCmsPageId and showRevocationButton %}
-				{% set revocationRequestUrl = revocationRequestCmsPageId ? path(cmsPath, { id: revocationRequestCmsPageId }) : '#' %}
-				<div class="footer-revocation-button mt-4">
-					{{ revocationRequestSnippetKey|trans({
-                                                '%url%': revocationRequestUrl
-                                            })|raw }}
-				</div>
-			{% endif %}
-		{% endblock %}
-	{% else %}
-		{{ parent() }}
-	{% endif %}
-{% endblock %}
-
 {% block layout_footer_copyright %}
 	<div class="footer-copyright">
 		HDESakura Theme by
