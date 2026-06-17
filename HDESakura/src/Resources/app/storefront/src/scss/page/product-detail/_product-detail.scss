@@ -157,3 +157,16 @@
         margin-bottom: 20px;
     }
 }
+
+.cms-element-image-gallery{
+    .gallery-slider-row {
+        margin-bottom: $spacer;
+        &.is-loading {
+            .gallery-slider-item-container {
+                &:not(:first-child) {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}

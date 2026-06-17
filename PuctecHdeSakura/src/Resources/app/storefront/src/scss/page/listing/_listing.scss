@@ -37,3 +37,28 @@
 	}
 
 }
+.cms-listing-row .product-image-wrapper{
+ width: 100%;
+}
+.cms-element-product-listing{
+	.cms-listing-row{
+		.cms-listing-col{
+			&.col-lg-4{
+				@include media-breakpoint-only(lg) {
+					width: 50%;
+					flex: 0 0 50%;
+				}
+			}
+			&.col-md-6{
+				@include media-breakpoint-down(md){
+					width: 50%;
+					flex: 0 0 50%;
+				}
+				@include media-breakpoint-down(sm){
+					width: 100%;
+					flex: 0 0 100%;
+				}
+			}
+		}
+	}
+}
