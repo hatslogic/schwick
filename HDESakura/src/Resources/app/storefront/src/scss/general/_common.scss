@@ -319,6 +319,10 @@ p {
 .cms-section-sidebar.cms-section-sidebar-mobile-wrap.boxed{
     padding-left: 40px;
     padding-right: 40px;
+    @include media-breakpoint-down(md){
+		padding-left: 20px;
+        padding-right: 20px;
+	}
 }
 .is-ctl-landingpage{
     .cms-breadcrumb.container, .cms-section .cms-breadcrumb.boxed{
@@ -326,5 +330,3 @@ p {
     }
 }
 
-// VerignDvAccessibilitySw6 renders inside a Shadow DOM (.dvaccess-shadow-root).
-// Theme SCSS cannot reach .dvaccess-toggle — see dvaccess-position-override.plugin.js.

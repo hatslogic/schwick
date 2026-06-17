@@ -229,7 +229,13 @@ h2.cms-element-category-listing-item-title.cms-element-category-listing-item-tit
 	}
 
 	.cms-listing-col.hde-row{
-		flex-basis: 50%;
+		flex-basis: 100%;
+		.product-image-wrapper{
+			width: 200px;
+		}
+		.product-box .product-name:after{
+			width: 200px;
+		}
 	}
 
 	.card-body .product-info{
@@ -245,6 +251,17 @@ h2.cms-element-category-listing-item-title.cms-element-category-listing-item-tit
 		margin-bottom:1rem;
 	}
 
+}
+
+.cms-listing-col.hde-row .card-body .product-image-wrapper{
+	@include media-breakpoint-down(md){
+		height: 200px;
+		margin: auto;
+		max-width: 100%;
+		.product-image-placeholder{
+			height: 100%;
+		}
+	}
 }
 
 
