@@ -1,0 +1,25 @@
+{% sw_extends '@Storefront/storefront/page/checkout/confirm/index.html.twig' %}
+
+{% block page_checkout_confirm_legal_guarantee_notice %}
+    {{ parent() }}
+
+    {% if showLegalGuaranteeNotice or config('core.cart.showLegalGuaranteeNotice') %}
+        <div class="checkout-legal-guarantee-badge my-3 text-center">
+            <a href="{{ context.languageId|sw_legal_guarantee_notice_link }}" target="_blank" rel="noopener" title="{{ 'checkout.confirmLegalGuaranteeNoticeLink'|trans|striptags }}" class="d-inline-block text-decoration-none">
+                <div class="p-2 border rounded bg-white shadow-sm" style="max-width: 160px; margin: 0 auto;">
+                    {{ context.languageId|sw_legal_guarantee_notice }}
+                </div>
+            </a>
+        </div>
+        <style>
+            .checkout-legal-guarantee-badge svg {
+                width: 100% !important;
+                height: auto !important;
+                max-width: 140px !important;
+                max-height: 180px !important;
+                display: block !important;
+                margin: 0 auto !important;
+            }
+        </style>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,30 @@
+{% sw_extends '@Storefront/storefront/component/privacy-notice.html.twig' %}
+
+{% block component_privacy_dpi %}
+    {% set cmsPath = 'frontend.cms.page' %}
+    {% set tosModalTagOpen = '<button type="button" class="btn btn-link-inline" aria-haspopup="dialog" data-ajax-modal="true" data-url="' ~ path(cmsPath, { id: config('core.basicInformation.tosPage') }) ~ '">' %}
+    {% set tosModalTagClose = '</button>' %}
+    {% set privacyModalTagOpen = '<button type="button" class="btn btn-link-inline" aria-haspopup="dialog" data-ajax-modal="true" data-url="' ~ path(cmsPath, { id: config('core.basicInformation.privacyPage') }) ~ '">' %}
+    {% set privacyModalTagClose = '</button>' %}
+
+    {% if config('core.loginRegistration.requireDataProtectionCheckbox') == 1 %}
+        {% set dataProtectionLabel %}
+            Ich habe die {{ privacyModalTagOpen|raw }}Datenschutzbestimmungen{{ privacyModalTagClose|raw }} zur Kenntnis genommen und die {{ tosModalTagOpen|raw }}AGB{{ tosModalTagClose|raw }} gelesen und bin mit ihnen einverstanden.
+        {% endset %}
+
+        {% sw_include '@Storefront/storefront/component/form/form-checkbox.html.twig' with {
+            label: dataProtectionLabel,
+            id: 'acceptedDataProtection',
+            name: 'acceptedDataProtection',
+            validationRules: 'required',
+        } %}
+    {% else %}
+        <div class="data-protection-information">
+            {% block component_privacy_label %}
+                <div>
+                    Ich habe die {{ privacyModalTagOpen|raw }}Datenschutzbestimmungen{{ privacyModalTagClose|raw }} zur Kenntnis genommen und die {{ tosModalTagOpen|raw }}AGB{{ tosModalTagClose|raw }} gelesen und bin mit ihnen einverstanden.
+                </div>
+            {% endblock %}
+        </div>
+    {% endif %}
+{% endblock %}

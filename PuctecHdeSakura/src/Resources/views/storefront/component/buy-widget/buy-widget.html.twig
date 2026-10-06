@@ -40,51 +40,61 @@
 
 {% endblock %}
 
-
 {% block buy_widget_ordernumber_container %}
+    {% set curProduct = product ?? page.product %}
     <div class="table-responsive">
 	  <table class="table">
 	  	<tbody>
 	  		<tr>
 	  			<th>{{ "detail.productNumberLabel"|trans }}</th>
-	  			<td>{{ page.product.productNumber }}</td>
+	  			<td>{{ curProduct.productNumber }}</td>
 	  		</tr>
 	  		<tr>
 	  			<th>{{ 'component.product.feature.label.manufacturerNumber' | trans }}</th>
-	  			<td>{{ page.product.manufacturerNumber }}</td>
+	  			<td>{{ curProduct.manufacturerNumber }}</td>
 	  		</tr>
-	  		{% if page.product.ean is defined and page.product.ean is not null %}
+	  		{% if curProduct.ean is defined and curProduct.ean is not null %}
 		  		<tr>
 		  			<th>{{ 'hde_ean' | trans }}</th>
-		  			<td>{{ page.product.ean }}</td>
+		  			<td>{{ curProduct.ean }}</td>
 		  		</tr>
 	  		{% endif %}
-			{% if page.product.translated.customFields.zusatzfelder_unit_multimeter_active == "Yes" %}
-				{% if page.product.translated.customFields.zusatzfelder_unit_multimeter_dc_voltage %}
+
+			{% set garanGuaranteeMonths = curProduct.guaranteeMonths %}
+			{% set garanGuarantee = garanGuaranteeMonths|sw_garan_label_duration %}
+			{% if curProduct.guaranteeConfirmed and garanGuarantee %}
+				<tr>
+					<th>{{ "detail.garanLabelTitle"|trans|default("Garantie") }}:</th>
+					<td>{{ garanGuarantee }}</td>
+				</tr>
+			{% endif %}
+
+			{% if curProduct.translated.customFields.zusatzfelder_unit_multimeter_active == "Yes" %}
+				{% if curProduct.translated.customFields.zusatzfelder_unit_multimeter_dc_voltage %}
 					<tr>
 						<th>{{ "customFields.zusatzfelder_unit_multimeter_dc_voltage"|trans }}:</th>
-						<td>{{ page.product.translated.customFields.zusatzfelder_unit_multimeter_dc_voltage|trans|sw_sanitize }}</td>
+						<td>{{ curProduct.translated.customFields.zusatzfelder_unit_multimeter_dc_voltage|trans|sw_sanitize }}</td>
 					</tr>
 				{% endif %}
 
-				{% if page.product.translated.customFields.zusatzfelder_unit_multimeter_AC_Voltage %}
+				{% if curProduct.translated.customFields.zusatzfelder_unit_multimeter_AC_Voltage %}
 					<tr>
 						<th>{{ "customFields.zusatzfelder_unit_multimeter_AC_Voltage"|trans }}:</th>
-						<td>{{ page.product.translated.customFields.zusatzfelder_unit_multimeter_AC_Voltage|trans|sw_sanitize }}</td>
+						<td>{{ curProduct.translated.customFields.zusatzfelder_unit_multimeter_AC_Voltage|trans|sw_sanitize }}</td>
 					</tr>
 				{% endif %}
 
-				{% if page.product.translated.customFields.zusatzfelder_unit_multimeter_dc_current %}
+				{% if curProduct.translated.customFields.zusatzfelder_unit_multimeter_dc_current %}
 				<tr>
 					<th>{{ "customFields.zusatzfelder_unit_multimeter_dc_current"|trans }}:</th>
-					<td>{{ page.product.translated.customFields.zusatzfelder_unit_multimeter_dc_current|trans|sw_sanitize }}</td>
+					<td>{{ curProduct.translated.customFields.zusatzfelder_unit_multimeter_dc_current|trans|sw_sanitize }}</td>
 				</tr>
 				{% endif %}
 
-				{% if page.product.translated.customFields.zusatzfelder_unit_multimeter_AC_Current %}
+				{% if curProduct.translated.customFields.zusatzfelder_unit_multimeter_AC_Current %}
 				<tr>
 					<th>{{ "customFields.zusatzfelder_unit_multimeter_AC_Current"|trans }}:</th>
-					<td>{{ page.product.translated.customFields.zusatzfelder_unit_multimeter_AC_Current|trans|sw_sanitize }}</td>
+					<td>{{ curProduct.translated.customFields.zusatzfelder_unit_multimeter_AC_Current|trans|sw_sanitize }}</td>
 				</tr>
 				{% endif %}
 			{% endif %}
@@ -95,4 +105,54 @@
 	<div class="hde-product-detail-text2">
         {{ "hde_product_detail_page_text2"|trans|raw }}
     </div>
+{% endblock %}
+
+{% block buy_widget_garan_label %}
+    {% set curProduct = product ?? page.product %}
+    {% set garanGuaranteeMonths = curProduct.guaranteeMonths %}
+    {% set garanGuarantee = garanGuaranteeMonths|sw_garan_label_duration %}
+    {% set garanManufacturer = curProduct.manufacturer.translated.name ?? curProduct.manufacturer.name ?? null %}
+    {% set garanModelIdentifier = curProduct.manufacturerNumber %}
+
+    {% if curProduct.guaranteeConfirmed and garanGuarantee and garanManufacturer and garanModelIdentifier %}
+        {% block buy_widget_garan_label_wrapper %}
+            <div class="product-detail-garan-label-wrapper my-2" data-garan-label-toggle="true">
+                {% block buy_widget_garan_label_preview %}
+                    <div class="product-detail-garan-label">
+                        {% sw_include '@Framework/garan/nested-label.svg.twig' with {
+                            guarantee: garanGuarantee
+                        } only %}
+                    </div>
+                {% endblock %}
+
+                {% block buy_widget_garan_label_full %}
+                    <div class="product-detail-garan-label-full d-none">
+                        {% sw_include '@Framework/garan/label.svg.twig' with {
+                            manufacturer: garanManufacturer,
+                            productNumber: garanModelIdentifier,
+                            guarantee: garanGuarantee
+                        } only %}
+                    </div>
+                {% endblock %}
+
+                {% block buy_widget_garan_label_show_link %}
+                    <button type="button"
+                            class="product-detail-garan-label-show-link"
+                            data-garan-label-toggle-trigger="true"
+                            data-garan-label-show-text="{{ 'detail.garanLabelShowLink'|trans|striptags }}"
+                            data-garan-label-hide-text="{{ 'detail.garanLabelHideLink'|trans|striptags }}">
+                        <span class="product-detail-garan-label-show-link-text">
+                            {{ 'detail.garanLabelShowLink'|trans|sw_sanitize }}
+                        </span>
+                        <span class="product-detail-garan-label-show-link-icon-show">
+                            {% sw_icon 'expand' style { pack: 'solid', size: 'xs' } %}
+                        </span>
+                        <span class="product-detail-garan-label-show-link-icon-hide d-none">
+                            {% sw_icon 'collapse' style { pack: 'solid', size: 'xs' } %}
+                        </span>
+                    </button>
+                {% endblock %}
+            </div>
+        {% endblock %}
+    {% endif %}
 {% endblock %}

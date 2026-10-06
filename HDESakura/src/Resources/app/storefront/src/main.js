@@ -1,65 +1,56 @@
-window.PluginManager.register(
-    'WishlistStickyCounterSync',
-    () => import('./plugin/wishlist-sticky-counter-sync.plugin'),
-    '[data-wishlist-sticky-counter]'
-);
-
-window.PluginManager.register(
-    'DvaccessPositionOverride',
-    () => import('./plugin/dvaccess-position-override.plugin'),
-    'body'
-);
-
 document.addEventListener('DOMContentLoaded', () => {
 
-    let productBoxQuantityBox = document.querySelectorAll('.quantity-select-container');
+let productBoxQuantityBox = document.querySelectorAll('.quantity-select-container');
 
     productBoxQuantityBox.forEach(box => {
-        const minusBtn = box.querySelector('.buy_quantity_minus');
-        const plusButton = box.querySelector('.buy_quantity_plus');
-        const input = box.querySelector('.product-detail-quantity-select');
+      const minusBtn = box.querySelector('.buy_quantity_minus');
+      const plusButton = box.querySelector('.buy_quantity_plus');
+      const input = box.querySelector('.product-detail-quantity-select');
 
-        minusBtn.addEventListener('click', event => {
-            console.log('minus button clicked');
-            if (minusBtn) {
-                if (input && Number(input.value) > 0) {
-                    input.value = Number(input.value) - 1;
-                }
-            }
-        });
-
-        plusButton.addEventListener('click', event => {
-            console.log('plus button clicked');
-            if (plusButton) {
-                if (input && Number(input.value) >= 0) {
-                    input.value = Number(input.value) + 1;
-                }
-            }
-        });
-
+    minusBtn.addEventListener('click', event => {
+        console.log('minus button clicked');
+        if (minusBtn) {
+             if (input && Number(input.value) > 0) {
+                input.value = Number(input.value) - 1;
+            } 
+        }
     });
 
-    console.log("hello from main.js");
+     plusButton.addEventListener('click', event => {
+        console.log('plus button clicked');
+        if (plusButton) {
+             if (input && Number(input.value) < 10) { // Assuming a maximum value of 10
+                input.value = Number(input.value) + 1;
+            } 
+        }
+    });
+});
+console.log("hello from main.js");
 
-    // Logic for 2 types of registration
-    if (
-        window.location.href.includes('account/login') ||
-        window.location.href.includes('checkout/register') ||
-        window.location.href.includes('account/register')
-    ) {
-        document.querySelectorAll('.register-guest-control').forEach(el => {
-            el.style.display = 'none';
-        });
+    // Logic for 2 types of registration (Schwick only - Puctec allows guest checkout)
+    const isPuctec = document.body.classList.contains('is-puctec') ||
+                     window.location.hostname.toLowerCase().includes('puctec') ||
+                     document.querySelector('meta[property="og:site_name"][content*="PUCTEC"]') !== null;
 
-        changeRegistrationType();
-        console.log('registration type logic executed');
-    }
+    if (!isPuctec) {
+        if (
+            window.location.href.includes('account/login') ||
+            window.location.href.includes('checkout/register') ||
+            window.location.href.includes('account/register')
+        ) {
+            document.querySelectorAll('.register-guest-control').forEach(el => {
+                el.style.display = 'none';
+            });
 
-    // Show text on top of form
-    if (window.location.href.includes('checkout/register')) {
-        document.querySelectorAll('.hde-registration-smallbusiness').forEach(el => {
-            el.style.display = 'block';
-        });
+            changeRegistrationType();
+        }
+
+        // Show text on top of form
+        if (window.location.href.includes('checkout/register')) {
+            document.querySelectorAll('.hde-registration-smallbusiness').forEach(el => {
+                el.style.display = 'block';
+            });
+        }
     }
 
     // Hide empty tech info blocks
@@ -79,7 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 function changeRegistrationType() {
-     console.log('registration type logic started');
     let group = getUrlParameter('group');
 
     if (window.location.href.includes('checkout/register')) {
@@ -90,7 +80,7 @@ function changeRegistrationType() {
     const distributorGroupID = '91e80d36381c4b6796eb685c719abe46';
     const germanySelectID = 'edcd2f8760d74eaa9b864a1ced422262';
 
-    const accountType = getAccountTypeSelect();
+    const accountType = document.getElementById('accountType');
     const changeEvent = new Event('change');
 
     const billingCountry = document.getElementById('billingAddressAddressCountry');
@@ -130,8 +120,8 @@ function changeRegistrationType() {
             el.style.display = 'none';
         });
 
-        const option = accountType?.querySelector(
-            `option[value="${smallbusinessGroupID}"]`
+        const option = document.querySelector(
+            `#accountType option[value="${smallbusinessGroupID}"]`
         );
 
         if (option) {
@@ -169,8 +159,8 @@ function changeRegistrationType() {
             el.style.display = 'block';
         });
 
-        const option = accountType?.querySelector(
-            `option[value="${distributorGroupID}"]`
+        const option = document.querySelector(
+            `#accountType option[value="${distributorGroupID}"]`
         );
 
         if (option) {
@@ -340,10 +330,4 @@ function getUrlParameter(name) {
     const params = new URLSearchParams(window.location.search);
 
     return params.get(name) || false;
-}
-
-function getAccountTypeSelect() {
-    return document.querySelector('#-accountType')
-        || document.querySelector('#accountType')
-        || document.querySelector('select[name="accountType"]');
 }

@@ -1,5 +1,31 @@
 {% sw_extends '@Storefront/storefront/layout/footer/footer.html.twig' %}
 
+{% block layout_footer_navigation_information_link %}
+    {% if 'cookie' in category.translated.name|lower or (category.externalLink and 'cookie' in category.externalLink|lower) %}
+        <span class="js-cookie-configuration-button">
+            <button type="button" class="btn btn-link footer-link p-0 text-start" style="text-decoration: none; color: inherit; font: inherit; background: none; border: none; cursor: pointer;">
+                {{ name }}
+            </button>
+        </span>
+    {% else %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}
+
+{% block layout_footer_service_menu_item %}
+    {% if 'cookie' in serviceMenuItem.translated.name|lower or (serviceMenuItem.externalLink and 'cookie' in serviceMenuItem.externalLink|lower) %}
+        <li class="footer-service-menu-item">
+            <span class="js-cookie-configuration-button">
+                <button type="button" class="btn btn-link footer-service-menu-link p-0" style="text-decoration: none; color: inherit; font: inherit; background: none; border: none; cursor: pointer;">
+                    {{ serviceMenuItem.translated.name }}
+                </button>
+            </span>
+        </li>
+    {% else %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}
+
 {% block layout_footer_copyright %}
 	<div class="footer-copyright">
 		HDESakura Theme by
@@ -9,6 +35,74 @@
 	<div class="footer-custom">
 		{{ "hde_footer_custom_html"|trans|raw }}
 	</div>
+    <script>
+        (function() {
+            function triggerCookieConsent() {
+                var acrisLink = document.getElementById('ccActivateModalLink');
+                if (acrisLink) {
+                    var cookieNote = document.querySelector('.acris-cookie-consent.has--accepted');
+                    if (cookieNote) cookieNote.classList.remove('has--accepted');
+                    acrisLink.click();
+                    return true;
+                }
+
+                var acrisModal = document.getElementById('ccAcivateModal');
+                if (acrisModal && window.bootstrap && window.bootstrap.Modal) {
+                    var modalInstance = window.bootstrap.Modal.getOrCreateInstance(acrisModal);
+                    if (modalInstance) {
+                        modalInstance.show();
+                        return true;
+                    }
+                }
+
+                if (window.PluginManager) {
+                    var instances = window.PluginManager.getPluginInstances('CookieConfiguration');
+                    if (instances && instances[0] && typeof instances[0].openOffCanvas === 'function') {
+                        instances[0].openOffCanvas();
+                        return true;
+                    }
+                }
+
+                var btn = document.querySelector('.js-cookie-configuration-button button, [data-cookie-permission] button, #ccSettingButton');
+                if (btn) {
+                    btn.click();
+                    return true;
+                }
+
+                return false;
+            }
+
+            window.openCookieConsentManager = triggerCookieConsent;
+
+            document.addEventListener('click', function(e) {
+                var target = e.target.closest('a, button, #cookie-banner-link, .js-cookie-configuration-button');
+                if (!target) return;
+
+                var href = target.getAttribute('href') || '';
+                var text = (target.textContent || '').trim().toLowerCase();
+                var isCookieLink = target.id === 'cookie-banner-link' ||
+                                   target.classList.contains('js-cookie-configuration-button') ||
+                                   href.indexOf('openCookieConsentManager') !== -1 ||
+                                   (text.indexOf('cookie') !== -1 && (text.indexOf('einstellung') !== -1 || text.indexOf('setting') !== -1));
+
+                if (isCookieLink) {
+                    e.preventDefault();
+                    var opened = triggerCookieConsent();
+                    if (!opened) {
+                        window.location.href = '/?openCookieConsent=1';
+                    }
+                }
+            });
+
+            if (window.location.search.indexOf('openCookieConsent=1') !== -1) {
+                window.addEventListener('DOMContentLoaded', function() {
+                    setTimeout(function() {
+                        triggerCookieConsent();
+                    }, 500);
+                });
+            }
+        })();
+    </script>
 {% endblock %}
 
 {% block layout_footer_service_menu %}{% endblock %}
