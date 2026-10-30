@@ -1,3 +1,9 @@
+.footer-column-content {
+    .list-unstyled {
+      display: none !important;
+    }
+}
+
 span#cookie-banner-link {
     cursor: pointer;
     &:hover{

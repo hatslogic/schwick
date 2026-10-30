@@ -1,48 +1,46 @@
 {% sw_extends '@Storefront/storefront/component/account/register.html.twig' %}
 
 {% block component_account_register_form %}
-   
-   <div class="hde-registration-smallbusiness">
-        <h4> {{ 'hde_registration_smallbusiness_title' | trans | raw }} </h4>
-        <div>
-            {{ 'hde_registration_smallbusiness_text' | trans | raw }}
+    {% set isPuctec = ('puctec' in context.salesChannel.name|lower) or (app.request and 'puctec' in app.request.host|lower) %}
+
+    {% if not isPuctec %}
+        <div class="hde-registration-smallbusiness">
+            <h4> {{ 'hde_registration_smallbusiness_title' | trans | raw }} </h4>
+            <div>
+                {{ 'hde_registration_smallbusiness_text' | trans | raw }}
+            </div>
         </div>
-   </div>
 
-
-   <div class="hde-registration-distributor">
-        <h4> {{ 'hde_registration_distributor_title' | trans | raw }} </h4>
-        <div>
-            {{ 'hde_registration_distributor_text' | trans | raw }}
+        <div class="hde-registration-distributor">
+            <h4> {{ 'hde_registration_distributor_title' | trans | raw }} </h4>
+            <div>
+                {{ 'hde_registration_distributor_text' | trans | raw }}
+            </div>
         </div>
-   </div>
+    {% endif %}
 
-   
     {{ parent() }}
 
+    {% if not isPuctec %}
+        {# NPM NOT AVAILABLE - JS NOT WORKING   #}
+        <script>
+            // NOTE:
+            // SINCE THE SERVER DOESN'T HAVE NPM, I NEEDED TO APPLY IT HERE.
+            function handleGuestAccount() {
+                const guestAccountCheckbox = document.getElementById("personalGuest");
+                if (!guestAccountCheckbox) {
+                    return;
+                }
 
-
-{# NPM NOT AVAILABLE - JS NOT WORKING   #}
-
-    <script>
-        // NOTE:
-        // SINCE THE SERVER DOESN'T HAVE NPM, I NEEDED TO APPLY IT HERE.
-        function handleGuestAccount() {
-            const guestAccountCheckbox = document.getElementById("personalGuest");
-            if (!guestAccountCheckbox) {
-                return;
+                // guestAccountCheckbox.click();
+                guestAccountCheckbox.checked = true;
+                const changeEvent = new Event("change");
+                guestAccountCheckbox.dispatchEvent(changeEvent);
             }
 
-            // guestAccountCheckbox.click();
-            guestAccountCheckbox.checked = true;
-            const changeEvent = new Event("change");
-            guestAccountCheckbox.dispatchEvent(changeEvent);
-        }
+            handleGuestAccount();
 
-        handleGuestAccount();
-
-        document.addEventListener("DOMContentLoaded", () => handleGuestAccount());
-    </script>
-
-
+            document.addEventListener("DOMContentLoaded", () => handleGuestAccount());
+        </script>
+    {% endif %}
 {% endblock %}

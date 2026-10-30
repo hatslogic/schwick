@@ -24,8 +24,6 @@
 /* hide registration type texts and select option */
 // Marco: After 6.5 update - this blocks also on the checkout page! added class to not include checkout page
 .is-ctl-register:not(.is-act-checkoutregisterpage), .is-act-loginpage {
-	.hde-registration-smallbusiness,
-	.hde-registration-distributor,
 	.register-card,
 	.login-card
 		/*.contact-type*/{
@@ -35,6 +33,11 @@
 	.col-lg-8:has(.register-card){
 		display:  block!important;
 	}
+}
+
+.hde-registration-smallbusiness,
+.hde-registration-distributor {
+	display: none !important;
 }
 
 #loginCollapse.collapse.show {

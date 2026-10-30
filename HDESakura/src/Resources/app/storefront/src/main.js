@@ -80,7 +80,7 @@ function changeRegistrationType() {
     const distributorGroupID = '91e80d36381c4b6796eb685c719abe46';
     const germanySelectID = 'edcd2f8760d74eaa9b864a1ced422262';
 
-    const accountType = document.getElementById('accountType');
+    const accountType = getAccountTypeSelect();
     const changeEvent = new Event('change');
 
     const billingCountry = document.getElementById('billingAddressAddressCountry');
@@ -120,9 +120,7 @@ function changeRegistrationType() {
             el.style.display = 'none';
         });
 
-        const option = document.querySelector(
-            `#accountType option[value="${smallbusinessGroupID}"]`
-        );
+        const option = accountType?.querySelector(`option[value="${smallbusinessGroupID}"]`) || document.querySelector(`option[value="${smallbusinessGroupID}"]`);
 
         if (option) {
             option.selected = true;
@@ -159,9 +157,7 @@ function changeRegistrationType() {
             el.style.display = 'block';
         });
 
-        const option = document.querySelector(
-            `#accountType option[value="${distributorGroupID}"]`
-        );
+        const option = accountType?.querySelector(`option[value="${distributorGroupID}"]`) || document.querySelector(`option[value="${distributorGroupID}"]`);
 
         if (option) {
             option.selected = true;
@@ -330,4 +326,10 @@ function getUrlParameter(name) {
     const params = new URLSearchParams(window.location.search);
 
     return params.get(name) || false;
+}
+
+function getAccountTypeSelect() {
+    return document.querySelector('#-accountType')
+        || document.querySelector('#accountType')
+        || document.querySelector('select[name="accountType"]');
 }
